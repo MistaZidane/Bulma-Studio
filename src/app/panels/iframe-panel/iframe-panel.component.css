@@ -1,0 +1,24 @@
+#focus, #clickfocus{
+    display: none;
+    position: fixed;
+    height: 923px;
+    width: 1061px;
+    border: 2px solid #2294e3;
+    top: 0px;
+    left: 0px;
+    z-index: 99999;
+}
+#info, #clickInfo{
+    float: left;
+    position: fixed;
+    padding: 1px;
+    font-size: x-small;
+    background-color: rgb(34, 148, 227);
+    color: rgb(255, 255, 255);
+    width: 1061px;
+    top: -16px;
+    left: 0px;
+}
+mat-icon{
+    font-size: small;
+}

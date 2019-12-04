@@ -1,0 +1,228 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #e4e4e4;
+    overflow: hidden;
+    cursor: default;
+    
+}
+html{
+    background-color: #e4e4e4; 
+    overflow: hidden;
+}
+/* embed, iframe, img, object, video {
+    height: 100% !important;
+    max-width: 100%;
+} */
+span{
+    user-select: none;
+}
+#preview{
+    background-color: #e4e4e4;  
+    max-width: 200px;
+    height: 100px;
+    max-height: 110px;
+}
+/* .myFrame{
+    overflow-y: scroll;
+    overflow-x: hidden;  
+    height: 95.4vh;
+} */
+::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+    background: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-corner {
+    display: none;
+}
+::-webkit-scrollbar-thumb {
+    background: #677073;
+}
+.toolbar{
+    background-color: #f7f7f7;
+    padding-bottom: 2px;
+    margin-bottom: 16px;
+} 
+.navbar-item{
+    color: #666666;
+}
+.home{
+    border-bottom: 2px solid #666666;
+}
+.aside{
+    padding: 0.7rem 1rem;
+}
+.left-icons{
+  font-size: 25px;
+}
+.left-tools{
+    width:65px !important ;
+    height: 100%;
+    background-color: #f7f7f7;
+    margin-right: 4px; 
+}
+.main-column{
+    height: 97.4vh;
+}
+.left-panel{
+    height: 97.4vh; 
+}
+.btm{
+   margin-top: 650px;
+}
+.components{
+    background-color: #f7f7f7; 
+}
+.myInput{
+    
+    border: 2px solid #666666;
+    height: 30px;
+    background: transparent;
+}
+.search{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    margin-bottom: 20px;
+}
+.sear{
+    background-color: #666666;
+    color: #e4e4e4;
+}
+.intro{
+    margin-bottom: 10px
+}
+.sign{
+    float: right;
+    font-size: 20px;
+    margin-right: 20px;
+ 
+}
+.comText{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.myBox{
+    background-color: #b7b7b7;
+    box-shadow: none;
+}
+.copo{
+    margin-bottom: 5px !important;
+    margin-left: 15px;
+    user-select: none;
+}
+.current{
+    color: #2294e3;
+}
+.element{
+   background-color: #2294e3 !important;
+}
+.others{
+    height: 80vh;
+    overflow-y: auto;
+}
+.separetion{
+    margin-bottom: 20px;
+}
+#iframe{
+    height: 99.1%;
+    margin-left: 5%;
+    transition: width 0.7s, height 0.7s;
+    margin-bottom: 10%;
+}
+.apearance{
+   margin-top: 15px; 
+}
+.rightPanel{
+background-color: #f7f7f7;
+overflow-y: scroll;
+overflow-x: hidden;
+height: 100%;
+}
+.tools{
+    background-color: #b7b7b7;
+    margin-top: 10px;
+}
+.subTools{
+    background-color: #f7f7f7;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.layoutProperties{
+    margin-top: 15px;
+}
+.property{
+    border-bottom: 2px solid #b7b7b7;
+    clear: both;
+}
+.mySelect{
+    border: none !important;
+    background-color: #f7f7f7 !important;
+    color: #666666 !important;
+}
+.mySelect:focus {
+    border: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+.inputForms{
+    margin-left: 0;
+    padding-left: 0;
+}
+.inputForms input{
+    border-radius: 0;
+    border: 2px solid #666666;
+    width: 100%;
+}
+.path{
+    margin-top: 23px;
+}
+.sliders{
+    margin-left: 0;
+    padding-left: 0; 
+}
+/* .slider{
+    width: 100%;
+    outline: none !important;
+} */
+.values{
+    width: 70% !important;
+}
+.apearance{
+    
+    height: 100%;
+    
+}
+/*  my slider styles  */
+
+.AnimationProperties{
+    margin-top: 20px;
+}
+
+
+
+
+
+
+/* for hidden focus bar */
+.focus-tools{
+    background-color: #2294e3;
+    color: whitesmoke;
+    width: 90px;
+    height: 20px;
+}
+.focus-tools span{
+    font-size: 20px;
+}
+.focus{
+    position: fixed;
+}
+.flexiblee{
+    border: 1px solid #2294e3;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

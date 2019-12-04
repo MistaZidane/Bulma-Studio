@@ -1,0 +1,15 @@
+ .dropdown-content{
+    margin-right: 20px !important;
+    
+}
+.dropdown-menu{  
+    width: 70%;
+}
+pre{
+    overflow: auto;
+    color: black !important;
+    width: 100%;
+}
+.dropdown-item{
+    padding: 0%;
+}

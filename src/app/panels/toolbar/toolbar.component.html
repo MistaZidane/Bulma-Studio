@@ -1,0 +1,28 @@
+<!-- tool bar -->
+
+<div class="navbar toolbar">
+    <div class="navbar-brand">
+        <span class="navbar-item" (click)="sideDrawer()"> <mat-icon>menu</mat-icon> </span>
+    </div>
+    <div class="navbar-start">
+        <span class="navbar-item home">Design</span>
+        <span class="navbar-item">Preview</span>
+    </div>
+    <div class="navbar-end">
+        <!-- clipboard dropdown -->
+        <span class="dropdown is-hoverable">
+                <span aria-haspopup="true" aria-controls="dropdown-menu2" class="navbar-item dropdown-trigger"> <mat-icon>post_add</mat-icon></span>
+            <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+              <div class="dropdown-content" id="clipboard" (click)="copy($event)">
+                <div class="dropdown-item">
+                   <p class="heading" matTooltip="Info about the action">Click to copy</p>
+                </div>
+                <hr class="dropdown-divider">
+              </div>
+            </div>
+          </span>
+          <span class="navbar-item" (click)="undo()" matTooltip="Info about the action"> <mat-icon>undo</mat-icon></span>  
+          <span class="navbar-item" (click)="redo()" matTooltip="Info about the action"> <mat-icon>redo</mat-icon></span>
+          <span class="navbar-item" matTooltip="Info about the action"> <mat-icon>code</mat-icon> </span>
+    </div>
+</div>
