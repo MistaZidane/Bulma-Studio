@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SizeService } from '../../shared/size.service';
 import { DataService } from '../../shared/data.service';
 import { StateService } from '../../shared/state.service';
+import { RightPanelService } from '../../shared/right-panel.service';
 @Component({
   selector: 'app-iframe-panel',
   templateUrl: './iframe-panel.component.html',
@@ -17,7 +18,7 @@ export class IframePanelComponent implements OnInit {
   public currentEvent;
   public clickedElement=[];
  
-  constructor(private size: SizeService, private data: DataService, private iframeState: StateService) {
+  constructor(private size: SizeService, private data: DataService, private iframeState: StateService, private rightPanel:RightPanelService) {
     // perant methods setup so iframe could access the methods here
     (<any>window).drop = this.drop.bind(this);
     (<any>window).dragover = this.dragover.bind(this);
@@ -211,9 +212,9 @@ export class IframePanelComponent implements OnInit {
     let iframe = <HTMLElement> document.querySelector('#iframe');
     let coor =  iframe.getBoundingClientRect();
     let line =<HTMLElement> document.querySelector('#line');
-    line.style.top = (coordinates.top + coor.top) + "px"; 
-    line.style.left = (coordinates.left + coor.left)+ "px";
-    line.style.display = 'block';
+    // line.style.top = (coordinates.top + coor.top) + "px"; 
+    // line.style.left = (coordinates.left + coor.left)+ "px";
+    // line.style.display = 'block';
     if(event.target.textContent == ''){
     //  line.style.width = (coordinates.width) + "px";
     } 

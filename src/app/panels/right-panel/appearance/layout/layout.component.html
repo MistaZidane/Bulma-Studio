@@ -3,7 +3,7 @@
         <div class="columns width property">
             <div class="column is-5">
                 <div class="select">
-                    <select class="mySelect">
+                    <select class="mySelect"  (change)="widthChange($event.target.value)">
                         <option>Width</option>
                         <option>Min-width</option>
                         <option>Max-width</option>
@@ -11,11 +11,11 @@
                 </div>
             </div>
             <div class="column is-3 inputForms">
-                <input type="number" class="input" placeholder="12">
+                <input type="number" class="input" placeholder="12" (change)="widthInputChange($event.target.value)">
             </div>
             <div class="column is-4">
                 <div class="select">
-                    <select class="mySelect">
+                    <select class="mySelect"  (change)="unitChange($event.target.value)">
                         <option>px</option>
                         <option>%</option>
                         <option>em</option>
