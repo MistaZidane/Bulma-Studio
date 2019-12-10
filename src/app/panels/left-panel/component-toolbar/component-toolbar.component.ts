@@ -16,7 +16,17 @@ export class ComponentToolbarComponent implements OnInit {
     // getting all the data associated with the service
     this.recivedComponentData = this.data.componentData;
     this.recievedElementData = this.data.elementData;
-
+    let dragMe = document.querySelector('.dragMe');
+    // still to work on it
+    dragMe.addEventListener('dragstart', function(event){
+      console.log(event.target)
+      var crt = this.cloneNode(true);
+      console.log(crt)
+      crt.style.backgroundColor = "red";
+      crt.style.display="block" /* or visibility: hidden, or any of the above */
+      document.body.appendChild(crt);
+      // event.dataTransfer.setDragImage(crt, 10, 10);
+    })
   }
 
   // handles componet data drag
@@ -55,6 +65,7 @@ export class ComponentToolbarComponent implements OnInit {
     console.log(event.target.innerHTML)
 
   }
+
   // handles form data drag
   formDrag(event) {
     event.preventDefault()

@@ -17,8 +17,10 @@ export class IframePanelComponent implements OnInit {
   // the current element in the focus bar
   public currentEvent;
   public clickedElement=[];
+  // when should focus show
+  public focusState = true;
  
-  constructor(private size: SizeService, private data: DataService, private iframeState: StateService, private rightPanel:RightPanelService) {
+  constructor(private size: SizeService, private data: DataService, private iframeState: StateService, private rightPanelData:RightPanelService) {
     // perant methods setup so iframe could access the methods here
     (<any>window).drop = this.drop.bind(this);
     (<any>window).dragover = this.dragover.bind(this);
@@ -62,7 +64,7 @@ export class IframePanelComponent implements OnInit {
     framebody.style.backgroundColor = "white";
     framebody.addEventListener('click', function (e) {
       e.preventDefault();
-     
+
       
     })
   
@@ -80,59 +82,61 @@ export class IframePanelComponent implements OnInit {
 
 
     // showing textform for the text of elemnts to be editted 
-    framebody.addEventListener('dblclick', function (event) {
-      event.preventDefault()
-      // checking to see that the target is not the body
-      if (event.target != framebody) {
-        if (event.type == 'dblclick') {
-          // creating the texarea that will show up
-          let input = document.createElement('input');
-          input.style.display = "none"
-          console.log(event)
-          let currentElement = <HTMLElement>event.target
-          // the elements textContent should not be empty
-          if (currentElement.textContent !== '') {
-            // check to see if the element does not have chilldnodes
-            if(currentElement.children.length == 0){
-            input.style.position = 'absolute';
-            input.style.zIndex = '4'
-            input.style.border = currentElement.style.border;
-            // getting computed styles to use for the input appearance 
-            let rect = currentElement.getBoundingClientRect();
-            let style = window.getComputedStyle(currentElement, 'before')
-            input.style.font = style.font
-            input.style.boxShadow = ` 0 0 2px #3273dc`
-            input.style.textAlign = style.textAlign;
-            input.style.width = rect.width + 'px';
-            input.style.height = rect.height + 'px';
-            input.style.minWidth = 20 + 'px';
-            input.style.minHeight = 10 + 'px';
-            input.style.zIndex = '99999'
-            input.style.left = rect.left + "px";
-            input.style.top = rect.top + 'px';
-            input.value = currentElement.textContent;
-            input.style.display = 'block';
-            // appending the input field
-            framebody.appendChild(input);
-            // making the input to focus     
-            input.focus()
-            input.select()
-            // interchanging the data on blur
-            input.addEventListener('blur', function (e) {
-              e.preventDefault()
-              if (e.type == 'blur') {
-                currentElement.textContent = input.value;
-                framebody.removeChild(input)
-              }
-              else {
-                framebody.removeChild(input)
-              }
-            })
-            }
-          }
-        }
-      }
-    });
+
+    // framebody.addEventListener('dblclick', function (event) {
+    //   event.preventDefault()
+    //   // checking to see that the target is not the body
+    //   if (event.target != framebody) {
+    //     if (event.type == 'dblclick') {
+    //       // creating the texarea that will show up
+    //       let input = document.createElement('input');
+    //       input.style.display = "none"
+    //       console.log(event)
+    //       let currentElement = <HTMLElement>event.target
+    //       // the elements textContent should not be empty
+    //       if (currentElement.textContent !== '') {
+    //         // check to see if the element does not have chilldnodes
+    //         if(currentElement.children.length == 0){
+    //         input.style.position = 'absolute';
+    //         input.style.zIndex = '4'
+    //         input.style.border = currentElement.style.border;
+    //         // getting computed styles to use for the input appearance 
+    //         let rect = currentElement.getBoundingClientRect();
+    //         let style = window.getComputedStyle(currentElement, 'before')
+    //         input.style.font = style.font
+    //         input.style.boxShadow = ` 0 0 2px #3273dc`
+    //         input.style.textAlign = style.textAlign;
+    //         input.style.width = rect.width + 'px';
+    //         input.style.height = rect.height + 'px';
+    //         input.style.minWidth = 20 + 'px';
+    //         input.style.minHeight = 10 + 'px';
+    //         input.style.zIndex = '99999'
+    //         input.style.left = rect.left + "px";
+    //         input.style.top = rect.top + 'px';
+    //         input.value = currentElement.textContent;
+    //         input.style.display = 'block';
+    //         // appending the input field
+    //         framebody.appendChild(input);
+    //         // making the input to focus     
+    //         input.focus()
+    //         input.select()
+    //         // interchanging the data on blur
+    //         input.addEventListener('blur', function (e) {
+    //           e.preventDefault()
+    //           if (e.type == 'blur') {
+    //             currentElement.textContent = input.value;
+    //             framebody.removeChild(input)
+    //           }
+    //           else {
+    //             framebody.removeChild(input)
+    //           }
+    //         })
+    //         }
+    //       }
+    //     }
+    //   }
+    // });
+
     // when the focus bar is double clicked
     let focus =<HTMLElement> document.querySelector('#focus')
     let info = <HTMLElement>document.querySelector('#info')
@@ -149,6 +153,10 @@ export class IframePanelComponent implements OnInit {
     focus.addEventListener('click',()=>{
       let clickFocus =<HTMLElement> document.querySelector('#clickFocus')
     let clickInfo = <HTMLElement>document.querySelector('#clickInfo')
+    this.clickedElement.push(this.currentEvent);
+    this.rightPanelData.edditedElement = this.currentEvent;
+    let coordinates = this.clickedElement[this.clickedElement.length-1].getBoundingClientRect();
+    let coor =  iframe.getBoundingClientRect();
     // setting the neccesary styles
     clickFocus.style.height = focus.style.height;
     clickFocus.style.width = focus.style.width;
@@ -157,21 +165,21 @@ export class IframePanelComponent implements OnInit {
     clickFocus.style.display = 'block';;
     clickInfo.style.height = info.style.height;
     clickInfo.style.width = info.style.width;
-    clickInfo.style.top = info.style.top;
+    clickInfo.style.top = (parseInt(coordinates.top + coor.top)-26) + "px";
     clickInfo.style.left = info.style.left;
     focus.style.display = 'none'
-    this.clickedElement.push(this.currentEvent);
+   
     // this is to update the clicked focus element on window scroll
     frame.addEventListener('scroll',()=>{
       console.log('dv')
-      let coordinates = this.clickedElement[this.clickedElement.length-1].getBoundingClientRect();
-      let coor =  iframe.getBoundingClientRect();
+      
+      
       clickFocus.style.height = coordinates.height + "px";
       clickFocus.style.width = coordinates.width + "px";
       clickFocus.style.top = (coordinates.top + coor.top) + "px"; 
       clickFocus.style.left = (coordinates.left + coor.left)+ "px";
       clickInfo.style.width = coordinates.width + "px"; 
-      clickInfo.style.top = (parseInt(coordinates.top + coor.top)-16) + "px";
+      clickInfo.style.top = (parseInt(coordinates.top + coor.top)-26) + "px";
       clickInfo.style.left = (coordinates.left + coor.left) + "px";
     })
     });
@@ -180,6 +188,7 @@ export class IframePanelComponent implements OnInit {
     let del = <HTMLElement> document.querySelector('#delete');
     del.addEventListener('click',(event)=>{
       event.preventDefault();
+      clickFocus.style.display = 'none'
       // deleting the element
       // dont delette the body
       if(this.clickedElement[this.clickedElement.length-1].nodeName== 'BODY'){
@@ -192,13 +201,56 @@ export class IframePanelComponent implements OnInit {
       }
  
     })
-     // dont show the clickfocus after the dellete has taken place
-    // clickFocus.style.display = 'none'
-    clickFocus.addEventListener('click',()=>{
-      clickFocus.style.display = 'none'
-    })
+    // duplicating elements
+    let duplicate = document.querySelector('#duplicate');
+     duplicate.addEventListener('click', (event)=>{
+          event.preventDefault();
+          clickFocus.style.display = 'none'
+        let parent = this.currentEvent.parentNode;
+        let clonedNode = this.currentEvent.cloneNode(true)
+        this.currentEvent.parentNode.insertBefore(clonedNode, this.currentEvent.nextSibling);
 
-  
+     })
+     // dont show the clickfocus after the dellete has taken place
+    clickFocus.style.display = 'none'
+    // clickFocus.addEventListener('click',()=>{
+    //   clickFocus.style.display = 'none'
+    // })
+ 
+    // making it posible for us to edit text
+  let edit = document.querySelector('#edit');
+  edit.addEventListener('click', (event) =>{
+    clickFocus.style.display = 'none'
+    event.preventDefault();
+    // setting focus state to false
+    this.focusState = false;
+    // adding the contenteditable attribute
+    this.clickedElement[this.clickedElement.length-1].setAttribute('contenteditable','true');
+    // making it auto focus when you click the edit icon
+    this.clickedElement[this.clickedElement.length-1].focus();
+    // adding an event listener to remove the contenteditable attribute
+    this.clickedElement[this.clickedElement.length-1].addEventListener('blur', ()=>{
+      this.clickedElement[this.clickedElement.length-1].removeAttribute('contenteditable');
+      // on blur setting focus state to true
+      this.focusState = true;
+    })
+  }); 
+  // making it posible for us to edit text through dblclick
+  clickFocus.addEventListener('dblclick', ()=>{
+    clickFocus.style.display = 'none'
+       // adding the contenteditable attribute
+       this.clickedElement[this.clickedElement.length-1].setAttribute('contenteditable','true');
+       // making it auto focus when you click the edit icon
+       this.clickedElement[this.clickedElement.length-1].focus();
+       // setting focus state to false
+     this.focusState = false;
+       // adding an event listener to remove the contenteditable attribute
+       this.clickedElement[this.clickedElement.length-1].addEventListener('blur', ()=>{
+         this.clickedElement[this.clickedElement.length-1].removeAttribute('contenteditable');
+         // on blur setting focus state to true
+         this.focusState = true;
+       })
+  })
     
   }
 
@@ -212,17 +264,13 @@ export class IframePanelComponent implements OnInit {
     let iframe = <HTMLElement> document.querySelector('#iframe');
     let coor =  iframe.getBoundingClientRect();
     let line =<HTMLElement> document.querySelector('#line');
-    // line.style.top = (coordinates.top + coor.top) + "px"; 
-    // line.style.left = (coordinates.left + coor.left)+ "px";
-    // line.style.display = 'block';
-    if(event.target.textContent == ''){
-    //  line.style.width = (coordinates.width) + "px";
-    } 
-    else{
-      console.log('not good')
-    }
-    
-
+    line.style.width = coordinates.width + "px";
+    line.style.backgroundColor = 'blue';
+    line.style.top = (coordinates.top + coor.top) + "px"; 
+    line.style.left = (coordinates.left + coor.left)+ "px";
+    line.style.display = 'block';
+    let info = <HTMLElement>document.querySelector('#info')
+  
   }
 
 
@@ -239,6 +287,8 @@ export class IframePanelComponent implements OnInit {
     // creating the css link
     event.target.innerHTML += this.data.recievedData;
     this.iframeState.iframeStateData=framebody.innerHTML;
+    line.style.display = 'none'
+    console.log(event)
   }
 
 
@@ -266,7 +316,10 @@ focus.style.top = (coordinates.top + coor.top) + "px";
 focus.style.left = (coordinates.left + coor.left)+ "px";
 let computedStyles = frame.getComputedStyle(event.target,'');
 focus.style.zIndex = '99999';
-focus.style.display = 'block';
+// focus state to show or hide
+if(this.focusState == true){
+  focus.style.display = 'block';
+}
 info.style.width = coordinates.width + "px"; 
 info.style.top = (parseInt(coordinates.top + coor.top)-16) + "px";
 info.style.left = (coordinates.left + coor.left) + "px";
@@ -276,13 +329,18 @@ if(event.target.classList == ''){
 else if(event.target.classList !== ''){
    info.innerHTML = event.target.classList;
  }
+
  focus.addEventListener('mousemove',(evv)=>{
     evv.preventDefault() 
 focus.style.display = 'none'; 
 },true); 
-this.currentEvent = event.target; 
-
+// roving the focus div to enable drop
+focus.addEventListener('dragover', ()=>{
+  focus.style.display = 'none'; 
+})
+this.currentEvent =  event.target; 
 }
+
 mouseleave(event){
   // let focus =<HTMLElement> document.querySelector('#focus')
   // focus.style.display = 'none'

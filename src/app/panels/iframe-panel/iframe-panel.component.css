@@ -22,3 +22,8 @@
 mat-icon{
     font-size: small;
 }
+#clickInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 70px !important;
+}
