@@ -136,7 +136,6 @@ span{
 .rightPanel{
 background-color: #f7f7f7;
 overflow-y: scroll;
-overflow-x: hidden;
 height: 100%;
 }
 .tools{
@@ -226,3 +225,8 @@ height: 100%;
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* slider color */
+.mat-accent .mat-slider-thumb, .mat-accent .mat-slider-thumb-label, .mat-accent .mat-slider-track-fill {
+    background-color: #2294e3;
+}

@@ -1,0 +1,35 @@
+.textAlign{
+    width: 100%;
+}
+.textAlign mat-button-toggle{
+    width: 100%;
+}
+.textOptions{
+    width: 100%;
+}
+.textOptions mat-button-toggle{
+    width: 100%;
+}
+.column{
+    margin-bottom: 0;
+}
+.columns{
+    margin-bottom: 0;
+}
+mat-slider{
+    width: 100%;
+}
+.block{
+    margin: 0 !important;
+}
+.filters{
+    background-color: #f7f7f7;
+}
+.mat-expansion-panel {
+    background: #f7f7f7;
+    border: none !important;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    margin-top: 0;
+}

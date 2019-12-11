@@ -1,19 +1,112 @@
 <p class="heading comText">Propeties</p>
+<div class="colorPicker">
+
+</div>
 <div class="tools">
+    <!-- text align -->
     <div class="columns">
-        <div class="column is-6  subTools">
-            <span><i class="material-icons" matTooltip="Info about the action" >format_italic</i></span>
-            <span><i class="material-icons" matTooltip="Info about the action" >format_bold</i></span>
-            <span><i class="material-icons" matTooltip="Info about the action" >format_underlined</i></span>
-            <span><i class="material-icons" matTooltip="Info about the action" >format_textdirection_l_to_r</i></span>
-            <span><i class="material-icons" matTooltip="Info about the action" >format_textdirection_r_to_l</i></span>
-        </div>
-        <div class="column is-6 subTools">
-            <span><i class="material-icons" matTooltip="Info about the action">format_align_left</i></span>
-            <span><i class="material-icons" matTooltip="Info about the action">format_align_center</i></span>
-            <span><i class="material-icons" matTooltip="Info about the action">format_align_justify</i></span>
-            <span><i class="material-icons" matTooltip="Info about the action">format_align_right</i></span>
-            <span class="color-picker"></span>
+        <div class="column  subTools">
+            <p class="heading">Text align</p>
+            <mat-button-toggle-group #group="matButtonToggleGroup" class="textAlign">
+                <mat-button-toggle value="left" aria-label="Text align left">
+                    <mat-icon>format_align_left</mat-icon>
+                </mat-button-toggle>
+                <mat-button-toggle value="center" aria-label="Text align center">
+                    <mat-icon>format_align_center</mat-icon>
+                </mat-button-toggle>
+                <mat-button-toggle value="right" aria-label="Text align right">
+                    <mat-icon>format_align_right</mat-icon>
+                </mat-button-toggle>
+                <mat-button-toggle value="justify" aria-label="Text align justify">
+                    <mat-icon>format_align_justify</mat-icon>
+                </mat-button-toggle>
+            </mat-button-toggle-group>
         </div>
     </div>
+    <!-- Text Options -->
+    <div class="columns">
+        <div class="column  subTools">
+            <p class="heading">Text Options</p>
+            <mat-button-toggle-group #group="matButtonToggleGroup" class="textOptions">
+                <mat-button-toggle value="left" aria-label="Text align left">
+                    <mat-icon>format_italic</mat-icon>
+                </mat-button-toggle>
+                <mat-button-toggle value="center" aria-label="Text align center">
+                    <mat-icon>format_bold</mat-icon>
+                </mat-button-toggle>
+                <mat-button-toggle value="right" aria-label="Text align right">
+                    <mat-icon>format_underlined</mat-icon>
+                </mat-button-toggle>
+                <mat-button-toggle value="justify" aria-label="Text align justify">
+                    <mat-icon>format_textdirection_l_to_r</mat-icon>
+                </mat-button-toggle>
+                <mat-button-toggle value="justify" aria-label="Text align justify">
+                    <mat-icon>format_textdirection_r_to_l</mat-icon>
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+    </div>
+     <!-- bacground color and color -->
+     <div class="columns" style="background-color: #f7f7f7;">
+
+            <div class="column is-6">
+                <h1 class="heading">Color</h1>
+                <div class="control">
+                    <div class="input"><span class="color-picker"></span> </div>
+                </div>
+    
+            </div>
+            <div class="column is-6">
+                <h1 class="heading">Background Color</h1>
+                <div class="control">
+                    <div class="input"><span class="bgGolor-picker">BackGroungd</span></div>
+                </div>
+    
+            </div>
+        </div>
+    <!-- opacity, brightness, hue and saturation, contrast, sepia -->
+     <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Filters
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="columns">
+                <div class="column subTools">
+                    <span class="heading">Opacity</span>
+                    <mat-slider></mat-slider>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column subTools">
+                    <span class="heading">brightness</span>
+                    <mat-slider></mat-slider>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column subTools">
+                    <span class="heading">saturation</span>
+                    <mat-slider></mat-slider>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column subTools">
+                    <span class="heading">contrast</span>
+                    <mat-slider></mat-slider>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column subTools">
+                    <span class="heading">hue</span>
+                    <mat-slider></mat-slider>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column subTools">
+                    <span class="heading">sepia</span>
+                    <mat-slider color="accent"></mat-slider>
+                </div>
+            </div>
+    </mat-expansion-panel>
+   
 </div>

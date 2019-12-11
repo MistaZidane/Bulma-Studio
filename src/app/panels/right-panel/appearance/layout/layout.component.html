@@ -1,100 +1,138 @@
 <div class="layoutProperties">
-        <span class="heading comText">Layout <i class="material-icons sign">keyboard_arrow_down</i> </span>
-        <div class="columns width property">
-            <div class="column is-5">
-                <div class="select">
-                    <select class="mySelect" id="width" >
-                        <option>Width</option>
-                        <option>Min-width</option>
-                        <option>Max-width</option>
-                    </select>
-                </div>
-            </div>
-            <div class="column is-3 inputForms">
-                <input type="number" class="input" placeholder="12" id="widthInput">
-            </div>
-            <div class="column is-4">
-                <div class="select">
-                    <select class="mySelect" id="widthUnit">
-                        <option>px</option>
-                        <option>%</option>
-                        <option>em</option>
-                    </select>
-                </div>
+    <!-- display and position -->
+    <div class="columns ">
+        <div class="column is-6">
+            <p class="heading">Display</p>
+            <div class="select">
+                <select class="" id="width">
+                    <option>Block</option>
+                    <option>Inline</option>
+                    <option>Inline-block</option>
+                    <option>None</option>
+                    <option>Flex</option>
+                    <option>Grid</option>
+                </select>
             </div>
         </div>
-        <!-- height -->
-        <div class="columns height property">
-            <div class="column is-5">
-                <div class="select">
-                    <select class="mySelect">
-                        <option>Height</option>
-                        <option>Min-Height</option>
-                        <option>Max-Height</option>
-                    </select>
-                </div>
-            </div>
-            <div class="column is-3 inputForms">
-                <input type="number" class="input" placeholder="12">
-            </div>
-            <div class="column is-4">
-                <div class="select">
-                    <select class="mySelect">
-                        <option>px</option>
-                        <option>%</option>
-                        <option>em</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="columns height property">
-            <div class="column is-5">
-                <div class="select">
-                    <select class="mySelect">
-                        <option>Margin</option>
-                        <option>Margin-Left</option>
-                        <option>Margin-Right</option>
-                        <option>Margin-Top</option>
-                        <option>Margin-Bottom</option>
-                    </select>
-                </div>
-            </div>
-            <div class="column is-3 inputForms">
-                <input type="number" class="input" placeholder="12">
-            </div>
-            <div class="column is-4">
-                <div class="select">
-                    <select class="mySelect">
-                        <option>px</option>
-                        <option>%</option>
-                        <option>em</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="columns height property">
-            <div class="column is-5">
-                <div class="select">
-                    <select class="mySelect">
-                        <option>Padding</option>
-                        <option>Padding-Left</option>
-                        <option>Padding-Right</option>
-                        <option>Padding-Top</option>
-                        <option>Padding-Bottom</option>
-                    </select>
-                </div>
-            </div>
-            <div class="column is-3 inputForms">
-                <input type="number" class="input" placeholder="12">
-            </div>
-            <div class="column is-4">
-                <div class="select">
-                    <select class="mySelect">
-                        <option>px</option>
-                        <option>%</option>
-                        <option>em</option>
-                    </select>
-                </div>
+        <div class="column is-6">
+            <p class="heading">Position</p>
+            <div class="select">
+                <select class="" id="width">
+                    <option>Fixed</option>
+                    <option>Absolute</option>
+                    <option>Static</option>
+                    <option>Relative</option>
+                </select>
             </div>
         </div>
     </div>
+    <div class="columns">
+        <div class="column">
+                <p class="heading">Float</p>
+            <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="float">
+                <mat-button-toggle value="bold"> <mat-icon>clear</mat-icon></mat-button-toggle>
+                <mat-button-toggle value="italic"><mat-icon>format_align_left</mat-icon></mat-button-toggle>
+                <mat-button-toggle value="underline"><mat-icon>format_align_right</mat-icon></mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+    </div>
+    <span class="heading comText">Layout <i class="material-icons sign">keyboard_arrow_down</i> </span>
+
+    <div class="columns width property">
+        <div class="column is-5">
+            <div class="select">
+                <select class="mySelect" id="width">
+                    <option>Width</option>
+                    <option>Min-width</option>
+                    <option>Max-width</option>
+                </select>
+            </div>
+        </div>
+        <div class="column is-3 inputForms">
+            <input type="number" class="input" placeholder="12" id="widthInput">
+        </div>
+        <div class="column is-4">
+            <div class="select">
+                <select class="mySelect" id="widthUnit">
+                    <option>px</option>
+                    <option>%</option>
+                    <option>em</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <!-- height -->
+    <div class="columns height property">
+        <div class="column is-5">
+            <div class="select">
+                <select class="mySelect">
+                    <option>Height</option>
+                    <option>Min-Height</option>
+                    <option>Max-Height</option>
+                </select>
+            </div>
+        </div>
+        <div class="column is-3 inputForms">
+            <input type="number" class="input" placeholder="12">
+        </div>
+        <div class="column is-4">
+            <div class="select">
+                <select class="mySelect">
+                    <option>px</option>
+                    <option>%</option>
+                    <option>em</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="columns height property">
+        <div class="column is-5">
+            <div class="select">
+                <select class="mySelect">
+                    <option>Margin</option>
+                    <option>Margin-Left</option>
+                    <option>Margin-Right</option>
+                    <option>Margin-Top</option>
+                    <option>Margin-Bottom</option>
+                </select>
+            </div>
+        </div>
+        <div class="column is-3 inputForms">
+            <input type="number" class="input" placeholder="12">
+        </div>
+        <div class="column is-4">
+            <div class="select">
+                <select class="mySelect">
+                    <option>px</option>
+                    <option>%</option>
+                    <option>em</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="columns height property">
+        <div class="column is-5">
+            <div class="select">
+                <select class="mySelect">
+                    <option>Padding</option>
+                    <option>Padding-Left</option>
+                    <option>Padding-Right</option>
+                    <option>Padding-Top</option>
+                    <option>Padding-Bottom</option>
+                </select>
+            </div>
+        </div>
+        <div class="column is-3 inputForms">
+            <input type="number" class="input" placeholder="12">
+        </div>
+        <div class="column is-4">
+            <div class="select">
+                <select class="mySelect">
+                    <option>px</option>
+                    <option>%</option>
+                    <option>em</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
