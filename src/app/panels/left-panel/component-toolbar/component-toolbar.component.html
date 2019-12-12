@@ -5,25 +5,44 @@
         <span class="sear has-text-centered"> <i class="material-icons">search</i> </span>
     </div>
     <div class="others">
-        <div class="ComponentList separetion">
-            <span class="heading comText">Components <i class="material-icons sign">add</i> </span>
+        <mat-expansion-panel [expanded]='true'>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Components
+                </mat-panel-title>
+            </mat-expansion-panel-header>
             <ul>
-                <li class="" >
+                <li class="">
 
-                    <p class="subtitle is-6 copo"><span class="dragMe" draggable=true (drag)="comDrag($event)" (mouseover)="over($event)">breadcrumb</span> </p>
-                    <p class="subtitle is-6 copo"><span draggable=true (drag)="comDrag($event)" (mouseover)="over($event)">card</span> </p>
-                    <p class="subtitle is-6 copo"><span draggable=true (drag)="comDrag($event)" (mouseover)="over($event)">dropdown</span> </p>
-                    <p class="subtitle is-6 copo"><span draggable=true (drag)="comDrag($event)" (mouseover)="over($event)">menu</span> </p>
-                    <p class="subtitle is-6 copo"><span draggable=true (drag)="comDrag($event)" (mouseover)="over($event)">message</span> </p>
-                    <p class="subtitle is-6 copo"><span draggable=true (drag)="comDrag($event)" (mouseover)="over($event)">navbar</span> </p>
-                    <p class="subtitle is-6 copo"><span draggable=true (drag)="comDrag($event)" (mouseover)="over($event)">pagination</span> </p>
-                    <p class="subtitle is-6 copo"><span draggable=true (drag)="comDrag($event)" (mouseover)="over($event)">panel</span> </p>
-                    <p class="subtitle is-6 copo"><span draggable=true (drag)="comDrag($event)" (mouseover)="over($event)">tabs</span> </p>
+                    <p class="subtitle is-6 copo"><span class="dragMe" draggable=true (drag)="comDrag($event)"
+                            (mouseover)="over($event)">breadcrumb</span> </p>
+                    <p class="subtitle is-6 copo"><span draggable=true (drag)="comDrag($event)"
+                            (mouseover)="over($event)">card</span> </p>
+                    <p class="subtitle is-6 copo"><span draggable=true (drag)="comDrag($event)"
+                            (mouseover)="over($event)">dropdown</span> </p>
+                    <p class="subtitle is-6 copo"><span draggable=true (drag)="comDrag($event)"
+                            (mouseover)="over($event)">menu</span> </p>
+                    <p class="subtitle is-6 copo"><span draggable=true (drag)="comDrag($event)"
+                            (mouseover)="over($event)">message</span> </p>
+                    <p class="subtitle is-6 copo"><span draggable=true (drag)="comDrag($event)"
+                            (mouseover)="over($event)">navbar</span> </p>
+                    <p class="subtitle is-6 copo"><span draggable=true (drag)="comDrag($event)"
+                            (mouseover)="over($event)">pagination</span> </p>
+                    <p class="subtitle is-6 copo"><span draggable=true (drag)="comDrag($event)"
+                            (mouseover)="over($event)">panel</span> </p>
+                    <p class="subtitle is-6 copo"><span draggable=true (drag)="comDrag($event)"
+                            (mouseover)="over($event)">tabs</span> </p>
                 </li>
             </ul>
-        </div>
-        <div class="elementsList separetion">
-            <span class="heading comText">Elements <i class="material-icons sign">add</i> </span>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel [expanded]='true'>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Elements
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+
             <ul>
                 <li class="">
                     <p class="subtitle is-6 copo" draggable=true (drag)="elemDrag($event)">box</p>
@@ -37,9 +56,15 @@
                     <p class="subtitle is-6 copo" draggable=true (drag)="elemDrag($event)">title</p>
                 </li>
             </ul>
-        </div>
-        <div class="LayoutList separetion">
-            <span class="heading comText">Layout <i class="material-icons sign">add</i> </span>
+        </mat-expansion-panel>
+        <mat-expansion-panel [expanded]='true'>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Layout
+                </mat-panel-title>
+
+            </mat-expansion-panel-header>
+
             <ul>
                 <li class="">
                     <p class="subtitle is-6 copo" draggable=true (drag)="layDrag($event)">Container</p>
@@ -49,9 +74,16 @@
                     <p class="subtitle is-6 copo" draggable=true (drag)="layDrag($event)">Footer</p>
                     <p class="subtitle is-6 copo" draggable=true (drag)="layDrag($event)">Tiles</p>
             </ul>
-        </div>
-        <div class="formList separetion">
-            <span class="heading comText">Form <i class="material-icons sign">add</i> </span>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Layout
+                </mat-panel-title>
+
+            </mat-expansion-panel-header>
+
             <ul>
                 <li class="">
                     <p class="subtitle is-6 copo" draggable=true (drag)="formDrag($event)">input</p>
@@ -61,7 +93,8 @@
                     <p class="subtitle is-6 copo" draggable=true (drag)="formDrag($event)">radio</p>
                     <p class="subtitle is-6 copo" draggable=true (drag)="formDrag($event)">file</p>
             </ul>
-        </div>
+        </mat-expansion-panel>
+
     </div>
 </div>
 

@@ -202,22 +202,6 @@ height: 100%;
 
 
 
-
-
-
-/* for hidden focus bar */
-.focus-tools{
-    background-color: #2294e3;
-    color: whitesmoke;
-    width: 90px;
-    height: 20px;
-}
-.focus-tools span{
-    font-size: 20px;
-}
-.focus{
-    position: fixed;
-}
 .flexiblee{
     border: 1px solid #2294e3;
     position: absolute;

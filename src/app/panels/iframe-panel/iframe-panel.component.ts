@@ -29,22 +29,27 @@ export class IframePanelComponent implements OnInit {
     (<any>window).drop = this.drop.bind(this);
     (<any>window).dragover = this.dragover.bind(this);
     (<any>window).mouseover = this.mouseover.bind(this);
-    (<any>window).mouseleave = this.mouseleave.bind(this);
 
   }
 
 
   ngOnInit() {
-  
+    
     //setting the iframe data
     let iframe = <HTMLElement>document.querySelector('#iframe');
     let frame = (<HTMLIFrameElement>iframe).contentWindow;
-    // creating the css link
-    let link = document.createElement('link')
-    link.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css')
-    link.setAttribute('rel', 'stylesheet');
+    // creating the bulma css link
+    let bulmaLink = document.createElement('link');
+    // the animate css link
+    let animateLink = document.createElement('link')
+    bulmaLink.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css') 
+    // attributing animate link
+    animateLink.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css') 
+    bulmaLink.setAttribute('rel', 'stylesheet');
+    animateLink.setAttribute('rel', 'stylesheet');
     // appending the link to the head
-    let csslink = frame.document.querySelector('head').appendChild(link)
+     frame.document.querySelector('head').appendChild(bulmaLink)
+     frame.document.querySelector('head').appendChild(animateLink)
     let framebody = <HTMLElement>frame.document.querySelector('body');
  
     this.iframeState.frameData$.subscribe(value => {
@@ -62,7 +67,6 @@ export class IframePanelComponent implements OnInit {
 
     // adding the mouseover event
     framebody.setAttribute('onmouseover', 'parent.mouseover(event)')
-    framebody.setAttribute('onmouseleave', 'parent.mouseleave(event)')
     // adding the ondrag event in the iframe and letting it access the parent window
     framebody.setAttribute('ondrop', 'parent.drop(event)')
     framebody.setAttribute('ondragover', 'parent.dragover(event)')
@@ -181,20 +185,20 @@ export class IframePanelComponent implements OnInit {
       clickFocus.style.left = focus.style.left;
       clickFocus.style.display = 'block';;
       clickInfo.style.height = info.style.height;
-      clickInfo.style.width = info.style.width;
       clickInfo.style.top = (parseInt(coordinates.top + coor.top) - 26) + "px";
       clickInfo.style.left = info.style.left;
       focus.style.display = 'none'
 
       // this is to update the clicked focus element on window scroll
       frame.addEventListener('scroll', () => {
-        clickFocus.style.height = coordinates.height + "px";
-        clickFocus.style.width = coordinates.width + "px";
-        clickFocus.style.top = (coordinates.top + coor.top) + "px";
-        clickFocus.style.left = (coordinates.left + coor.left) + "px";
-        clickInfo.style.width = coordinates.width + "px";
-        clickInfo.style.top = (parseInt(coordinates.top + coor.top) - 26) + "px";
-        clickInfo.style.left = (coordinates.left + coor.left) + "px";
+        let currentCoordinates = this.clickedElement[this.clickedElement.length - 1].getBoundingClientRect();
+        console.log(coordinates)
+        clickFocus.style.top = (currentCoordinates.top + coor.top) + "px";
+        clickFocus.style.left = (currentCoordinates.left + coor.left) + "px";
+        clickInfo.style.top = (parseInt(currentCoordinates.top + coor.top) - 26) + "px";
+        clickInfo.style.left = (currentCoordinates.left + coor.left) + "px";
+        // dont show the focus bar on scroll
+        focus.style.display = 'none';
       })
 
     });
@@ -334,7 +338,6 @@ export class IframePanelComponent implements OnInit {
     if (this.focusState == true) {
       focus.style.display = 'block';
     }
-    info.style.width = coordinates.width + "px";
     info.style.top = (parseInt(coordinates.top + coor.top) - 16) + "px";
     info.style.left = (coordinates.left + coor.left) + "px";
     if (event.target.classList == '') {
@@ -348,7 +351,7 @@ export class IframePanelComponent implements OnInit {
       evv.preventDefault()
       focus.style.display = 'none';
     }, true);
-    // roving the focus div to enable drop
+    // removing the focus div to enable drop
     focus.addEventListener('dragover', () => {
       focus.style.display = 'none';
     })
@@ -359,11 +362,6 @@ export class IframePanelComponent implements OnInit {
 
   }
 
-  mouseleave(event) {
-    // let focus =<HTMLElement> document.querySelector('#focus')
-    // focus.style.display = 'none'
-
-  }
 
 
 }

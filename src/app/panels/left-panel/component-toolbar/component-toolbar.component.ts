@@ -19,9 +19,7 @@ export class ComponentToolbarComponent implements OnInit {
     let dragMe = document.querySelector('.dragMe');
     // still to work on it
     dragMe.addEventListener('dragstart', function(event){
-      console.log(event.target)
       var crt = this.cloneNode(true);
-      console.log(crt)
       crt.style.backgroundColor = "red";
       crt.style.display="block" /* or visibility: hidden, or any of the above */
       document.body.appendChild(crt);
@@ -62,14 +60,12 @@ export class ComponentToolbarComponent implements OnInit {
   // handles layout data drag
   layDrag(event) {
     event.preventDefault()
-    console.log(event.target.innerHTML)
 
   }
 
   // handles form data drag
   formDrag(event) {
     event.preventDefault()
-    console.log(event.target.innerHTML)
 
   }
   // show the hidden preview div

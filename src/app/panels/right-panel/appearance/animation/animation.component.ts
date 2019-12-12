@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { RightPanelService } from '../../../../shared/right-panel.service';
 @Component({
   selector: 'app-animation',
   templateUrl: './animation.component.html',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnimationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private currentElement: RightPanelService) { }
 
   ngOnInit() {
+
+  }
+  animation(event){
+   let  element = <HTMLElement> this.currentElement.edditedElement;
+   element.classList.add('animate');
+   element.classList.add(event.target.value);
+   console.log(element)
   }
 
 }
