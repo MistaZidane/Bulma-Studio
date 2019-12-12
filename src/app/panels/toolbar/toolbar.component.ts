@@ -59,7 +59,6 @@ export class ToolbarComponent implements OnInit {
    else{
        // sending the data to the service
      this.iframeState.iframedata(this.iframeState._iframeContent[(length-1)-this.currentIndex])
-
     this.currentIndex += 1;
    }
   }

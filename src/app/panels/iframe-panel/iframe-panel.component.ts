@@ -3,6 +3,7 @@ import { SizeService } from '../../shared/size.service';
 import { DataService } from '../../shared/data.service';
 import { StateService } from '../../shared/state.service';
 import { RightPanelService } from '../../shared/right-panel.service';
+import { ElementPathService } from '../../shared/element-path.service'
 @Component({
   selector: 'app-iframe-panel',
   templateUrl: './iframe-panel.component.html',
@@ -23,7 +24,7 @@ export class IframePanelComponent implements OnInit {
   public elementPath = [];
   // path event
   public pathEvent: any;
-  constructor(private size: SizeService, private data: DataService, private iframeState: StateService, private rightPanelData: RightPanelService) {
+  constructor(private size: SizeService, private data: DataService, private iframeState: StateService, private rightPanelData: RightPanelService, private elementPathService: ElementPathService) {
     // perant methods setup so iframe could access the methods here
     (<any>window).drop = this.drop.bind(this);
     (<any>window).dragover = this.dragover.bind(this);
@@ -34,6 +35,7 @@ export class IframePanelComponent implements OnInit {
 
 
   ngOnInit() {
+  
     //setting the iframe data
     let iframe = <HTMLElement>document.querySelector('#iframe');
     let frame = (<HTMLIFrameElement>iframe).contentWindow;
@@ -44,7 +46,7 @@ export class IframePanelComponent implements OnInit {
     // appending the link to the head
     let csslink = frame.document.querySelector('head').appendChild(link)
     let framebody = <HTMLElement>frame.document.querySelector('body');
-
+ 
     this.iframeState.frameData$.subscribe(value => {
       // making sure that the value of the frame is not underfined
       if (value == undefined) {
@@ -70,7 +72,6 @@ export class IframePanelComponent implements OnInit {
 
 
     })
-
 
     // setting the size of the iframe
     this.size.sizze$.subscribe(data => {
@@ -159,12 +160,13 @@ export class IframePanelComponent implements OnInit {
       this.elementPath = [];
       [...this.pathEvent.path].forEach((name) => {
         if (name.localName !== undefined) {
-          this.elementPath.push(name.localName)
+          this.elementPath.unshift(name.localName)
 
         }
 
       })
-      console.log(this.elementPath)
+      // sending the data to the element path service
+      this.elementPathService.elementPath(this.elementPath);
       // working with the click focus bar
       let clickFocus = <HTMLElement>document.querySelector('#clickFocus')
       let clickInfo = <HTMLElement>document.querySelector('#clickInfo')
@@ -186,9 +188,6 @@ export class IframePanelComponent implements OnInit {
 
       // this is to update the clicked focus element on window scroll
       frame.addEventListener('scroll', () => {
-        console.log('dv')
-
-
         clickFocus.style.height = coordinates.height + "px";
         clickFocus.style.width = coordinates.width + "px";
         clickFocus.style.top = (coordinates.top + coor.top) + "px";
@@ -225,7 +224,7 @@ export class IframePanelComponent implements OnInit {
       let parent = this.currentEvent.parentNode;
       let clonedNode = this.currentEvent.cloneNode(true)
       this.currentEvent.parentNode.insertBefore(clonedNode, this.currentEvent.nextSibling);
-
+      this.iframeState.iframeStateData = framebody.innerHTML;
     })
     // dont show the clickfocus after the dellete has taken place
     clickFocus.style.display = 'none'

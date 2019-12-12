@@ -8,16 +8,19 @@
         <div class="column  subTools">
             <p class="heading">Text align</p>
             <mat-button-toggle-group #group="matButtonToggleGroup" class="textAlign">
-                <mat-button-toggle value="left" aria-label="Text align left">
+                    <mat-button-toggle value="" aria-label="Text align normal" (change)="align($event.value)">
+                            <mat-icon>clear</mat-icon>
+                        </mat-button-toggle>
+                <mat-button-toggle value="left" aria-label="Text align left" (change)="align($event.value)">
                     <mat-icon>format_align_left</mat-icon>
                 </mat-button-toggle>
-                <mat-button-toggle value="center" aria-label="Text align center">
+                <mat-button-toggle value="center" aria-label="Text align center" (change)="align($event.value)">
                     <mat-icon>format_align_center</mat-icon>
                 </mat-button-toggle>
-                <mat-button-toggle value="right" aria-label="Text align right">
+                <mat-button-toggle value="right" aria-label="Text align right" (change)="align($event.value)">
                     <mat-icon>format_align_right</mat-icon>
                 </mat-button-toggle>
-                <mat-button-toggle value="justify" aria-label="Text align justify">
+                <mat-button-toggle value="justify" aria-label="Text align justify" (change)="align($event.value)">
                     <mat-icon>format_align_justify</mat-icon>
                 </mat-button-toggle>
             </mat-button-toggle-group>
@@ -27,21 +30,15 @@
     <div class="columns">
         <div class="column  subTools">
             <p class="heading">Text Options</p>
-            <mat-button-toggle-group #group="matButtonToggleGroup" class="textOptions">
-                <mat-button-toggle value="left" aria-label="Text align left">
+            <mat-button-toggle-group #group="matButtonToggleGroup" class="textOptions" multiple>
+                <mat-button-toggle value="left" aria-label="Text align left" (click)="italic()">
                     <mat-icon>format_italic</mat-icon>
                 </mat-button-toggle>
-                <mat-button-toggle value="center" aria-label="Text align center">
+                <mat-button-toggle value="center" aria-label="Text align center" (click)="bold($event)">
                     <mat-icon>format_bold</mat-icon>
                 </mat-button-toggle>
-                <mat-button-toggle value="right" aria-label="Text align right">
+                <mat-button-toggle value="right" aria-label="Text align right" (click)="underline()">
                     <mat-icon>format_underlined</mat-icon>
-                </mat-button-toggle>
-                <mat-button-toggle value="justify" aria-label="Text align justify">
-                    <mat-icon>format_textdirection_l_to_r</mat-icon>
-                </mat-button-toggle>
-                <mat-button-toggle value="justify" aria-label="Text align justify">
-                    <mat-icon>format_textdirection_r_to_l</mat-icon>
                 </mat-button-toggle>
             </mat-button-toggle-group>
         </div>
@@ -59,7 +56,7 @@
             <div class="column is-6">
                 <h1 class="heading">Background Color</h1>
                 <div class="control">
-                    <div class="input"><span class="bgGolor-picker">BackGroungd</span></div>
+                    <div class="input"><span class="bgGolor-picker"></span></div>
                 </div>
     
             </div>
@@ -74,37 +71,37 @@
         <div class="columns">
                 <div class="column subTools">
                     <span class="heading">Opacity</span>
-                    <mat-slider></mat-slider>
+                    <mat-slider min="0" max="1" step="0.1" (change)="opacity($event)"></mat-slider>
                 </div>
             </div>
             <div class="columns">
                 <div class="column subTools">
                     <span class="heading">brightness</span>
-                    <mat-slider></mat-slider>
+                    <mat-slider min="0" max="400"  (change)="brightness($event)"></mat-slider>
                 </div>
             </div>
             <div class="columns">
                 <div class="column subTools">
                     <span class="heading">saturation</span>
-                    <mat-slider></mat-slider>
+                    <mat-slider min="0" max="100" name="" (change)="saturation($event)"></mat-slider>
                 </div>
             </div>
             <div class="columns">
                 <div class="column subTools">
                     <span class="heading">contrast</span>
-                    <mat-slider></mat-slider>
+                    <mat-slider min="0" max="100" name="" (change)="contrast($event)"></mat-slider>
                 </div>
             </div>
             <div class="columns">
                 <div class="column subTools">
-                    <span class="heading">hue</span>
-                    <mat-slider></mat-slider>
+                    <span class="heading">blur</span>
+                    <mat-slider min="0" max="100" name="" (change)="blur($event)"></mat-slider>
                 </div>
             </div>
             <div class="columns">
                 <div class="column subTools">
                     <span class="heading">sepia</span>
-                    <mat-slider color="accent"></mat-slider>
+                    <mat-slider min="0" max="100" name="" (change)="sepia($event)" color="accent"></mat-slider>
                 </div>
             </div>
     </mat-expansion-panel>

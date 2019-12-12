@@ -4,13 +4,13 @@
         <div class="column is-6">
             <p class="heading">Display</p>
             <div class="select">
-                <select class="" id="width">
-                    <option>Block</option>
-                    <option>Inline</option>
-                    <option>Inline-block</option>
-                    <option>None</option>
-                    <option>Flex</option>
-                    <option>Grid</option>
+                <select class="" id="width" (change)="display($event)">
+                    <option value="block">Block</option>
+                    <option value="inline">Inline</option>
+                    <option value="inline-block">Inline-block</option>
+                    <option value="none">None</option>
+                    <option value="flex">Flex</option>
+                    <option value="grid">Grid</option>
                 </select>
             </div>
         </div>
@@ -30,13 +30,18 @@
         <div class="column">
                 <p class="heading">Float</p>
             <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="float">
-                <mat-button-toggle value="bold"> <mat-icon>clear</mat-icon></mat-button-toggle>
-                <mat-button-toggle value="italic"><mat-icon>format_align_left</mat-icon></mat-button-toggle>
-                <mat-button-toggle value="underline"><mat-icon>format_align_right</mat-icon></mat-button-toggle>
+                <mat-button-toggle value=" " (change)="float($event.value)"> <mat-icon>clear</mat-icon></mat-button-toggle>
+                <mat-button-toggle value="left" (change)="float($event.value)"><mat-icon>format_align_left</mat-icon></mat-button-toggle>
+                <mat-button-toggle value="right" (change)="float($event.value)"><mat-icon>format_align_right</mat-icon></mat-button-toggle>
             </mat-button-toggle-group>
         </div>
     </div>
     <span class="heading comText">Layout <i class="material-icons sign">keyboard_arrow_down</i> </span>
+ 
+<!-- layout  -->
+<div class="columns property">
+
+</div>
 
     <div class="columns width property">
         <div class="column is-5">

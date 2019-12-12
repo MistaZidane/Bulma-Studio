@@ -11,35 +11,22 @@ export class LayoutComponent implements OnInit {
   constructor(private rightPanelData: RightPanelService) { }
 
   ngOnInit() {
-    let width = <HTMLSelectElement>document.querySelector('#width');
-    let widthInput = <HTMLInputElement>document.querySelector('#widthInput');
-    let widthUnit = <HTMLSelectElement>document.querySelector('#widthUnit');
-    this.unitAndValue[0] = width.value;
-    this.unitAndValue[1] = widthUnit.value;
-    width.addEventListener('change', () => {
-      let element = <HTMLElement>this.rightPanelData.edditedElement;
-      if(width.value == 'Width')element.style.width = `${widthInput.value}${widthUnit.value}`;
-      else if(width.value == 'Min-width')element.style.minWidth = `${widthInput.value}${widthUnit.value}`;
-      else if(width.value == 'Max-width')element.style.maxWidth = `${widthInput.value}${widthUnit.value}`;
-    })
-    widthInput.addEventListener('change',()=>{
-      let element = <HTMLElement>this.rightPanelData.edditedElement;
-      if(width.value == 'Width')element.style.width = `${widthInput.value}${widthUnit.value}`;
-      else if(width.value == 'Min-width')element.style.minWidth = `${widthInput.value}${widthUnit.value}`;
-      else if(width.value == 'Max-width')element.style.maxWidth = `${widthInput.value}${widthUnit.value}`;
-    })
-    widthUnit.addEventListener('change', ()=>{
-      let element = <HTMLElement>this.rightPanelData.edditedElement;
-      if(width.value == 'Width')element.style.width = `${widthInput.value}${widthUnit.value}`;
-      else if(width.value == 'Min-width')element.style.minWidth = `${widthInput.value}${widthUnit.value}`;
-      else if(width.value == 'Max-width')element.style.maxWidth = `${widthInput.value}${widthUnit.value}`;
-    })
 
   }
-  // setting up the array to carry width data
-
-  //  let dd= <HTMLElement> this.rightPanelData.edditedElement;
-  //  dd.style.color = 'red';
-
+  // working on display
+  display(event) {
+    let element = <HTMLElement>this.rightPanelData.edditedElement;
+    element.style.display = event.target.value
+  }
+  // working on float 
+  float(value) {
+    let element = <HTMLElement>this.rightPanelData.edditedElement;
+    if (value == ' ') {
+      element.style.removeProperty('float')
+    }
+    else {
+      element.style.cssFloat = value;
+    }
+  }
 
 }

@@ -1,7 +1,5 @@
-<div class="buttons are-small path">
-        <button class="button">Html</button>
-        <button class="button">Body</button>
-        <button class="button">Div</button>
-        <button class="button">Div</button>
-        <button class="button is-primary element">Span</button>
+<div class="buttons are-small path" >
+    <div *ngFor= "let element of elementPath; let last = last" class="btnPath">
+        <button [class.is-primary]="last== true" class="button">{{element}}</button>
+    </div>        
     </div>
