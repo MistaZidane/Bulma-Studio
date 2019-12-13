@@ -14,6 +14,7 @@ public elementPath: any;
     if(this.path.path$ != undefined){
       this.path.path$.subscribe( (data)=>{
         this.elementPath = data;
+        console.log(this.elementPath);
     })
     }
   }

@@ -117,10 +117,22 @@ public filtersArray = [];
         }
 
     }
+    // line throug
+    lineThrough(){
+        let element = <HTMLElement>this.rightPanelData.edditedElement;
+
+        if (element.style.textDecoration == 'underline' || element.style.textDecoration == 'line-through') {
+            element.style.removeProperty('text-decoration')
+        }
+        else {
+            element.style.textDecoration = 'line-through';
+        }
+
+    }
     // to underline
     underline() {
         let element = <HTMLElement>this.rightPanelData.edditedElement;
-        if (element.style.textDecoration == 'underline') {
+        if (element.style.textDecoration == 'underline' || element.style.textDecoration == 'line-through' ) {
             element.style.removeProperty('text-decoration')
         }
         else {

@@ -1,4 +1,4 @@
-#focus, #clickfocus{
+#focus, #clickFocus{
     display: none;
     position: fixed;
     height: 923px;
@@ -9,6 +9,9 @@
     z-index: 99999;
     pointer-events: none;
 }
+#clickFocus{
+    background-color: rgba(166, 166, 255,0.2);
+}
 #info, #clickInfo{
     float: left;
     position: fixed;
@@ -16,6 +19,7 @@
     font-size: x-small;
     background-color: rgb(34, 148, 227);
     color: rgb(255, 255, 255);
+    display: none;
 }
 #info{
     width: 70px !important;
