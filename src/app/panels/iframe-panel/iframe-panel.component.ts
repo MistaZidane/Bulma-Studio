@@ -37,18 +37,23 @@ export class IframePanelComponent implements OnInit {
     //setting the iframe data
     let iframe = <HTMLElement>document.querySelector('#iframe');
     let frame = (<HTMLIFrameElement>iframe).contentWindow;
+    // my link
+    let myLink = document.createElement('link');
+    myLink.setAttribute('href', './assets/my.css');
+    myLink.setAttribute('rel', 'stylesheet');
     // creating the bulma css link
     let bulmaLink = document.createElement('link');
     // the animate css link
-    let animateLink = document.createElement('link')
-    bulmaLink.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css')
+    let animateLink = document.createElement('link');
+    bulmaLink.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css');
     // attributing animate link
-    animateLink.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css')
+    animateLink.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css');
     bulmaLink.setAttribute('rel', 'stylesheet');
     animateLink.setAttribute('rel', 'stylesheet');
     // appending the link to the head
     frame.document.querySelector('head').appendChild(bulmaLink)
     frame.document.querySelector('head').appendChild(animateLink)
+    frame.document.querySelector('head').appendChild(myLink);
     let framebody = <HTMLElement>frame.document.querySelector('body');
 
     this.iframeState.frameData$.subscribe(value => {
@@ -96,7 +101,11 @@ export class IframePanelComponent implements OnInit {
     })
 
 
-
+framebody.addEventListener('mousemove',(event)=>{
+  //  if(event.target.localName == 'body'){
+  //    console.log('dfvb')
+  //  } 
+} )
 
 
     // for displaying the clickable focus bar
@@ -124,14 +133,14 @@ export class IframePanelComponent implements OnInit {
       clickFocus.style.top = (coordinates.top + coor.top) + "px";
       clickFocus.style.left = (coordinates.left + coor.left) + "px";
       clickInfo.style.height = info.style.height;
-      console.log('elese', coordinates)
       clickFocus.style.display = 'block';
       clickInfo.style.display = 'grid';
       clickInfo.style.height = info.style.height;
       clickInfo.style.top = (coordinates.top + coor.top - 26) + "px";
       clickInfo.style.left = (coordinates.left + coor.left) + "px";
       frame.addEventListener('scroll', () => {
-        let currentCoordinates = element.getBoundingClientRect();
+        coor = iframe.getBoundingClientRect();
+        let currentCoordinates = this.clickedElement[this.clickedElement.length - 1].getBoundingClientRect();
         clickFocus.style.top = (currentCoordinates.top + coor.top) + "px";
         clickFocus.style.left = (currentCoordinates.left + coor.left) + "px";
         clickInfo.style.top = (currentCoordinates.top + coor.top) - 26 + "px";
@@ -141,7 +150,6 @@ export class IframePanelComponent implements OnInit {
         // dont show the focus bar on scroll
         focus.style.display = 'none';
         info.style.display = 'none';
-        console.log('dffffddfdf')
       })
     }, true);
 
@@ -214,6 +222,8 @@ export class IframePanelComponent implements OnInit {
     parentSelector.addEventListener('click', (e) => {
       e.preventDefault();
       let parentElementt = <HTMLElement>this.clickedElement[this.clickedElement.length - 1].parentElement;
+      this.clickedElement.push(parentElementt)
+      this.clickedElement.shift();
       parentElementt.click();
     })
 
@@ -223,7 +233,8 @@ export class IframePanelComponent implements OnInit {
     // making it posible for us to edit text through dblclick
     framebody.addEventListener('dblclick', (event) => {
       clickFocus.style.display = 'none';
-      clickInfo.style.display = 'none'
+      clickInfo.style.display = 'none';
+      info.style.display = 'none';
       let element = <HTMLElement>event.target;
       // adding the contenteditable attribute
       element.setAttribute('contenteditable', 'true');
@@ -273,8 +284,10 @@ export class IframePanelComponent implements OnInit {
     line.style.top = (coordinates.top + coor.top) + "px";
     line.style.left = (coordinates.left + coor.left) + "px";
     line.style.display = 'block';
-    let info = <HTMLElement>document.querySelector('#info')
-
+    let info = <HTMLElement>document.querySelector('#info');
+ 
+    // calling the mouseover event in the dragover method to show us where the dragover is
+    // this.mouseover(event);
   }
 
 
@@ -294,7 +307,15 @@ export class IframePanelComponent implements OnInit {
     event.target.innerHTML += this.data.recievedData;
     this.iframeState.iframeStateData = framebody.innerHTML;
     line.style.display = 'none'
-    console.log(event)
+    // let element = event.target.getBoundingClientRect();
+    // let prev = event.target.previousElementSibling.getBoundingClientRect();
+    // let next = event.target.nextElementSibling.getBoundingClientRect();
+    // console.log(prev, 'prev');
+    // console.log(next, 'next');
+    // console.log(element, 'cure');
+    // console.log('cu - prev', element.top- prev.top);
+    // console.log('cu - next', element.top- next.top);
+
   }
 
 
