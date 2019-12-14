@@ -228,6 +228,26 @@ export class IframePanelComponent implements OnInit {
     })
 
 
+    // moving element up
+    let moveDown = document.querySelector('#moveDown');
+    moveDown.addEventListener('click', (e) => {
+      e.preventDefault();
+      // clone the node first
+      try {
+        let clonedNode = this.clickedElement[this.clickedElement.length - 1].cloneNode(true)
+        let parentElementt = <HTMLElement>this.clickedElement[this.clickedElement.length - 1].parentElement;
+        let nextElement = <HTMLElement>this.clickedElement[this.clickedElement.length - 1].nextElementSibling;
+        parentElementt.insertBefore(clonedNode, nextElement.nextElementSibling);
+        parentElementt.removeChild(this.clickedElement[this.clickedElement.length - 1]);
+        clickFocus.style.display = 'none';
+        clickInfo.style.display = 'none';
+      }
+      catch{
+
+      }
+
+    })
+
 
 
     // making it posible for us to edit text through dblclick
