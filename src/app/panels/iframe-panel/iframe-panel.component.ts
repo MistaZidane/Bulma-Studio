@@ -39,13 +39,13 @@ export class IframePanelComponent implements OnInit {
     let frame = (<HTMLIFrameElement>iframe).contentWindow;
     // my link
     let myLink = document.createElement('link');
-    myLink.setAttribute('href', './assets/my.css');
+    myLink.setAttribute('href', './assets/framebody.css');
     myLink.setAttribute('rel', 'stylesheet');
     // creating the bulma css link
     let bulmaLink = document.createElement('link');
     // the animate css link
     let animateLink = document.createElement('link');
-    bulmaLink.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css');
+    bulmaLink.setAttribute('href', './assets/bulma/bulma.min.css');
     // attributing animate link
     animateLink.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css');
     bulmaLink.setAttribute('rel', 'stylesheet');
