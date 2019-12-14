@@ -200,8 +200,7 @@ export class IframePanelComponent implements OnInit {
       // adding an event listener to remove the contenteditable attribute
       this.clickedElement[this.clickedElement.length - 1].addEventListener('blur', () => {
         this.clickedElement[this.clickedElement.length - 1].removeAttribute('contenteditable');
-        // on blur setting focus state to true
-        
+        // on blur setting focus state to true 
         this.focusState = true;
       })
     });
@@ -304,7 +303,6 @@ export class IframePanelComponent implements OnInit {
     focus.style.width = coordinates.width + "px";
     focus.style.top = (coordinates.top + coor.top) + "px";
     focus.style.left = (coordinates.left + coor.left) + "px";
-    let computedStyles = frame.getComputedStyle(event.target, '');
     focus.style.zIndex = '99999';
     // focus state to show or hide
     if (this.focusState == true) {

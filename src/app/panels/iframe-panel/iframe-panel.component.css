@@ -29,6 +29,6 @@ mat-icon{
 }
 #clickInfo {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 70px !important;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 95px !important;
 }
