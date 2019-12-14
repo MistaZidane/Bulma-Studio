@@ -101,11 +101,11 @@ export class IframePanelComponent implements OnInit {
     })
 
 
-framebody.addEventListener('mousemove',(event)=>{
-  //  if(event.target.localName == 'body'){
-  //    console.log('dfvb')
-  //  } 
-} )
+    framebody.addEventListener('mousemove', (event) => {
+      //  if(event.target.localName == 'body'){
+      //    console.log('dfvb')
+      //  } 
+    })
 
 
     // for displaying the clickable focus bar
@@ -256,16 +256,21 @@ framebody.addEventListener('mousemove',(event)=>{
 
     // tracking the window resize to update the click focus bar
     frame.addEventListener('resize', () => {
+
       let element = <HTMLElement>this.clickedElement[this.clickedElement.length - 1];
-      let currentCoordinates = element.getBoundingClientRect();
-      let coor = iframe.getBoundingClientRect();
-      clickFocus.style.top = (currentCoordinates.top + coor.top) + "px";
-      clickFocus.style.left = (currentCoordinates.left + coor.left) + "px";
-      clickInfo.style.top = (currentCoordinates.top + coor.top) - 26 + "px";
-      clickInfo.style.left = (currentCoordinates.left + coor.left) + "px";
-      clickInfo.style.height = info.style.height;
-      clickFocus.style.width = currentCoordinates.width + 'px';
-      clickFocus.style.height = currentCoordinates.height + 'px';
+      // so that even wen resizing without selecting and element
+      if (element != undefined) {
+        let currentCoordinates = element.getBoundingClientRect();
+        let coor = iframe.getBoundingClientRect();
+        clickFocus.style.top = (currentCoordinates.top + coor.top) + "px";
+        clickFocus.style.left = (currentCoordinates.left + coor.left) + "px";
+        clickInfo.style.top = (currentCoordinates.top + coor.top) - 26 + "px";
+        clickInfo.style.left = (currentCoordinates.left + coor.left) + "px";
+        clickInfo.style.height = info.style.height;
+        clickFocus.style.width = currentCoordinates.width + 'px';
+        clickFocus.style.height = currentCoordinates.height + 'px';
+      }
+
     })
   }
 
@@ -279,13 +284,13 @@ framebody.addEventListener('mousemove',(event)=>{
     let iframe = <HTMLElement>document.querySelector('#iframe');
     let coor = iframe.getBoundingClientRect();
     let line = <HTMLElement>document.querySelector('#line');
-    line.style.width = coordinates.width + "px";
-    line.style.backgroundColor = 'blue';
-    line.style.top = (coordinates.top + coor.top) + "px";
-    line.style.left = (coordinates.left + coor.left) + "px";
-    line.style.display = 'block';
+    // line.style.width = coordinates.width + "px";
+    // line.style.backgroundColor = 'blue';
+    // line.style.top = (coordinates.top + coor.top) + "px";
+    // line.style.left = (coordinates.left + coor.left) + "px";
+    // line.style.display = 'block';
     let info = <HTMLElement>document.querySelector('#info');
- 
+
     // calling the mouseover event in the dragover method to show us where the dragover is
     // this.mouseover(event);
   }

@@ -15,18 +15,26 @@ export class LayoutComponent implements OnInit {
   }
   // working on display
   display(event) {
-    let element = <HTMLElement>this.rightPanelData.edditedElement;
-    element.style.display = event.target.value
+    try{
+      let element = <HTMLElement>this.rightPanelData.edditedElement;
+    element.style.display = event.target.value;
+    }
+    catch{}
+    
   }
   // working on float 
   float(value) {
-    let element = <HTMLElement>this.rightPanelData.edditedElement;
-    if (value == ' ') {
-      element.style.removeProperty('float')
+    try{
+      let element = <HTMLElement>this.rightPanelData.edditedElement;
+      if (value == ' ') {
+        element.style.removeProperty('float')
+      }
+      else {
+        element.style.cssFloat = value;
+      }
     }
-    else {
-      element.style.cssFloat = value;
-    }
+    catch{}
+   
   }
 
 }

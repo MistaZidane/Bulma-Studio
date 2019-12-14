@@ -17,7 +17,7 @@ export class LeftToolbarComponent implements OnInit {
   }
   phone() {
     let data = {
-      "y": '525px',
+      "y": '842px',
       "x": '325px',
       'state': 'true'
     }
@@ -29,7 +29,7 @@ export class LeftToolbarComponent implements OnInit {
   }
   tablet() {
     let data = {
-      "y": '914px',
+      "y": '842px',
       "x": '668px',
       'state': 'true'
     }
@@ -53,7 +53,7 @@ export class LeftToolbarComponent implements OnInit {
   }
   dextop() {
     let data = {
-      "x": '94%',
+      "x": '95%',
       "y": '942px',
       'state': 'true'
     }

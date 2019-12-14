@@ -7,7 +7,7 @@ import { RightPanelService } from '../../../shared/right-panel.service'
     styleUrls: ['./sub-tools.component.css']
 })
 export class SubToolsComponent implements OnInit {
-public filtersArray = [];
+    public filtersArray = [];
     constructor(private rightPanelData: RightPanelService) { }
 
     ngOnInit() {
@@ -96,91 +96,136 @@ public filtersArray = [];
     }
     // to bold text
     bold(event) {
-        let element = <HTMLElement>this.rightPanelData.edditedElement;
 
-        if (element.style.fontWeight == 'bold') {
-            element.style.removeProperty('font-weight')
+        try {
+            let element = <HTMLElement>this.rightPanelData.edditedElement;
+            if (element.style.fontWeight == 'bold') {
+                element.style.removeProperty('font-weight')
+            }
+            else {
+                element.style.fontWeight = 'bold';
+            }
         }
-        else {
-            element.style.fontWeight = 'bold';
-        }
+        catch{ }
+
     }
     // to italise
     italic() {
-        let element = <HTMLElement>this.rightPanelData.edditedElement;
 
-        if (element.style.fontStyle == "italic") {
-            element.style.removeProperty('font-style')
+        try {
+            let element = <HTMLElement>this.rightPanelData.edditedElement;
+            if (element.style.fontStyle == "italic") {
+                element.style.removeProperty('font-style')
+            }
+            else {
+                element.style.fontStyle = 'italic';
+            }
         }
-        else {
-            element.style.fontStyle = 'italic';
-        }
+        catch{ }
+
 
     }
     // line throug
-    lineThrough(){
-        let element = <HTMLElement>this.rightPanelData.edditedElement;
+    lineThrough() {
 
-        if (element.style.textDecoration == 'underline' || element.style.textDecoration == 'line-through') {
-            element.style.removeProperty('text-decoration')
+        try {
+            let element = <HTMLElement>this.rightPanelData.edditedElement;
+            if (element.style.textDecoration == 'underline' || element.style.textDecoration == 'line-through') {
+                element.style.removeProperty('text-decoration')
+            }
+            else {
+                element.style.textDecoration = 'line-through';
+            }
         }
-        else {
-            element.style.textDecoration = 'line-through';
-        }
+        catch{ }
+
 
     }
     // to underline
     underline() {
-        let element = <HTMLElement>this.rightPanelData.edditedElement;
-        if (element.style.textDecoration == 'underline' || element.style.textDecoration == 'line-through' ) {
-            element.style.removeProperty('text-decoration')
+
+        try {
+            let element = <HTMLElement>this.rightPanelData.edditedElement;
+            if (element.style.textDecoration == 'underline' || element.style.textDecoration == 'line-through') {
+                element.style.removeProperty('text-decoration')
+            }
+            else {
+                element.style.textDecoration = 'underline';
+            }
         }
-        else {
-            element.style.textDecoration = 'underline';
-        }
+        catch{ }
+
     }
     // text align 
     align(value) {
-        let element = <HTMLElement>this.rightPanelData.edditedElement;
-        if (value == '') {
-            element.style.removeProperty('text-align')
+        try {
+            let element = <HTMLElement>this.rightPanelData.edditedElement;
+            if (value == '') {
+                element.style.removeProperty('text-align')
+            }
+            else {
+                element.style.textAlign = value;
+            }
         }
-        else {
-            element.style.textAlign = value;
-        }
+        catch{ }
+
     }
     // filters 
-        // opacity
+    // opacity
     opacity(event) {
-        let element = <HTMLElement>this.rightPanelData.edditedElement;
-        element.style.opacity = event.value;
-        console.log(element.style.opacity);
+        try {
+            let element = <HTMLElement>this.rightPanelData.edditedElement;
+            element.style.opacity = event.value;
+            console.log(element.style.opacity);
+        }
+        catch{ }
+
     }
-       // brigthness
+    // brigthness
     brightness(event) {
-        let element = <HTMLElement>this.rightPanelData.edditedElement;
-        this.filtersArray[0] = ' brightness(' + event.value + '%) ';
-        element.style.filter = this.filtersArray.join('');   
+        try {
+            let element = <HTMLElement>this.rightPanelData.edditedElement;
+            this.filtersArray[0] = ' brightness(' + event.value + '%) ';
+            element.style.filter = this.filtersArray.join('');
+        }
+        catch{ }
+
     }
     saturation(event) {
-        let element = <HTMLElement>this.rightPanelData.edditedElement;
-        this.filtersArray[1] = 'saturate(' + event.value + '%)';
-        element.style.filter = this.filtersArray.join('');
+        try {
+            let element = <HTMLElement>this.rightPanelData.edditedElement;
+            this.filtersArray[1] = 'saturate(' + event.value + '%)';
+            element.style.filter = this.filtersArray.join('');
+        }
+        catch{ }
+
     }
     contrast(event) {
-        let element = <HTMLElement>this.rightPanelData.edditedElement;
-        this.filtersArray[2] = 'contrast(' + event.value + '%)';
-        element.style.filter = this.filtersArray.join('');
+        try {
+            let element = <HTMLElement>this.rightPanelData.edditedElement;
+            this.filtersArray[2] = 'contrast(' + event.value + '%)';
+            element.style.filter = this.filtersArray.join('');
+        }
+        catch{ }
+
     }
     blur(event) {
-        let element = <HTMLElement>this.rightPanelData.edditedElement;
-        this.filtersArray[4] = 'blur(' + event.value + 'px)';
-        element.style.filter = this.filtersArray.join('');
+        try {
+            let element = <HTMLElement>this.rightPanelData.edditedElement;
+            this.filtersArray[4] = 'blur(' + event.value + 'px)';
+            element.style.filter = this.filtersArray.join('');
+        }
+        catch{ }
+
     }
     sepia(event) {
-        let element = <HTMLElement>this.rightPanelData.edditedElement;
-        this.filtersArray[3] = 'sepia(' + event.value + '%)';
-        element.style.filter = this.filtersArray.join('');
+        try {
+            let element = <HTMLElement>this.rightPanelData.edditedElement;
+            this.filtersArray[3] = 'sepia(' + event.value + '%)';
+            element.style.filter = this.filtersArray.join('');
+        }
+        catch{ }
+
     }
 
 }
