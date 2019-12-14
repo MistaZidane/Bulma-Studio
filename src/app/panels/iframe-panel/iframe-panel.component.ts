@@ -88,7 +88,7 @@ export class IframePanelComponent implements OnInit {
 
 
 
-    
+
     // hidden the focus bar
     framebody.addEventListener('mouseout', () => {
       focus.style.display = 'none';
@@ -115,19 +115,21 @@ export class IframePanelComponent implements OnInit {
       this.clickedElement.push(event.target);
       this.rightPanelData.edditedElement = event.target;
       let element = <HTMLElement>event.target;
-      let coordinates = element.getBoundingClientRect();
+      let coordinates = this.clickedElement[this.clickedElement.length - 1].getBoundingClientRect();
       let coor = iframe.getBoundingClientRect();
       let clickFocus = <HTMLElement>document.querySelector('#clickFocus')
       let clickInfo = <HTMLElement>document.querySelector('#clickInfo')
-      clickFocus.style.height = focus.style.height;
-      clickFocus.style.width = focus.style.width;
-      clickFocus.style.top = focus.style.top;
-      clickFocus.style.left = focus.style.left;
+      clickFocus.style.height = coordinates.height + "px";
+      clickFocus.style.width = coordinates.width + "px";
+      clickFocus.style.top = (coordinates.top + coor.top) + "px";
+      clickFocus.style.left = (coordinates.left + coor.left) + "px";
+      clickInfo.style.height = info.style.height;
+      console.log('elese', coordinates)
       clickFocus.style.display = 'block';
       clickInfo.style.display = 'grid';
       clickInfo.style.height = info.style.height;
       clickInfo.style.top = (coordinates.top + coor.top - 26) + "px";
-      clickInfo.style.left = info.style.left; 
+      clickInfo.style.left = (coordinates.left + coor.left) + "px";
       frame.addEventListener('scroll', () => {
         let currentCoordinates = element.getBoundingClientRect();
         clickFocus.style.top = (currentCoordinates.top + coor.top) + "px";
@@ -136,11 +138,12 @@ export class IframePanelComponent implements OnInit {
         clickInfo.style.left = (currentCoordinates.left + coor.left) + "px";
         // clickFocus.style.display = 'none';
         // clickInfo.style.display = 'none';
-         // dont show the focus bar on scroll
+        // dont show the focus bar on scroll
         focus.style.display = 'none';
         info.style.display = 'none';
+        console.log('dffffddfdf')
       })
-    })
+    }, true);
 
 
 
@@ -173,9 +176,9 @@ export class IframePanelComponent implements OnInit {
       event.preventDefault();
       clickFocus.style.display = 'none';
       clickInfo.style.display = 'none';
-      let parent =  this.clickedElement[this.clickedElement.length - 1].parentNode;
-      let clonedNode =  this.clickedElement[this.clickedElement.length - 1].cloneNode(true)
-      parent.insertBefore(clonedNode,  this.clickedElement[this.clickedElement.length - 1].nextSibling);
+      let parent = this.clickedElement[this.clickedElement.length - 1].parentNode;
+      let clonedNode = this.clickedElement[this.clickedElement.length - 1].cloneNode(true)
+      parent.insertBefore(clonedNode, this.clickedElement[this.clickedElement.length - 1].nextSibling);
       this.iframeState.iframeStateData = framebody.innerHTML;
     })
     // dont show the clickfocus after the dellete has taken place
@@ -206,13 +209,22 @@ export class IframePanelComponent implements OnInit {
     });
 
 
+    // selecting parent
+    let parentSelector = document.querySelector('#parent');
+    parentSelector.addEventListener('click', (e) => {
+      e.preventDefault();
+      let parentElementt = <HTMLElement>this.clickedElement[this.clickedElement.length - 1].parentElement;
+      parentElementt.click();
+    })
+
+
 
 
     // making it posible for us to edit text through dblclick
     framebody.addEventListener('dblclick', (event) => {
       clickFocus.style.display = 'none';
       clickInfo.style.display = 'none'
-      let element = <HTMLElement> event.target;
+      let element = <HTMLElement>event.target;
       // adding the contenteditable attribute
       element.setAttribute('contenteditable', 'true');
       // making it auto focus when you click the edit icon
@@ -232,8 +244,8 @@ export class IframePanelComponent implements OnInit {
 
 
     // tracking the window resize to update the click focus bar
-    frame.addEventListener('resize',()=>{
-      let element = <HTMLElement> this.clickedElement[this.clickedElement.length-1];
+    frame.addEventListener('resize', () => {
+      let element = <HTMLElement>this.clickedElement[this.clickedElement.length - 1];
       let currentCoordinates = element.getBoundingClientRect();
       let coor = iframe.getBoundingClientRect();
       clickFocus.style.top = (currentCoordinates.top + coor.top) + "px";
@@ -317,7 +329,6 @@ export class IframePanelComponent implements OnInit {
     else if (event.target.classList !== '') {
       info.innerHTML = event.target.classList;
     }
-
   }
 
 }
