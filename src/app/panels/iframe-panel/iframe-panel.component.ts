@@ -55,7 +55,6 @@ export class IframePanelComponent implements OnInit {
     frame.document.querySelector('head').appendChild(animateLink)
     frame.document.querySelector('head').appendChild(myLink);
     let framebody = <HTMLElement>frame.document.querySelector('body');
-
     this.iframeState.frameData$.subscribe(value => {
       // making sure that the value of the frame is not underfined
       if (value == undefined) {
@@ -75,7 +74,17 @@ export class IframePanelComponent implements OnInit {
     framebody.setAttribute('ondrop', 'parent.drop(event)')
     framebody.setAttribute('ondragover', 'parent.dragover(event)')
     framebody.style.backgroundColor = "white";
-
+    ////////////////////////////////////////////
+    let mutations = new MutationObserver((data) => {
+      console.log(framebody.innerHTML)
+    });
+    mutations.observe(framebody, {
+      attributes: true,
+      subtree: true,
+      childList: true,
+      characterData: true,
+      characterDataOldValue: true
+    })
     // setting the size of the iframe
     this.size.sizze$.subscribe(data => {
       this.output = data;
@@ -111,13 +120,7 @@ export class IframePanelComponent implements OnInit {
     // for displaying the clickable focus bar
     framebody.addEventListener('click', (event) => {
       event.preventDefault()
-      this.elementPath = [];
-      this.pathEvent = event;
-      [...this.pathEvent.path].forEach((name) => {
-        if (name.localName !== undefined) {
-          this.elementPath.unshift(name.localName);
-        }
-      })
+
       // sending the data to the element path service
       this.elementPathService.elementPath(this.elementPath);
       // working with the click focus bar
@@ -244,26 +247,26 @@ export class IframePanelComponent implements OnInit {
         // clicking the node
         clonedNode.click()
       }
-      catch{}
+      catch{ }
     })
     // moving element up
     let moveUp = document.querySelector('#moveUp');
-    moveUp.addEventListener('click', (e)=>{
-   e.preventDefault();
-   console.log('moved up');
-   try{
-    let clonedNode = this.clickedElement[this.clickedElement.length - 1].cloneNode(true)
-    let parentElementt = <HTMLElement>this.clickedElement[this.clickedElement.length - 1].parentElement;
-    let previousElement = <HTMLElement>this.clickedElement[this.clickedElement.length - 1].previousElementSibling;
-    console.log(previousElement);
-    parentElementt.insertBefore(clonedNode, previousElement.previousElementSibling);
-    parentElementt.removeChild(this.clickedElement[this.clickedElement.length - 1]);
-    clickFocus.style.display = 'none';
-    clickInfo.style.display = 'none';
-    // clicking the node
-    clonedNode.click()
-   }
-   catch{}
+    moveUp.addEventListener('click', (e) => {
+      e.preventDefault();
+      console.log('moved up');
+      try {
+        let clonedNode = this.clickedElement[this.clickedElement.length - 1].cloneNode(true)
+        let parentElementt = <HTMLElement>this.clickedElement[this.clickedElement.length - 1].parentElement;
+        let previousElement = <HTMLElement>this.clickedElement[this.clickedElement.length - 1].previousElementSibling;
+        console.log(previousElement);
+        parentElementt.insertBefore(clonedNode, previousElement.previousElementSibling);
+        parentElementt.removeChild(this.clickedElement[this.clickedElement.length - 1]);
+        clickFocus.style.display = 'none';
+        clickInfo.style.display = 'none';
+        // clicking the node
+        clonedNode.click()
+      }
+      catch{ }
     })
 
 
