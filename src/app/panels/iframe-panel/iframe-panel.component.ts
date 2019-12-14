@@ -228,7 +228,7 @@ export class IframePanelComponent implements OnInit {
     })
 
 
-    // moving element up
+    // moving element down
     let moveDown = document.querySelector('#moveDown');
     moveDown.addEventListener('click', (e) => {
       e.preventDefault();
@@ -241,12 +241,32 @@ export class IframePanelComponent implements OnInit {
         parentElementt.removeChild(this.clickedElement[this.clickedElement.length - 1]);
         clickFocus.style.display = 'none';
         clickInfo.style.display = 'none';
+        // clicking the node
+        clonedNode.click()
       }
-      catch{
-
-      }
-
+      catch{}
     })
+    // moving element up
+    let moveUp = document.querySelector('#moveUp');
+    moveUp.addEventListener('click', (e)=>{
+   e.preventDefault();
+   console.log('moved up');
+   try{
+    let clonedNode = this.clickedElement[this.clickedElement.length - 1].cloneNode(true)
+    let parentElementt = <HTMLElement>this.clickedElement[this.clickedElement.length - 1].parentElement;
+    let previousElement = <HTMLElement>this.clickedElement[this.clickedElement.length - 1].previousElementSibling;
+    console.log(previousElement);
+    parentElementt.insertBefore(clonedNode, previousElement.previousElementSibling);
+    parentElementt.removeChild(this.clickedElement[this.clickedElement.length - 1]);
+    clickFocus.style.display = 'none';
+    clickInfo.style.display = 'none';
+    // clicking the node
+    clonedNode.click()
+   }
+   catch{}
+    })
+
+
 
 
 
