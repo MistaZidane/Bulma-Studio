@@ -1,12 +1,11 @@
 <div class="codePreview">     
 <pre>
-    <code contenteditable="" class="html" [highlight]="codeData"> </code>
+    <code contenteditable="" spellcheck="false" class="html" [highlight]="codeHtml"> </code>
     
 </pre>
 <br>
  <div class="buttons">
-    <button class="button is-primary Save">Save</button>
-    <button class="button is-danger ">cancel</button>
+    <button class="button is-primary Save" (click)="save()">Save</button>
 </div>
 </div>
 

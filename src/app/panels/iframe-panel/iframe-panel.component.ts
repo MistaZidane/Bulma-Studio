@@ -56,7 +56,11 @@ export class IframePanelComponent implements OnInit {
     frame.document.querySelector('head').appendChild(animateLink)
     frame.document.querySelector('head').appendChild(myLink);
     let framebody = <HTMLElement>frame.document.querySelector('body');
-    this.code.iframeBodyElement(framebody.innerHTML);
+    // when you click the save button in the code component when the iframe component is loading again the data is set
+    if( this.code.codeData != undefined){
+        framebody.innerHTML = this.code.codeData;
+    }
+  
     this.iframeState.frameData$.subscribe(value => {
       // making sure that the value of the frame is not underfined
       if (value == undefined) {
@@ -76,10 +80,11 @@ export class IframePanelComponent implements OnInit {
     framebody.setAttribute('ondrop', 'parent.drop(event)')
     framebody.setAttribute('ondragover', 'parent.dragover(event)')
     framebody.style.backgroundColor = "white";
+ 
     ////////////////////////////////////////////
     let mutations = new MutationObserver((data) => {
       data.forEach( (mutation)=>{
-           console.log(mutation.type)
+        this.code.codeData = framebody.innerHTML;
       });
     });
     mutations.observe(framebody, {

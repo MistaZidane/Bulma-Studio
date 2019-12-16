@@ -4,11 +4,13 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class CodeService {
-  public _code: any;
-  private _codeSource = new Subject<string>();
+  public codeData: string;
   constructor() { }
-framebody$ = this._codeSource.asObservable();
-iframeBodyElement(dara: any) {
-  this._codeSource.next(dara);
-}
+  set htmlCode(value: string){
+   this.codeData = value
+  }
+  get htmlCode(): string{
+    return this.codeData;
+  }
+
 }
