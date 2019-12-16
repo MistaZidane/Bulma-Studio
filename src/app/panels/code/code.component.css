@@ -1,5 +1,4 @@
 .codePreview{
-    height: 95vh;
     margin-left: 5%;
     margin-bottom: 10%;
     text-align: left; 
@@ -9,8 +8,16 @@
     background-color: #2294e3 !important;
 }
 pre{
-    height: 85vh;
+   
+    margin-left: 5%;
+    margin-right: 5%;
+}
+code{
+    height: 75vh;
 }
 .html{
     user-select: text !important;
+}
+.buttons{
+    margin-left: 5%;
 }

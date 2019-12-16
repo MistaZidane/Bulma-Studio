@@ -25,6 +25,7 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { CodeComponent } from './panels/code/code.component';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 const appRoutes: Routes = [
   {path: 'design', component: IframePanelComponent},
       {path: 'code', component: CodeComponent},
@@ -65,6 +66,7 @@ export function getHighlightLanguages() {
     MatSliderModule,
     MatExpansionModule,
     HighlightModule,
+    DragDropModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [

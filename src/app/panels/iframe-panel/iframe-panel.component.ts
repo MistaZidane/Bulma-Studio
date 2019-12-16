@@ -3,7 +3,7 @@ import { SizeService } from '../../shared/size.service';
 import { DataService } from '../../shared/data.service';
 import { StateService } from '../../shared/state.service';
 import { RightPanelService } from '../../shared/right-panel.service';
-import { ElementPathService } from '../../shared/element-path.service'
+import { CodeService } from '../../shared/code.service'
 @Component({
   selector: 'app-iframe-panel',
   templateUrl: './iframe-panel.component.html',
@@ -24,7 +24,7 @@ export class IframePanelComponent implements OnInit {
   // path event
   public pathEvent: any;
   public frameData = []
-  constructor(private size: SizeService, private data: DataService, private iframeState: StateService, private rightPanelData: RightPanelService, private elementPathService: ElementPathService) {
+  constructor(private size: SizeService, private data: DataService, private iframeState: StateService, private rightPanelData: RightPanelService, private code:CodeService) {
     // perant methods setup so iframe could access the methods here
     (<any>window).drop = this.drop.bind(this);
     (<any>window).dragover = this.dragover.bind(this);
@@ -56,6 +56,7 @@ export class IframePanelComponent implements OnInit {
     frame.document.querySelector('head').appendChild(animateLink)
     frame.document.querySelector('head').appendChild(myLink);
     let framebody = <HTMLElement>frame.document.querySelector('body');
+    this.code.iframeBodyElement(framebody.innerHTML);
     this.iframeState.frameData$.subscribe(value => {
       // making sure that the value of the frame is not underfined
       if (value == undefined) {
@@ -123,8 +124,7 @@ export class IframePanelComponent implements OnInit {
     // for displaying the clickable focus bar
     framebody.addEventListener('click', (event) => {
       event.preventDefault()
-      // sending the data to the element path service
-      this.elementPathService.elementPath(this.elementPath);
+ 
       // working with the click focus bar
       this.clickedElement.push(event.target);
       this.rightPanelData.edditedElement = event.target;

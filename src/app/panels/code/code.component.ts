@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CodeService} from '../../shared/code.service'
 
 @Component({
   selector: 'app-code',
@@ -7,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CodeComponent implements OnInit {
 
-  constructor() { }
- public code = `<select class="" id="width" >
+  constructor(private code:CodeService) { }
+ public codeData = `<select class="" id="width" >
  <option value="block">Block</option>
  <option value="inline">Inline</option>
  <option value="inline-block">Inline-block</option>
@@ -17,7 +18,9 @@ export class CodeComponent implements OnInit {
  <option value="grid">Grid</option>
 </select>`
   ngOnInit() {
-
+this.code.framebody$.subscribe((data)=>{
+   console.log(data)
+})
 
   }
 

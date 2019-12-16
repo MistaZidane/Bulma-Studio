@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {StateService} from '../../shared/state.service'
+import {StateService} from '../../shared/state.service';
+
 
 @Component({
   selector: 'app-toolbar',
@@ -79,4 +80,7 @@ export class ToolbarComponent implements OnInit {
   sideDrawer(){
    console.log("dwwf")
   }
+
+  // code view 
+
 }
