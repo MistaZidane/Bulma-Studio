@@ -48,7 +48,7 @@ export class IframePanelComponent implements OnInit {
     let animateLink = document.createElement('link');
     bulmaLink.setAttribute('href', './assets/bulma/bulma.min.css');
     // attributing animate link
-    animateLink.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css');
+    animateLink.setAttribute('href', './assets/libs/animate.min.css');
     bulmaLink.setAttribute('rel', 'stylesheet');
     animateLink.setAttribute('rel', 'stylesheet');
     // appending the link to the head
