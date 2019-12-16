@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
-import 'highlight.js/styles/mono-blue.css';
 @Component({
   selector: 'app-code',
   templateUrl: './code.component.html',
