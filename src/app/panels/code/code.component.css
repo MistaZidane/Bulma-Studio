@@ -1,5 +1,16 @@
-pre{
+.codePreview{
     height: 95vh;
     margin-left: 5%;
     margin-bottom: 10%;
+    text-align: left; 
+    user-select: text !important;
+}
+.Save{
+    background-color: #2294e3 !important;
+}
+pre{
+    height: 85vh;
+}
+.html{
+    user-select: text !important;
 }

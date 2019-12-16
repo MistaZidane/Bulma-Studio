@@ -24,11 +24,19 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { CodeComponent } from './panels/code/code.component';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 const appRoutes: Routes = [
   {path: 'design', component: IframePanelComponent},
       {path: 'code', component: CodeComponent},
       {path: '', redirectTo: 'design', pathMatch: 'full'},
-]
+];
+export function getHighlightLanguages() {
+  return {
+    javascript: () => import('highlight.js/lib/languages/javascript'),
+    css: () => import('highlight.js/lib/languages/css'),
+    xml: () => import('highlight.js/lib/languages/xml')
+  };
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,9 +64,17 @@ const appRoutes: Routes = [
     MatButtonToggleModule,
     MatSliderModule,
     MatExpansionModule,
+    HighlightModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        languages: getHighlightLanguages()
+      }
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
