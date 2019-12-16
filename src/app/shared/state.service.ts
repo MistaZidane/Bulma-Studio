@@ -16,7 +16,7 @@ get iframeStateData():string{
   return this._state
 }
 // undo and redo data
-// use to send data in the _iframeconten array
+// use to send data in the _iframecontent array
 set iframeStateData(value: string){
   this._state = value
   this._iframeContent.push(this._state)

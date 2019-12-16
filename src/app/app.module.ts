@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PanelsComponent } from './panels/panels.component';
 import { LeftPanelComponent } from './panels/left-panel/left-panel.component';
@@ -22,7 +23,12 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatExpansionModule} from '@angular/material/expansion';
-
+import { CodeComponent } from './panels/code/code.component';
+const appRoutes: Routes = [
+  {path: 'design', component: IframePanelComponent},
+      {path: 'code', component: CodeComponent},
+      {path: '', redirectTo: 'design', pathMatch: 'full'},
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +43,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     AppearanceComponent,
     LayoutComponent,
     AnimationComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    CodeComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatTooltipModule,
     MatButtonToggleModule,
     MatSliderModule,
-    MatExpansionModule
+    MatExpansionModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

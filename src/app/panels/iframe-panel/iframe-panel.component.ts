@@ -23,6 +23,7 @@ export class IframePanelComponent implements OnInit {
   public elementPath = [];
   // path event
   public pathEvent: any;
+  public frameData = []
   constructor(private size: SizeService, private data: DataService, private iframeState: StateService, private rightPanelData: RightPanelService, private elementPathService: ElementPathService) {
     // perant methods setup so iframe could access the methods here
     (<any>window).drop = this.drop.bind(this);
@@ -76,7 +77,9 @@ export class IframePanelComponent implements OnInit {
     framebody.style.backgroundColor = "white";
     ////////////////////////////////////////////
     let mutations = new MutationObserver((data) => {
-      console.log(framebody.innerHTML)
+      data.forEach( (mutation)=>{
+           console.log(mutation.type)
+      });
     });
     mutations.observe(framebody, {
       attributes: true,
@@ -120,7 +123,6 @@ export class IframePanelComponent implements OnInit {
     // for displaying the clickable focus bar
     framebody.addEventListener('click', (event) => {
       event.preventDefault()
-
       // sending the data to the element path service
       this.elementPathService.elementPath(this.elementPath);
       // working with the click focus bar
@@ -174,7 +176,7 @@ export class IframePanelComponent implements OnInit {
       else {
         this.clickedElement[this.clickedElement.length - 1].parentNode.removeChild(this.clickedElement[this.clickedElement.length - 1]);
         // sending the data to enable redo and undo
-        this.iframeState.iframeStateData = framebody.innerHTML;
+        // this.iframeState.iframeStateData = framebody.innerHTML;
       }
 
     })
@@ -190,7 +192,7 @@ export class IframePanelComponent implements OnInit {
       let parent = this.clickedElement[this.clickedElement.length - 1].parentNode;
       let clonedNode = this.clickedElement[this.clickedElement.length - 1].cloneNode(true)
       parent.insertBefore(clonedNode, this.clickedElement[this.clickedElement.length - 1].nextSibling);
-      this.iframeState.iframeStateData = framebody.innerHTML;
+      // this.iframeState.iframeStateData = framebody.innerHTML;
     })
     // dont show the clickfocus after the dellete has taken place
     clickFocus.style.display = 'none'
@@ -253,12 +255,10 @@ export class IframePanelComponent implements OnInit {
     let moveUp = document.querySelector('#moveUp');
     moveUp.addEventListener('click', (e) => {
       e.preventDefault();
-      console.log('moved up');
       try {
         let clonedNode = this.clickedElement[this.clickedElement.length - 1].cloneNode(true)
         let parentElementt = <HTMLElement>this.clickedElement[this.clickedElement.length - 1].parentElement;
         let previousElement = <HTMLElement>this.clickedElement[this.clickedElement.length - 1].previousElementSibling;
-        console.log(previousElement);
         parentElementt.insertBefore(clonedNode, previousElement.previousElementSibling);
         parentElementt.removeChild(this.clickedElement[this.clickedElement.length - 1]);
         clickFocus.style.display = 'none';
@@ -353,7 +353,7 @@ export class IframePanelComponent implements OnInit {
     let framebody = <HTMLElement>frame.document.querySelector('body');
     // creating the css link
     event.target.innerHTML += this.data.recievedData;
-    this.iframeState.iframeStateData = framebody.innerHTML;
+    // this.iframeState.iframeStateData = framebody.innerHTML;
     line.style.display = 'none'
     // let element = event.target.getBoundingClientRect();
     // let prev = event.target.previousElementSibling.getBoundingClientRect();
