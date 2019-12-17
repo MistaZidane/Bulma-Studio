@@ -364,8 +364,10 @@ export class IframePanelComponent implements OnInit {
     let iframe = document.querySelector('#iframe');
     let frame = (<HTMLIFrameElement>iframe).contentWindow;
     let framebody = <HTMLElement>frame.document.querySelector('body');
-    // creating the css link
-    event.target.innerHTML += this.data.recievedData;
+  if(this.data.recievedData != undefined){
+     event.target.innerHTML += this.data.recievedData;
+  }
+   
     // this.iframeState.iframeStateData = framebody.innerHTML;
     line.style.display = 'none'
     // let element = event.target.getBoundingClientRect();

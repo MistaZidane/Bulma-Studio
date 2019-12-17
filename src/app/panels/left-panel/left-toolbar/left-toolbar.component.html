@@ -5,7 +5,9 @@
             <span class="left-icons" (click)="laptop()" matTooltip="Info about the action"> <mat-icon [ngClass]="lap ? '' : 'current'">laptop</mat-icon></span>
             <span class="left-icons" (click)="dextop()" matTooltip="Info about the action"> <mat-icon [ngClass]="des ? '' : 'current'">desktop_windows</mat-icon> </span>
             <div class="btm">
-                <span class="left-icons" matTooltip="Info about the action"> <mat-icon>cloud_upload </mat-icon> </span>
+                <span class="left-icons" matTooltip="Info about the action" > <mat-icon>cloud_upload </mat-icon> </span>
+                <input type="file" (change)="upload($event)">
+                <img src="" alt="" id="img" height="200px" width="100px">
                 <span class="left-icons" matTooltip="Info about the action"> <mat-icon>pages</mat-icon> </span>
             </div>
         </div>

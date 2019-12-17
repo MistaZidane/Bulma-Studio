@@ -63,4 +63,15 @@ export class LeftToolbarComponent implements OnInit {
     this.lap= true;
     this.des= false;
   }
+  // testing upload
+  upload(event){
+    // let img = <HTMLImageElement> document.querySelector('#img');
+    // let file = event.target.files[0];
+    // const fileread = new FileReader();
+    // fileread.onload = (e)=>{
+    //  console.log(e.target.result)
+    // //  img.setAttribute('src', e.target.result);
+    // }
+    // fileread.readAsDataURL(file);
+  }
 }

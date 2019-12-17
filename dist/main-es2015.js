@@ -36,6 +36,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/panels/code/code.component.html":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/panels/code/code.component.html ***!
+  \***************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"codePreview\">     \n<pre>\n    <code contenteditable=\"\" spellcheck=\"false\" class=\"html\" [highlight]=\"codeHtml\"> </code>\n    \n</pre>\n<br>\n <div class=\"buttons\">\n    <button class=\"button is-primary Save\" (click)=\"save()\">Save</button>\n</div>\n</div>\n\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/panels/iframe-panel/iframe-panel.component.html":
 /*!*******************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/panels/iframe-panel/iframe-panel.component.html ***!
@@ -45,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div id=\"focus\" style=\"display: none; position: absolute ; border: 2px solid teal;\"></div>\n\n<iframe id=\"iframe\"  width=\"85%\" frameborder=\"0\" ></iframe>\n\n<!-- <div class=\"onFocus\" id=\"onFocus\" style=\"display: none; border: 2px solid blue; position: absolute;\">\n\n</div>\n<div class=\"onHover\" id=\"onHover\" style=\"display: none; border: 2px solid blue; position: absolute;\"></div>\n -->\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- <div id=\"focus\" style=\"display: none; position: absolute ; border: 2px solid teal;\"></div> -->\n<iframe id=\"iframe\"  width=\"85%\" frameborder=\"0\"></iframe>\n\n\n<!-- <div class=\"onFocus\" id=\"onFocus\" style=\"display: none; border: 2px solid blue; position: absolute;\">\n\n</div>\n<div class=\"onHover\" id=\"onHover\" style=\"display: none; border: 2px solid blue; position: absolute;\"></div>\n -->\n <span id=\"info\" style=\"float: left; position: fixed; padding: 1px; font-size: x-small; background-color: rgb(34, 148, 227); color: rgb(255, 255, 255);\"></span>\n<div id=\"focus\" style=\" position: fixed; border: 1px solid rgb(34, 148, 227);\">\n    \n</div>\n<div id=\"clickFocus\" style=\" position: fixed; border: 1px solid rgb(34, 148, 227);\"></div>\n<span id=\"clickInfo\" style=\" float: left; position: fixed; padding: 1px; font-size: x-small; background-color: rgb(34, 148, 227); color: rgb(255, 255, 255); width: 1061px; top: -16px; left: 0px;\">\n<mat-icon id=\"delete\" matTooltip=\"delete\">delete</mat-icon>\n<mat-icon id=\"duplicate\" matTooltip=\"delete\">add_circle_outline</mat-icon>\n<mat-icon id=\"edit\" matTooltip=\"edit\">edit</mat-icon>\n<mat-icon id=\"parent\" matTooltip=\"select parent\">arrow_drop_up</mat-icon>\n<mat-icon id=\"moveDown\" matTooltip=\"move down\">arrow_downward</mat-icon>\n<mat-icon id=\"moveUp\" matTooltip=\"move up\">arrow_upward</mat-icon>\n</span>\n\n<div id=\"line\" style=\"display: none; position: fixed; border: 1px solid rgb(34, 148, 227); width:100px\"></div>");
 
 /***/ }),
 
@@ -58,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"assets\">\n    <h1 class=\"heading intro\">Components</h1>\n    <div class=\"search\">\n        <input type=\"text\" class=\"myInput\" placeholder=\"card\">\n        <span class=\"sear has-text-centered\"> <i class=\"material-icons\">search</i> </span>\n    </div>\n    <div class=\"others\">\n        <div class=\"ComponentList separetion\">\n            <span class=\"heading comText\">Components <i class=\"material-icons sign\">add</i> </span>\n            <ul>\n                <li class=\"\" >\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"comDrag($event)\" (mouseover)=\"over($event)\">breadcrumb</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"comDrag($event)\" (mouseover)=\"over($event)\">card</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"comDrag($event)\" (mouseover)=\"over($event)\">dropdown</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"comDrag($event)\" (mouseover)=\"over($event)\">menu</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"comDrag($event)\" (mouseover)=\"over($event)\">message</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"comDrag($event)\" (mouseover)=\"over($event)\">navbar</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"comDrag($event)\" (mouseover)=\"over($event)\">pagination</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"comDrag($event)\" (mouseover)=\"over($event)\">panel</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"comDrag($event)\" (mouseover)=\"over($event)\">tabs</p>\n                </li>\n            </ul>\n        </div>\n        <div class=\"elementsList separetion\">\n            <span class=\"heading comText\">Elements <i class=\"material-icons sign\">add</i> </span>\n            <ul>\n                <li class=\"\">\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">box</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">button</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">delete</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">image</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">notification</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">progress Bar</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">table</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">tag</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">title</p>\n                </li>\n            </ul>\n        </div>\n        <div class=\"LayoutList separetion\">\n            <span class=\"heading comText\">Layout <i class=\"material-icons sign\">add</i> </span>\n            <ul>\n                <li class=\"\">\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"layDrag($event)\">Container</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"layDrag($event)\">Level</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"layDrag($event)\">Hero</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"layDrag($event)\">Section</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"layDrag($event)\">Footer</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"layDrag($event)\">Tiles</p>\n            </ul>\n        </div>\n        <div class=\"formList separetion\">\n            <span class=\"heading comText\">Form <i class=\"material-icons sign\">add</i> </span>\n            <ul>\n                <li class=\"\">\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"formDrag($event)\">input</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"formDrag($event)\">textarea</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"formDrag($event)\">select</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"formDrag($event)\">checkbox</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"formDrag($event)\">radio</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"formDrag($event)\">file</p>\n            </ul>\n        </div>\n    </div>\n</div>\n\n<div style=\"display: none;\" id=\"preview\"> </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"assets\">\n    <h1 class=\"heading intro\">Components</h1>\n    <div class=\"search\">\n        <input type=\"text\" class=\"myInput\" placeholder=\"card\">\n        <span class=\"sear has-text-centered\"> <i class=\"material-icons\">search</i> </span>\n    </div>\n    <div class=\"others\">\n        <mat-expansion-panel [expanded]='true'>\n            <mat-expansion-panel-header>\n                <mat-panel-title>\n                    Components\n                </mat-panel-title>\n            </mat-expansion-panel-header>\n            <ul>\n                <li class=\"\">\n\n                    <p class=\"subtitle is-6 copo\"><span class=\"dragMe\" draggable=true (drag)=\"comDrag($event)\"\n                            (mouseover)=\"over($event)\">breadcrumb</span> </p>\n                    <p class=\"subtitle is-6 copo\"><span draggable=true (drag)=\"comDrag($event)\"\n                            (mouseover)=\"over($event)\">card</span> </p>\n                    <p class=\"subtitle is-6 copo\"><span draggable=true (drag)=\"comDrag($event)\"\n                            (mouseover)=\"over($event)\">dropdown</span> </p>\n                    <p class=\"subtitle is-6 copo\"><span draggable=true (drag)=\"comDrag($event)\"\n                            (mouseover)=\"over($event)\">menu</span> </p>\n                    <p class=\"subtitle is-6 copo\"><span draggable=true (drag)=\"comDrag($event)\"\n                            (mouseover)=\"over($event)\">message</span> </p>\n                    <p class=\"subtitle is-6 copo\"><span draggable=true (drag)=\"comDrag($event)\"\n                            (mouseover)=\"over($event)\">navbar</span> </p>\n                    <p class=\"subtitle is-6 copo\"><span draggable=true (drag)=\"comDrag($event)\"\n                            (mouseover)=\"over($event)\">pagination</span> </p>\n                    <p class=\"subtitle is-6 copo\"><span draggable=true (drag)=\"comDrag($event)\"\n                            (mouseover)=\"over($event)\">panel</span> </p>\n                    <p class=\"subtitle is-6 copo\"><span draggable=true (drag)=\"comDrag($event)\"\n                            (mouseover)=\"over($event)\">tabs</span> </p>\n                </li>\n            </ul>\n        </mat-expansion-panel>\n\n        <mat-expansion-panel [expanded]='true'>\n            <mat-expansion-panel-header>\n                <mat-panel-title>\n                    Elements\n                </mat-panel-title>\n            </mat-expansion-panel-header>\n\n            <ul>\n                <li class=\"\">\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">box</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">button</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">delete</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">image</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">notification</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">progress Bar</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">table</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">tag</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"elemDrag($event)\">title</p>\n                </li>\n            </ul>\n        </mat-expansion-panel>\n        <mat-expansion-panel [expanded]='true'>\n            <mat-expansion-panel-header>\n                <mat-panel-title>\n                    Layout\n                </mat-panel-title>\n\n            </mat-expansion-panel-header>\n\n            <ul>\n                <li class=\"\">\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"layDrag($event)\">Container</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"layDrag($event)\">Level</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"layDrag($event)\">Hero</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"layDrag($event)\">Section</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"layDrag($event)\">Footer</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"layDrag($event)\">Tiles</p>\n            </ul>\n        </mat-expansion-panel>\n\n        <mat-expansion-panel>\n            <mat-expansion-panel-header>\n                <mat-panel-title>\n                    Layout\n                </mat-panel-title>\n\n            </mat-expansion-panel-header>\n\n            <ul>\n                <li class=\"\">\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"formDrag($event)\">input</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"formDrag($event)\">textarea</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"formDrag($event)\">select</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"formDrag($event)\">checkbox</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"formDrag($event)\">radio</p>\n                    <p class=\"subtitle is-6 copo\" draggable=true (drag)=\"formDrag($event)\">file</p>\n            </ul>\n        </mat-expansion-panel>\n\n    </div>\n</div>\n\n<div style=\"display: none;\" id=\"preview\"> </div>");
 
 /***/ }),
 
@@ -84,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"column is-1 left-tools\">\n        <div class=\"section aside\">\n            <span class=\"left-icons\" (click)=\"phone()\"> <mat-icon [ngClass]=\"smartphone ? ' ' : 'current'\">smartphone</mat-icon></span>\n            <span class=\"left-icons\" (click)=\"tablet()\"> <mat-icon [ngClass]=\"tab ? '' : 'current'\">tablet_android</mat-icon></span>\n            <span class=\"left-icons\" (click)=\"laptop()\"> <mat-icon [ngClass]=\"lap ? '' : 'current'\">laptop</mat-icon></span>\n            <span class=\"left-icons\" (click)=\"dextop()\"> <mat-icon [ngClass]=\"des ? '' : 'current'\">desktop_windows</mat-icon> </span>\n            <div class=\"btm\">\n                <span class=\"left-icons\"> <mat-icon>cloud_upload </mat-icon> </span>\n                <span class=\"left-icons\"> <mat-icon>pages</mat-icon> </span>\n            </div>\n\n        </div>\n    </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"column is-1 left-tools\">\n        <div class=\"section aside\">\n            <span class=\"left-icons\" (click)=\"phone()\" matTooltip=\"Info about the action\"> <mat-icon [ngClass]=\"smartphone ? ' ' : 'current'\">smartphone</mat-icon></span>\n            <span class=\"left-icons\" (click)=\"tablet()\" matTooltip=\"Info about the action\"> <mat-icon [ngClass]=\"tab ? '' : 'current'\">tablet_android</mat-icon></span>\n            <span class=\"left-icons\" (click)=\"laptop()\" matTooltip=\"Info about the action\"> <mat-icon [ngClass]=\"lap ? '' : 'current'\">laptop</mat-icon></span>\n            <span class=\"left-icons\" (click)=\"dextop()\" matTooltip=\"Info about the action\"> <mat-icon [ngClass]=\"des ? '' : 'current'\">desktop_windows</mat-icon> </span>\n            <div class=\"btm\">\n                <span class=\"left-icons\" matTooltip=\"Info about the action\" > <mat-icon>cloud_upload </mat-icon> </span>\n                <input type=\"file\" (change)=\"upload($event)\">\n                <img src=\"\" alt=\"\" id=\"img\" height=\"200px\" width=\"100px\">\n                <span class=\"left-icons\" matTooltip=\"Info about the action\"> <mat-icon>pages</mat-icon> </span>\n            </div>\n        </div>\n    </div>");
 
 /***/ }),
 
@@ -97,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-toolbar></app-toolbar>\n<!-- panels -->\n<div class=\"columns main-column\">\n        <div class=\"column is-2\">\n            \n    <app-left-panel></app-left-panel>\n        </div>\n\n    <div class=\"column is-8 myFrame has-text-centered\">\n        <app-iframe-panel></app-iframe-panel>\n    </div>\n    <div class=\"column is-2 rightPanel\">\n        <app-right-panel></app-right-panel>\n    </div>\n</div>\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-toolbar></app-toolbar>\n<!-- panels -->\n<div class=\"columns main-column\">\n        <div class=\"column is-2\">\n            \n    <app-left-panel></app-left-panel>\n        </div>\n\n    <div class=\"column is-8 myFrame has-text-centered\">\n            <router-outlet></router-outlet>\n           \n    </div>\n    <div class=\"column is-2 rightPanel\">\n        <app-right-panel></app-right-panel>\n    </div>\n</div>\n\n\n");
 
 /***/ }),
 
@@ -110,7 +123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"AnimationProperties\">\n        <span class=\"heading comText\">Animation <i class=\"material-icons sign\">keyboard_arrow_down</i>\n        </span>\n        <div class=\"columns width property\">\n            <div class=\"column is-7\">\n\n                <div class=\"select\">\n                    <select class=\"mySelect\">\n                        <optgroup label=\"Attention Seekers\">\n                            <option value=\"bounce\">bounce</option>\n                            <option value=\"flash\">flash</option>\n                            <option value=\"pulse\">pulse</option>\n                            <option value=\"rubberBand\">rubberBand</option>\n                            <option value=\"shake\">shake</option>\n                            <option value=\"swing\">swing</option>\n                            <option value=\"tada\">tada</option>\n                            <option value=\"wobble\">wobble</option>\n                            <option value=\"jello\">jello</option>\n                            <option value=\"heartBeat\">heartBeat</option>\n                        </optgroup>\n                        <optgroup label=\"Bouncing Entrances\">\n                            <option value=\"bounceIn\">bounceIn</option>\n                            <option value=\"bounceInDown\">bounceInDown</option>\n                            <option value=\"bounceInLeft\">bounceInLeft</option>\n                            <option value=\"bounceInRight\">bounceInRight</option>\n                            <option value=\"bounceInUp\">bounceInUp</option>\n                        </optgroup>\n                        <optgroup label=\"Bouncing Exits\">\n                            <option value=\"bounceOut\">bounceOut</option>\n                            <option value=\"bounceOutDown\">bounceOutDown</option>\n                            <option value=\"bounceOutLeft\">bounceOutLeft</option>\n                            <option value=\"bounceOutRight\">bounceOutRight</option>\n                            <option value=\"bounceOutUp\">bounceOutUp</option>\n                        </optgroup>\n                        <optgroup label=\"Fading Entrances\">\n                            <option value=\"fadeIn\">fadeIn</option>\n                            <option value=\"fadeInDown\">fadeInDown</option>\n                            <option value=\"fadeInDownBig\">fadeInDownBig</option>\n                            <option value=\"fadeInLeft\">fadeInLeft</option>\n                            <option value=\"fadeInLeftBig\">fadeInLeftBig</option>\n                            <option value=\"fadeInRight\">fadeInRight</option>\n                            <option value=\"fadeInRightBig\">fadeInRightBig</option>\n                            <option value=\"fadeInUp\">fadeInUp</option>\n                            <option value=\"fadeInUpBig\">fadeInUpBig</option>\n                        </optgroup>\n                        <optgroup label=\"Fading Exits\">\n                            <option value=\"fadeOut\">fadeOut</option>\n                            <option value=\"fadeOutDown\">fadeOutDown</option>\n                            <option value=\"fadeOutDownBig\">fadeOutDownBig</option>\n                            <option value=\"fadeOutLeft\">fadeOutLeft</option>\n                            <option value=\"fadeOutLeftBig\">fadeOutLeftBig</option>\n                            <option value=\"fadeOutRight\">fadeOutRight</option>\n                            <option value=\"fadeOutRightBig\">fadeOutRightBig</option>\n                            <option value=\"fadeOutUp\">fadeOutUp</option>\n                            <option value=\"fadeOutUpBig\">fadeOutUpBig</option>\n                        </optgroup>\n                        <optgroup label=\"Flippers\">\n                            <option value=\"flip\">flip</option>\n                            <option value=\"flipInX\">flipInX</option>\n                            <option value=\"flipInY\">flipInY</option>\n                            <option value=\"flipOutX\">flipOutX</option>\n                            <option value=\"flipOutY\">flipOutY</option>\n                        </optgroup>\n                        <optgroup label=\"Lightspeed\">\n                            <option value=\"lightSpeedIn\">lightSpeedIn</option>\n                            <option value=\"lightSpeedOut\">lightSpeedOut</option>\n                        </optgroup>\n                        <optgroup label=\"Rotating Entrances\">\n                            <option value=\"rotateIn\">rotateIn</option>\n                            <option value=\"rotateInDownLeft\">rotateInDownLeft</option>\n                            <option value=\"rotateInDownRight\">rotateInDownRight</option>\n                            <option value=\"rotateInUpLeft\">rotateInUpLeft</option>\n                            <option value=\"rotateInUpRight\">rotateInUpRight</option>\n                        </optgroup>\n                        <optgroup label=\"Rotating Exits\">\n                            <option value=\"rotateOut\">rotateOut</option>\n                            <option value=\"rotateOutDownLeft\">rotateOutDownLeft</option>\n                            <option value=\"rotateOutDownRight\">rotateOutDownRight</option>\n                            <option value=\"rotateOutUpLeft\">rotateOutUpLeft</option>\n                            <option value=\"rotateOutUpRight\">rotateOutUpRight</option>\n                        </optgroup>\n                        <optgroup label=\"Sliding Entrances\">\n                            <option value=\"slideInUp\">slideInUp</option>\n                            <option value=\"slideInDown\">slideInDown</option>\n                            <option value=\"slideInLeft\">slideInLeft</option>\n                            <option value=\"slideInRight\">slideInRight</option>\n\n                        </optgroup>\n                        <optgroup label=\"Sliding Exits\">\n                            <option value=\"slideOutUp\">slideOutUp</option>\n                            <option value=\"slideOutDown\">slideOutDown</option>\n                            <option value=\"slideOutLeft\">slideOutLeft</option>\n                            <option value=\"slideOutRight\">slideOutRight</option>\n\n                        </optgroup>\n                        <optgroup label=\"Zoom Entrances\">\n                            <option value=\"zoomIn\">zoomIn</option>\n                            <option value=\"zoomInDown\">zoomInDown</option>\n                            <option value=\"zoomInLeft\">zoomInLeft</option>\n                            <option value=\"zoomInRight\">zoomInRight</option>\n                            <option value=\"zoomInUp\">zoomInUp</option>\n                        </optgroup>\n                        <optgroup label=\"Zoom Exits\">\n                            <option value=\"zoomOut\">zoomOut</option>\n                            <option value=\"zoomOutDown\">zoomOutDown</option>\n                            <option value=\"zoomOutLeft\">zoomOutLeft</option>\n                            <option value=\"zoomOutRight\">zoomOutRight</option>\n                            <option value=\"zoomOutUp\">zoomOutUp</option>\n                        </optgroup>\n                        <optgroup label=\"Specials\">\n                            <option value=\"hinge\">hinge</option>\n                            <option value=\"jackInTheBox\">jackInTheBox</option>\n                            <option value=\"rollIn\">rollIn</option>\n                            <option value=\"rollOut\">rollOut</option>\n                        </optgroup>\n                    </select>\n                </div>\n\n            </div>\n\n            <div class=\"column is-5 inputForms\">\n                <div class=\"select\">\n                    <select class=\"mySelect\">\n                        <option>Wow</option>\n                        <option>Animate</option>\n                    </select>\n                </div>\n            </div>\n        </div>\n    </div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"AnimationProperties\">\n        <span class=\"heading comText\">Animation <i class=\"material-icons sign\">keyboard_arrow_down</i>\n        </span>\n        <div class=\"columns width property\">\n            <div class=\"column is-7\">\n\n                <div class=\"select\">\n                    <select class=\"mySelect\" (change)=\"animation($event)\">\n                        <optgroup label=\"Attention Seekers\">\n                            <option value=\"bounce\">bounce</option>\n                            <option value=\"flash\">flash</option>\n                            <option value=\"pulse\">pulse</option>\n                            <option value=\"rubberBand\">rubberBand</option>\n                            <option value=\"shake\">shake</option>\n                            <option value=\"swing\">swing</option>\n                            <option value=\"tada\">tada</option>\n                            <option value=\"wobble\">wobble</option>\n                            <option value=\"jello\">jello</option>\n                            <option value=\"heartBeat\">heartBeat</option>\n                        </optgroup>\n                        <optgroup label=\"Bouncing Entrances\">\n                            <option value=\"bounceIn\">bounceIn</option>\n                            <option value=\"bounceInDown\">bounceInDown</option>\n                            <option value=\"bounceInLeft\">bounceInLeft</option>\n                            <option value=\"bounceInRight\">bounceInRight</option>\n                            <option value=\"bounceInUp\">bounceInUp</option>\n                        </optgroup>\n                        <optgroup label=\"Bouncing Exits\">\n                            <option value=\"bounceOut\">bounceOut</option>\n                            <option value=\"bounceOutDown\">bounceOutDown</option>\n                            <option value=\"bounceOutLeft\">bounceOutLeft</option>\n                            <option value=\"bounceOutRight\">bounceOutRight</option>\n                            <option value=\"bounceOutUp\">bounceOutUp</option>\n                        </optgroup>\n                        <optgroup label=\"Fading Entrances\">\n                            <option value=\"fadeIn\">fadeIn</option>\n                            <option value=\"fadeInDown\">fadeInDown</option>\n                            <option value=\"fadeInDownBig\">fadeInDownBig</option>\n                            <option value=\"fadeInLeft\">fadeInLeft</option>\n                            <option value=\"fadeInLeftBig\">fadeInLeftBig</option>\n                            <option value=\"fadeInRight\">fadeInRight</option>\n                            <option value=\"fadeInRightBig\">fadeInRightBig</option>\n                            <option value=\"fadeInUp\">fadeInUp</option>\n                            <option value=\"fadeInUpBig\">fadeInUpBig</option>\n                        </optgroup>\n                        <optgroup label=\"Fading Exits\">\n                            <option value=\"fadeOut\">fadeOut</option>\n                            <option value=\"fadeOutDown\">fadeOutDown</option>\n                            <option value=\"fadeOutDownBig\">fadeOutDownBig</option>\n                            <option value=\"fadeOutLeft\">fadeOutLeft</option>\n                            <option value=\"fadeOutLeftBig\">fadeOutLeftBig</option>\n                            <option value=\"fadeOutRight\">fadeOutRight</option>\n                            <option value=\"fadeOutRightBig\">fadeOutRightBig</option>\n                            <option value=\"fadeOutUp\">fadeOutUp</option>\n                            <option value=\"fadeOutUpBig\">fadeOutUpBig</option>\n                        </optgroup>\n                        <optgroup label=\"Flippers\">\n                            <option value=\"flip\">flip</option>\n                            <option value=\"flipInX\">flipInX</option>\n                            <option value=\"flipInY\">flipInY</option>\n                            <option value=\"flipOutX\">flipOutX</option>\n                            <option value=\"flipOutY\">flipOutY</option>\n                        </optgroup>\n                        <optgroup label=\"Lightspeed\">\n                            <option value=\"lightSpeedIn\">lightSpeedIn</option>\n                            <option value=\"lightSpeedOut\">lightSpeedOut</option>\n                        </optgroup>\n                        <optgroup label=\"Rotating Entrances\">\n                            <option value=\"rotateIn\">rotateIn</option>\n                            <option value=\"rotateInDownLeft\">rotateInDownLeft</option>\n                            <option value=\"rotateInDownRight\">rotateInDownRight</option>\n                            <option value=\"rotateInUpLeft\">rotateInUpLeft</option>\n                            <option value=\"rotateInUpRight\">rotateInUpRight</option>\n                        </optgroup>\n                        <optgroup label=\"Rotating Exits\">\n                            <option value=\"rotateOut\">rotateOut</option>\n                            <option value=\"rotateOutDownLeft\">rotateOutDownLeft</option>\n                            <option value=\"rotateOutDownRight\">rotateOutDownRight</option>\n                            <option value=\"rotateOutUpLeft\">rotateOutUpLeft</option>\n                            <option value=\"rotateOutUpRight\">rotateOutUpRight</option>\n                        </optgroup>\n                        <optgroup label=\"Sliding Entrances\">\n                            <option value=\"slideInUp\">slideInUp</option>\n                            <option value=\"slideInDown\">slideInDown</option>\n                            <option value=\"slideInLeft\">slideInLeft</option>\n                            <option value=\"slideInRight\">slideInRight</option>\n\n                        </optgroup>\n                        <optgroup label=\"Sliding Exits\">\n                            <option value=\"slideOutUp\">slideOutUp</option>\n                            <option value=\"slideOutDown\">slideOutDown</option>\n                            <option value=\"slideOutLeft\">slideOutLeft</option>\n                            <option value=\"slideOutRight\">slideOutRight</option>\n\n                        </optgroup>\n                        <optgroup label=\"Zoom Entrances\">\n                            <option value=\"zoomIn\">zoomIn</option>\n                            <option value=\"zoomInDown\">zoomInDown</option>\n                            <option value=\"zoomInLeft\">zoomInLeft</option>\n                            <option value=\"zoomInRight\">zoomInRight</option>\n                            <option value=\"zoomInUp\">zoomInUp</option>\n                        </optgroup>\n                        <optgroup label=\"Zoom Exits\">\n                            <option value=\"zoomOut\">zoomOut</option>\n                            <option value=\"zoomOutDown\">zoomOutDown</option>\n                            <option value=\"zoomOutLeft\">zoomOutLeft</option>\n                            <option value=\"zoomOutRight\">zoomOutRight</option>\n                            <option value=\"zoomOutUp\">zoomOutUp</option>\n                        </optgroup>\n                        <optgroup label=\"Specials\">\n                            <option value=\"hinge\">hinge</option>\n                            <option value=\"jackInTheBox\">jackInTheBox</option>\n                            <option value=\"rollIn\">rollIn</option>\n                            <option value=\"rollOut\">rollOut</option>\n                        </optgroup>\n                    </select>\n                </div>\n\n            </div>\n\n            <div class=\"column is-5 inputForms\">\n                <div class=\"select\">\n                    <select class=\"mySelect\">\n                        <option>Wow</option>\n                        <option>Animate</option>\n                    </select>\n                </div>\n            </div>\n        </div>\n    </div>\n");
 
 /***/ }),
 
@@ -136,7 +149,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"layoutProperties\">\n        <span class=\"heading comText\">Layout <i class=\"material-icons sign\">keyboard_arrow_down</i> </span>\n        <div class=\"columns width property\">\n            <div class=\"column is-5\">\n                <div class=\"select\">\n                    <select class=\"mySelect\">\n                        <option>Width</option>\n                        <option>Min-width</option>\n                        <option>Max-width</option>\n                    </select>\n                </div>\n            </div>\n            <div class=\"column is-3 inputForms\">\n                <input type=\"number\" class=\"input\" placeholder=\"12\">\n            </div>\n            <div class=\"column is-4\">\n                <div class=\"select\">\n                    <select class=\"mySelect\">\n                        <option>px</option>\n                        <option>%</option>\n                        <option>em</option>\n                    </select>\n                </div>\n            </div>\n        </div>\n        <!-- height -->\n        <div class=\"columns height property\">\n            <div class=\"column is-5\">\n                <div class=\"select\">\n                    <select class=\"mySelect\">\n                        <option>Height</option>\n                        <option>Min-Height</option>\n                        <option>Max-Height</option>\n                    </select>\n                </div>\n            </div>\n            <div class=\"column is-3 inputForms\">\n                <input type=\"number\" class=\"input\" placeholder=\"12\">\n            </div>\n            <div class=\"column is-4\">\n                <div class=\"select\">\n                    <select class=\"mySelect\">\n                        <option>px</option>\n                        <option>%</option>\n                        <option>em</option>\n                    </select>\n                </div>\n            </div>\n        </div>\n        <div class=\"columns height property\">\n            <div class=\"column is-5\">\n                <div class=\"select\">\n                    <select class=\"mySelect\">\n                        <option>Margin</option>\n                        <option>Margin-Left</option>\n                        <option>Margin-Right</option>\n                        <option>Margin-Top</option>\n                        <option>Margin-Bottom</option>\n                    </select>\n                </div>\n            </div>\n            <div class=\"column is-3 inputForms\">\n                <input type=\"number\" class=\"input\" placeholder=\"12\">\n            </div>\n            <div class=\"column is-4\">\n                <div class=\"select\">\n                    <select class=\"mySelect\">\n                        <option>px</option>\n                        <option>%</option>\n                        <option>em</option>\n                    </select>\n                </div>\n            </div>\n        </div>\n        <div class=\"columns height property\">\n            <div class=\"column is-5\">\n                <div class=\"select\">\n                    <select class=\"mySelect\">\n                        <option>Padding</option>\n                        <option>Padding-Left</option>\n                        <option>Padding-Right</option>\n                        <option>Padding-Top</option>\n                        <option>Padding-Bottom</option>\n                    </select>\n                </div>\n            </div>\n            <div class=\"column is-3 inputForms\">\n                <input type=\"number\" class=\"input\" placeholder=\"12\">\n            </div>\n            <div class=\"column is-4\">\n                <div class=\"select\">\n                    <select class=\"mySelect\">\n                        <option>px</option>\n                        <option>%</option>\n                        <option>em</option>\n                    </select>\n                </div>\n            </div>\n        </div>\n    </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"layoutProperties\">\n    <!-- display and position -->\n    <div class=\"columns \">\n        <div class=\"column is-6\">\n            <p class=\"heading\">Display</p>\n            <div class=\"select\">\n                <select class=\"\" id=\"width\" (change)=\"display($event)\">\n                    <option value=\"block\">Block</option>\n                    <option value=\"inline\">Inline</option>\n                    <option value=\"inline-block\">Inline-block</option>\n                    <option value=\"none\">None</option>\n                    <option value=\"flex\">Flex</option>\n                    <option value=\"grid\">Grid</option>\n                </select>\n            </div>\n        </div>\n        <div class=\"column is-6\">\n            <p class=\"heading\">Position</p>\n            <div class=\"select\">\n                <select class=\"\" id=\"width\">\n                    <option>Fixed</option>\n                    <option>Absolute</option>\n                    <option>Static</option>\n                    <option>Relative</option>\n                </select>\n            </div>\n        </div>\n    </div>\n    <div class=\"columns\">\n        <div class=\"column\">\n                <p class=\"heading\">Float</p>\n            <mat-button-toggle-group name=\"fontStyle\" aria-label=\"Font Style\" class=\"float\">\n                <mat-button-toggle value=\" \" (change)=\"float($event.value)\"> <mat-icon>clear</mat-icon></mat-button-toggle>\n                <mat-button-toggle value=\"left\" (change)=\"float($event.value)\"><mat-icon>format_align_left</mat-icon></mat-button-toggle>\n                <mat-button-toggle value=\"right\" (change)=\"float($event.value)\"><mat-icon>format_align_right</mat-icon></mat-button-toggle>\n            </mat-button-toggle-group>\n        </div>\n    </div>\n    <span class=\"heading comText\">Layout <i class=\"material-icons sign\">keyboard_arrow_down</i> </span>\n \n<!-- layout  -->\n<div class=\"columns property\">\n\n</div>\n\n    <div class=\"columns width property\">\n        <div class=\"column is-5\">\n            <div class=\"select\">\n                <select class=\"mySelect\" id=\"width\">\n                    <option>Width</option>\n                    <option>Min-width</option>\n                    <option>Max-width</option>\n                </select>\n            </div>\n        </div>\n        <div class=\"column is-3 inputForms\">\n            <input type=\"number\" class=\"input\" placeholder=\"12\" id=\"widthInput\">\n        </div>\n        <div class=\"column is-4\">\n            <div class=\"select\">\n                <select class=\"mySelect\" id=\"widthUnit\">\n                    <option>px</option>\n                    <option>%</option>\n                    <option>em</option>\n                </select>\n            </div>\n        </div>\n    </div>\n    <!-- height -->\n    <div class=\"columns height property\">\n        <div class=\"column is-5\">\n            <div class=\"select\">\n                <select class=\"mySelect\">\n                    <option>Height</option>\n                    <option>Min-Height</option>\n                    <option>Max-Height</option>\n                </select>\n            </div>\n        </div>\n        <div class=\"column is-3 inputForms\">\n            <input type=\"number\" class=\"input\" placeholder=\"12\">\n        </div>\n        <div class=\"column is-4\">\n            <div class=\"select\">\n                <select class=\"mySelect\">\n                    <option>px</option>\n                    <option>%</option>\n                    <option>em</option>\n                </select>\n            </div>\n        </div>\n    </div>\n    <div class=\"columns height property\">\n        <div class=\"column is-5\">\n            <div class=\"select\">\n                <select class=\"mySelect\">\n                    <option>Margin</option>\n                    <option>Margin-Left</option>\n                    <option>Margin-Right</option>\n                    <option>Margin-Top</option>\n                    <option>Margin-Bottom</option>\n                </select>\n            </div>\n        </div>\n        <div class=\"column is-3 inputForms\">\n            <input type=\"number\" class=\"input\" placeholder=\"12\">\n        </div>\n        <div class=\"column is-4\">\n            <div class=\"select\">\n                <select class=\"mySelect\">\n                    <option>px</option>\n                    <option>%</option>\n                    <option>em</option>\n                </select>\n            </div>\n        </div>\n    </div>\n    <div class=\"columns height property\">\n        <div class=\"column is-5\">\n            <div class=\"select\">\n                <select class=\"mySelect\">\n                    <option>Padding</option>\n                    <option>Padding-Left</option>\n                    <option>Padding-Right</option>\n                    <option>Padding-Top</option>\n                    <option>Padding-Bottom</option>\n                </select>\n            </div>\n        </div>\n        <div class=\"column is-3 inputForms\">\n            <input type=\"number\" class=\"input\" placeholder=\"12\">\n        </div>\n        <div class=\"column is-4\">\n            <div class=\"select\">\n                <select class=\"mySelect\">\n                    <option>px</option>\n                    <option>%</option>\n                    <option>em</option>\n                </select>\n            </div>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -149,7 +162,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"buttons are-small path\">\n        <button class=\"button\">Html</button>\n        <button class=\"button\">Body</button>\n        <button class=\"button\">Div</button>\n        <button class=\"button\">Div</button>\n        <button class=\"button is-primary element\">Span</button>\n    </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"buttons are-small path\" >\n    <div *ngFor= \"let elemment of elementPath; let last = last\" class=\"btnPath\">\n        <button [class.is-primary]=\"last== true\" class=\"button\">{{elemment}}</button>\n    </div>        \n    </div>");
 
 /***/ }),
 
@@ -162,7 +175,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-sub-tools></app-sub-tools>\n<!-- element path -->\n<app-element-path></app-element-path>\n<!-- appearance -->\n<div class=\"apearance\">\n    <p class=\"heading\">Apearance</p>\n <app-layout></app-layout>\n   <app-animation></app-animation>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<!-- element path -->\n<!-- <app-element-path></app-element-path> <br> -->\n<app-sub-tools></app-sub-tools>\n<!-- appearance -->\n<div class=\"apearance\">\n    <p class=\"heading\">Apearance</p>\n <app-layout></app-layout>\n   <app-animation></app-animation>\n</div>");
 
 /***/ }),
 
@@ -175,7 +188,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p class=\"heading comText\">Propeties</p>\n<div class=\"tools\">\n    <div class=\"columns\">\n        <div class=\"column is-6  subTools\">\n            <span><i class=\"material-icons\">format_italic</i></span>\n            <span><i class=\"material-icons\">format_bold</i></span>\n            <span><i class=\"material-icons\">format_underlined</i></span>\n            <span><i class=\"material-icons\">format_textdirection_l_to_r</i></span>\n            <span><i class=\"material-icons\">format_textdirection_r_to_l</i></span>\n        </div>\n        <div class=\"column is-6 subTools\">\n            <span><i class=\"material-icons\">format_align_left</i></span>\n            <span><i class=\"material-icons\">format_align_center</i></span>\n            <span><i class=\"material-icons\">format_align_justify</i></span>\n            <span><i class=\"material-icons\">format_align_right</i></span>\n        </div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<p class=\"heading comText\">Propeties</p>\n<div class=\"colorPicker\">\n\n</div>\n<div class=\"tools\">\n    <!-- text align -->\n    <div class=\"columns\">\n        <div class=\"column  subTools\">\n            <p class=\"heading\">Text align</p>\n            <mat-button-toggle-group #group=\"matButtonToggleGroup\" class=\"textAlign\">\n                    <mat-button-toggle value=\"\" aria-label=\"Text align normal\" (change)=\"align($event.value)\">\n                            <mat-icon>clear</mat-icon>\n                        </mat-button-toggle>\n                <mat-button-toggle value=\"left\" aria-label=\"Text align left\" (change)=\"align($event.value)\">\n                    <mat-icon>format_align_left</mat-icon>\n                </mat-button-toggle>\n                <mat-button-toggle value=\"center\" aria-label=\"Text align center\" (change)=\"align($event.value)\">\n                    <mat-icon>format_align_center</mat-icon>\n                </mat-button-toggle>\n                <mat-button-toggle value=\"right\" aria-label=\"Text align right\" (change)=\"align($event.value)\">\n                    <mat-icon>format_align_right</mat-icon>\n                </mat-button-toggle>\n                <mat-button-toggle value=\"justify\" aria-label=\"Text align justify\" (change)=\"align($event.value)\">\n                    <mat-icon>format_align_justify</mat-icon>\n                </mat-button-toggle>\n            </mat-button-toggle-group>\n        </div>\n    </div>\n    <!-- Text Options -->\n    <div class=\"columns\">\n        <div class=\"column  subTools\">\n            <p class=\"heading\">Text Options</p>\n            <mat-button-toggle-group #group=\"matButtonToggleGroup\" class=\"textOptions\" multiple>\n                <mat-button-toggle value=\"left\" aria-label=\"Text align left\" (click)=\"italic()\">\n                    <mat-icon>format_italic</mat-icon>\n                </mat-button-toggle>\n                <mat-button-toggle value=\"center\" aria-label=\"Text align center\" (click)=\"bold($event)\">\n                    <mat-icon>format_bold</mat-icon>\n                </mat-button-toggle>\n                <mat-button-toggle value=\"right\" aria-label=\"Text align right\" (click)=\"underline()\">\n                    <mat-icon>format_underlined</mat-icon>\n                </mat-button-toggle>\n                <mat-button-toggle value=\"right\" aria-label=\"Text align right\" (click)=\"lineThrough()\">\n                    <mat-icon>format_strikethrough</mat-icon>\n                </mat-button-toggle>\n            </mat-button-toggle-group>\n        </div>\n    </div>\n     <!-- bacground color and color -->\n     <div class=\"columns\" style=\"background-color: #f7f7f7;\">\n\n            <div class=\"column is-6\">\n                <h1 class=\"heading\">Color</h1>\n                <div class=\"control\">\n                    <div class=\"input\"><span class=\"color-picker\"></span> </div>\n                </div>\n    \n            </div>\n            <div class=\"column is-6\">\n                <h1 class=\"heading\">Background Color</h1>\n                <div class=\"control\">\n                    <div class=\"input\"><span class=\"bgGolor-picker\"></span></div>\n                </div>\n    \n            </div>\n        </div>\n    <!-- opacity, brightness, hue and saturation, contrast, sepia -->\n     <mat-expansion-panel>\n        <mat-expansion-panel-header>\n            <mat-panel-title>\n                Filters\n            </mat-panel-title>\n        </mat-expansion-panel-header>\n        <div class=\"columns\">\n                <div class=\"column subTools\">\n                    <span class=\"heading\">Opacity</span>\n                    <mat-slider min=\"0\" max=\"1\" step=\"0.1\" (change)=\"opacity($event)\"></mat-slider>\n                </div>\n            </div>\n            <div class=\"columns\">\n                <div class=\"column subTools\">\n                    <span class=\"heading\">brightness</span>\n                    <mat-slider min=\"0\" max=\"400\"  (change)=\"brightness($event)\"></mat-slider>\n                </div>\n            </div>\n            <div class=\"columns\">\n                <div class=\"column subTools\">\n                    <span class=\"heading\">saturation</span>\n                    <mat-slider min=\"0\" max=\"100\" name=\"\" (change)=\"saturation($event)\"></mat-slider>\n                </div>\n            </div>\n            <div class=\"columns\">\n                <div class=\"column subTools\">\n                    <span class=\"heading\">contrast</span>\n                    <mat-slider min=\"0\" max=\"100\" name=\"\" (change)=\"contrast($event)\"></mat-slider>\n                </div>\n            </div>\n            <div class=\"columns\">\n                <div class=\"column subTools\">\n                    <span class=\"heading\">blur</span>\n                    <mat-slider min=\"0\" max=\"100\" name=\"\" (change)=\"blur($event)\"></mat-slider>\n                </div>\n            </div>\n            <div class=\"columns\">\n                <div class=\"column subTools\">\n                    <span class=\"heading\">sepia</span>\n                    <mat-slider min=\"0\" max=\"100\" name=\"\" (change)=\"sepia($event)\" color=\"accent\"></mat-slider>\n                </div>\n            </div>\n    </mat-expansion-panel>\n   \n</div>");
 
 /***/ }),
 
@@ -188,7 +201,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- tool bar -->\n\n<div class=\"navbar toolbar\">\n    <div class=\"navbar-brand\">\n        <span class=\"navbar-item\" (click)=\"sideDrawer()\"> <mat-icon>menu</mat-icon> </span>\n    </div>\n    <div class=\"navbar-start\">\n        <span class=\"navbar-item home\">Design</span>\n        <span class=\"navbar-item\">Preview</span>\n    </div>\n    <div class=\"navbar-end\">\n        <!-- clipboard dropdown -->\n        <span class=\"dropdown is-hoverable\">\n                <span aria-haspopup=\"true\" aria-controls=\"dropdown-menu2\" class=\"navbar-item dropdown-trigger\"> <mat-icon>post_add</mat-icon></span>\n            <div class=\"dropdown-menu\" id=\"dropdown-menu2\" role=\"menu\">\n              <div class=\"dropdown-content\" id=\"clipboard\" (click)=\"copy($event)\">\n                <div class=\"dropdown-item\">\n                   <p class=\"heading\">Click to copy</p>\n                </div>\n                <hr class=\"dropdown-divider\">\n              </div>\n            </div>\n          </span>\n          <span class=\"navbar-item\"> <mat-icon>undo</mat-icon></span>  \n          <span class=\"navbar-item\"> <mat-icon>redo</mat-icon></span>\n          <span class=\"navbar-item\"> <mat-icon>code</mat-icon> </span>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- tool bar -->\n\n<div class=\"navbar toolbar\">\n    <div class=\"navbar-brand\">\n        <span class=\"navbar-item\" (click)=\"sideDrawer()\"> <mat-icon>menu</mat-icon> </span>\n    </div>\n    <div class=\"navbar-start\">\n         <a routerLink=\"/design\"  routerLinkActive=\"home\"><span class=\"navbar-item \">Design</span></a>\n        <a routerLink=\"/code\" routerLinkActive=\"home\"><span class=\"navbar-item\">Code</span></a>\n    </div>\n    <div class=\"navbar-end\">\n        <!-- clipboard dropdown -->\n        <span class=\"dropdown is-hoverable\">\n                <span aria-haspopup=\"true\" aria-controls=\"dropdown-menu2\" class=\"navbar-item dropdown-trigger\"> <mat-icon>post_add</mat-icon></span>\n            <div class=\"dropdown-menu\" id=\"dropdown-menu2\" role=\"menu\">\n              <div class=\"dropdown-content\" id=\"clipboard\" (click)=\"copy($event)\">\n                <div class=\"dropdown-item\">\n                   <p class=\"heading\" matTooltip=\"Info about the action\">Click to copy</p>\n                </div>\n                <hr class=\"dropdown-divider\">\n              </div>\n            </div>\n          </span>\n          <span class=\"navbar-item\" (click)=\"undo()\" matTooltip=\"Info about the action\"> <mat-icon>undo</mat-icon></span>  \n          <span class=\"navbar-item\" (click)=\"redo()\" matTooltip=\"Info about the action\"> <mat-icon>redo</mat-icon></span>\n          <span class=\"navbar-item\" matTooltip=\"Info about the action\"> <mat-icon>code</mat-icon> </span>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -499,32 +512,41 @@ AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*!*******************************!*\
   !*** ./src/app/app.module.ts ***!
   \*******************************/
-/*! exports provided: AppModule */
+/*! exports provided: getHighlightLanguages, AppModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getHighlightLanguages", function() { return getHighlightLanguages; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _panels_panels_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./panels/panels.component */ "./src/app/panels/panels.component.ts");
-/* harmony import */ var _panels_left_panel_left_panel_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./panels/left-panel/left-panel.component */ "./src/app/panels/left-panel/left-panel.component.ts");
-/* harmony import */ var _panels_right_panel_right_panel_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./panels/right-panel/right-panel.component */ "./src/app/panels/right-panel/right-panel.component.ts");
-/* harmony import */ var _panels_iframe_panel_iframe_panel_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./panels/iframe-panel/iframe-panel.component */ "./src/app/panels/iframe-panel/iframe-panel.component.ts");
-/* harmony import */ var _panels_left_panel_left_toolbar_left_toolbar_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./panels/left-panel/left-toolbar/left-toolbar.component */ "./src/app/panels/left-panel/left-toolbar/left-toolbar.component.ts");
-/* harmony import */ var _panels_left_panel_component_toolbar_component_toolbar_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./panels/left-panel/component-toolbar/component-toolbar.component */ "./src/app/panels/left-panel/component-toolbar/component-toolbar.component.ts");
-/* harmony import */ var _panels_right_panel_sub_tools_sub_tools_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./panels/right-panel/sub-tools/sub-tools.component */ "./src/app/panels/right-panel/sub-tools/sub-tools.component.ts");
-/* harmony import */ var _panels_right_panel_element_path_element_path_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./panels/right-panel/element-path/element-path.component */ "./src/app/panels/right-panel/element-path/element-path.component.ts");
-/* harmony import */ var _panels_right_panel_appearance_appearance_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./panels/right-panel/appearance/appearance.component */ "./src/app/panels/right-panel/appearance/appearance.component.ts");
-/* harmony import */ var _panels_right_panel_appearance_layout_layout_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./panels/right-panel/appearance/layout/layout.component */ "./src/app/panels/right-panel/appearance/layout/layout.component.ts");
-/* harmony import */ var _panels_right_panel_appearance_animation_animation_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./panels/right-panel/appearance/animation/animation.component */ "./src/app/panels/right-panel/appearance/animation/animation.component.ts");
-/* harmony import */ var _panels_toolbar_toolbar_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./panels/toolbar/toolbar.component */ "./src/app/panels/toolbar/toolbar.component.ts");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
-/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/esm2015/icon.js");
-/* harmony import */ var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material/sidenav */ "./node_modules/@angular/material/esm2015/sidenav.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _panels_panels_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./panels/panels.component */ "./src/app/panels/panels.component.ts");
+/* harmony import */ var _panels_left_panel_left_panel_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./panels/left-panel/left-panel.component */ "./src/app/panels/left-panel/left-panel.component.ts");
+/* harmony import */ var _panels_right_panel_right_panel_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./panels/right-panel/right-panel.component */ "./src/app/panels/right-panel/right-panel.component.ts");
+/* harmony import */ var _panels_iframe_panel_iframe_panel_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./panels/iframe-panel/iframe-panel.component */ "./src/app/panels/iframe-panel/iframe-panel.component.ts");
+/* harmony import */ var _panels_left_panel_left_toolbar_left_toolbar_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./panels/left-panel/left-toolbar/left-toolbar.component */ "./src/app/panels/left-panel/left-toolbar/left-toolbar.component.ts");
+/* harmony import */ var _panels_left_panel_component_toolbar_component_toolbar_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./panels/left-panel/component-toolbar/component-toolbar.component */ "./src/app/panels/left-panel/component-toolbar/component-toolbar.component.ts");
+/* harmony import */ var _panels_right_panel_sub_tools_sub_tools_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./panels/right-panel/sub-tools/sub-tools.component */ "./src/app/panels/right-panel/sub-tools/sub-tools.component.ts");
+/* harmony import */ var _panels_right_panel_element_path_element_path_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./panels/right-panel/element-path/element-path.component */ "./src/app/panels/right-panel/element-path/element-path.component.ts");
+/* harmony import */ var _panels_right_panel_appearance_appearance_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./panels/right-panel/appearance/appearance.component */ "./src/app/panels/right-panel/appearance/appearance.component.ts");
+/* harmony import */ var _panels_right_panel_appearance_layout_layout_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./panels/right-panel/appearance/layout/layout.component */ "./src/app/panels/right-panel/appearance/layout/layout.component.ts");
+/* harmony import */ var _panels_right_panel_appearance_animation_animation_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./panels/right-panel/appearance/animation/animation.component */ "./src/app/panels/right-panel/appearance/animation/animation.component.ts");
+/* harmony import */ var _panels_toolbar_toolbar_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./panels/toolbar/toolbar.component */ "./src/app/panels/toolbar/toolbar.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/esm2015/icon.js");
+/* harmony import */ var _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/sidenav */ "./node_modules/@angular/material/esm2015/sidenav.js");
+/* harmony import */ var _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/material/tooltip */ "./node_modules/@angular/material/esm2015/tooltip.js");
+/* harmony import */ var _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/material/button-toggle */ "./node_modules/@angular/material/esm2015/button-toggle.js");
+/* harmony import */ var _angular_material_slider__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/material/slider */ "./node_modules/@angular/material/esm2015/slider.js");
+/* harmony import */ var _angular_material_expansion__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/material/expansion */ "./node_modules/@angular/material/esm2015/expansion.js");
+/* harmony import */ var _panels_code_code_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./panels/code/code.component */ "./src/app/panels/code/code.component.ts");
+/* harmony import */ var ngx_highlightjs__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ngx-highlightjs */ "./node_modules/ngx-highlightjs/fesm2015/ngx-highlightjs.js");
+/* harmony import */ var _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/cdk/drag-drop */ "./node_modules/@angular/cdk/esm2015/drag-drop.js");
 
 
 
@@ -545,36 +567,131 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
+const appRoutes = [
+    { path: 'design', component: _panels_iframe_panel_iframe_panel_component__WEBPACK_IMPORTED_MODULE_9__["IframePanelComponent"] },
+    { path: 'code', component: _panels_code_code_component__WEBPACK_IMPORTED_MODULE_25__["CodeComponent"] },
+    { path: '', redirectTo: 'design', pathMatch: 'full' },
+];
+function getHighlightLanguages() {
+    return {
+        javascript: () => __webpack_require__.e(/*! import() | highlight-js-lib-languages-javascript */ "common").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/javascript */ "./node_modules/highlight.js/lib/languages/javascript.js", 7)),
+        css: () => __webpack_require__.e(/*! import() | highlight-js-lib-languages-css */ "common").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/css */ "./node_modules/highlight.js/lib/languages/css.js", 7)),
+        xml: () => __webpack_require__.e(/*! import() | highlight-js-lib-languages-xml */ "common").then(__webpack_require__.t.bind(null, /*! highlight.js/lib/languages/xml */ "./node_modules/highlight.js/lib/languages/xml.js", 7))
+    };
+}
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-            _panels_panels_component__WEBPACK_IMPORTED_MODULE_5__["PanelsComponent"],
-            _panels_left_panel_left_panel_component__WEBPACK_IMPORTED_MODULE_6__["LeftPanelComponent"],
-            _panels_right_panel_right_panel_component__WEBPACK_IMPORTED_MODULE_7__["RightPanelComponent"],
-            _panels_iframe_panel_iframe_panel_component__WEBPACK_IMPORTED_MODULE_8__["IframePanelComponent"],
-            _panels_left_panel_left_toolbar_left_toolbar_component__WEBPACK_IMPORTED_MODULE_9__["LeftToolbarComponent"],
-            _panels_left_panel_component_toolbar_component_toolbar_component__WEBPACK_IMPORTED_MODULE_10__["ComponentToolbarComponent"],
-            _panels_right_panel_sub_tools_sub_tools_component__WEBPACK_IMPORTED_MODULE_11__["SubToolsComponent"],
-            _panels_right_panel_element_path_element_path_component__WEBPACK_IMPORTED_MODULE_12__["ElementPathComponent"],
-            _panels_right_panel_appearance_appearance_component__WEBPACK_IMPORTED_MODULE_13__["AppearanceComponent"],
-            _panels_right_panel_appearance_layout_layout_component__WEBPACK_IMPORTED_MODULE_14__["LayoutComponent"],
-            _panels_right_panel_appearance_animation_animation_component__WEBPACK_IMPORTED_MODULE_15__["AnimationComponent"],
-            _panels_toolbar_toolbar_component__WEBPACK_IMPORTED_MODULE_16__["ToolbarComponent"]
+            _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+            _panels_panels_component__WEBPACK_IMPORTED_MODULE_6__["PanelsComponent"],
+            _panels_left_panel_left_panel_component__WEBPACK_IMPORTED_MODULE_7__["LeftPanelComponent"],
+            _panels_right_panel_right_panel_component__WEBPACK_IMPORTED_MODULE_8__["RightPanelComponent"],
+            _panels_iframe_panel_iframe_panel_component__WEBPACK_IMPORTED_MODULE_9__["IframePanelComponent"],
+            _panels_left_panel_left_toolbar_left_toolbar_component__WEBPACK_IMPORTED_MODULE_10__["LeftToolbarComponent"],
+            _panels_left_panel_component_toolbar_component_toolbar_component__WEBPACK_IMPORTED_MODULE_11__["ComponentToolbarComponent"],
+            _panels_right_panel_sub_tools_sub_tools_component__WEBPACK_IMPORTED_MODULE_12__["SubToolsComponent"],
+            _panels_right_panel_element_path_element_path_component__WEBPACK_IMPORTED_MODULE_13__["ElementPathComponent"],
+            _panels_right_panel_appearance_appearance_component__WEBPACK_IMPORTED_MODULE_14__["AppearanceComponent"],
+            _panels_right_panel_appearance_layout_layout_component__WEBPACK_IMPORTED_MODULE_15__["LayoutComponent"],
+            _panels_right_panel_appearance_animation_animation_component__WEBPACK_IMPORTED_MODULE_16__["AnimationComponent"],
+            _panels_toolbar_toolbar_component__WEBPACK_IMPORTED_MODULE_17__["ToolbarComponent"],
+            _panels_code_code_component__WEBPACK_IMPORTED_MODULE_25__["CodeComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_17__["BrowserAnimationsModule"],
-            _angular_material_icon__WEBPACK_IMPORTED_MODULE_18__["MatIconModule"],
-            _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_19__["MatSidenavModule"]
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_18__["BrowserAnimationsModule"],
+            _angular_material_icon__WEBPACK_IMPORTED_MODULE_19__["MatIconModule"],
+            _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_20__["MatSidenavModule"],
+            _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_21__["MatTooltipModule"],
+            _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_22__["MatButtonToggleModule"],
+            _angular_material_slider__WEBPACK_IMPORTED_MODULE_23__["MatSliderModule"],
+            _angular_material_expansion__WEBPACK_IMPORTED_MODULE_24__["MatExpansionModule"],
+            ngx_highlightjs__WEBPACK_IMPORTED_MODULE_26__["HighlightModule"],
+            _angular_cdk_drag_drop__WEBPACK_IMPORTED_MODULE_27__["DragDropModule"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot(appRoutes)
         ],
-        providers: [],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+        providers: [
+            {
+                provide: ngx_highlightjs__WEBPACK_IMPORTED_MODULE_26__["HIGHLIGHT_OPTIONS"],
+                useValue: {
+                    languages: getHighlightLanguages()
+                }
+            }
+        ],
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
     })
 ], AppModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/panels/code/code.component.css":
+/*!************************************************!*\
+  !*** ./src/app/panels/code/code.component.css ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".codePreview{\n    margin-left: 5%;\n    margin-bottom: 10%;\n    text-align: left; \n    -webkit-user-select: text !important; \n       -moz-user-select: text !important; \n        -ms-user-select: text !important; \n            user-select: text !important;\n}\n.Save{\n    background-color: #2294e3 !important;\n}\npre{\n    background-color: white;\n    margin-left: 5%;\n    margin-right: 5%;\n}\ncode{\n    height: 75vh;\n}\n.html{\n    -webkit-user-select: text !important;\n       -moz-user-select: text !important;\n        -ms-user-select: text !important;\n            user-select: text !important;\n}\n.buttons{\n    margin-left: 5%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFuZWxzL2NvZGUvY29kZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtJQUNmLGtCQUFrQjtJQUNsQixnQkFBZ0I7SUFDaEIsb0NBQTRCO09BQTVCLGlDQUE0QjtRQUE1QixnQ0FBNEI7WUFBNUIsNEJBQTRCO0FBQ2hDO0FBQ0E7SUFDSSxvQ0FBb0M7QUFDeEM7QUFDQTtJQUNJLHVCQUF1QjtJQUN2QixlQUFlO0lBQ2YsZ0JBQWdCO0FBQ3BCO0FBQ0E7SUFDSSxZQUFZO0FBQ2hCO0FBQ0E7SUFDSSxvQ0FBNEI7T0FBNUIsaUNBQTRCO1FBQTVCLGdDQUE0QjtZQUE1Qiw0QkFBNEI7QUFDaEM7QUFDQTtJQUNJLGVBQWU7QUFDbkIiLCJmaWxlIjoic3JjL2FwcC9wYW5lbHMvY29kZS9jb2RlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29kZVByZXZpZXd7XG4gICAgbWFyZ2luLWxlZnQ6IDUlO1xuICAgIG1hcmdpbi1ib3R0b206IDEwJTtcbiAgICB0ZXh0LWFsaWduOiBsZWZ0OyBcbiAgICB1c2VyLXNlbGVjdDogdGV4dCAhaW1wb3J0YW50O1xufVxuLlNhdmV7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzIyOTRlMyAhaW1wb3J0YW50O1xufVxucHJle1xuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIG1hcmdpbi1sZWZ0OiA1JTtcbiAgICBtYXJnaW4tcmlnaHQ6IDUlO1xufVxuY29kZXtcbiAgICBoZWlnaHQ6IDc1dmg7XG59XG4uaHRtbHtcbiAgICB1c2VyLXNlbGVjdDogdGV4dCAhaW1wb3J0YW50O1xufVxuLmJ1dHRvbnN7XG4gICAgbWFyZ2luLWxlZnQ6IDUlO1xufSJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/panels/code/code.component.ts":
+/*!***********************************************!*\
+  !*** ./src/app/panels/code/code.component.ts ***!
+  \***********************************************/
+/*! exports provided: CodeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CodeComponent", function() { return CodeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_code_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/code.service */ "./src/app/shared/code.service.ts");
+
+
+
+let CodeComponent = class CodeComponent {
+    constructor(code) {
+        this.code = code;
+        this.codeHtml = ``;
+    }
+    ngOnInit() {
+        setTimeout(() => {
+            this.codeHtml = localStorage.getItem("frameData");
+        }, 200);
+    }
+    // saving the code html back
+    save() {
+        // this.code.codeData = document.querySelector('code').innerText;
+        localStorage.setItem("frameData", document.querySelector('code').innerText);
+    }
+};
+CodeComponent.ctorParameters = () => [
+    { type: _shared_code_service__WEBPACK_IMPORTED_MODULE_2__["CodeService"] }
+];
+CodeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-code',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./code.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/panels/code/code.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./code.component.css */ "./src/app/panels/code/code.component.css")).default]
+    })
+], CodeComponent);
 
 
 
@@ -589,7 +706,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhbmVscy9pZnJhbWUtcGFuZWwvaWZyYW1lLXBhbmVsLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("#focus, #clickFocus{\n    display: none;\n    position: fixed;\n    height: 923px;\n    width: 1061px;\n    border: 2px solid #2294e3;\n    top: 0px;\n    left: 0px;\n    z-index: 99999;\n    pointer-events: none;\n}\n#clickFocus{\n    background-color: rgba(166, 166, 255,0.2);\n}\n#info, #clickInfo{\n    float: left;\n    position: fixed;\n    padding: 1px;\n    font-size: x-small;\n    background-color: rgb(34, 148, 227);\n    color: rgb(255, 255, 255);\n    display: none;\n}\n#info{\n    width: 70px !important;\n}\nmat-icon{\n    font-size: small;\n}\n#clickInfo {\n  display: grid;\n  grid-template-columns: repeat(6, 1fr);\n  width: 145px !important;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFuZWxzL2lmcmFtZS1wYW5lbC9pZnJhbWUtcGFuZWwuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGFBQWE7SUFDYixlQUFlO0lBQ2YsYUFBYTtJQUNiLGFBQWE7SUFDYix5QkFBeUI7SUFDekIsUUFBUTtJQUNSLFNBQVM7SUFDVCxjQUFjO0lBQ2Qsb0JBQW9CO0FBQ3hCO0FBQ0E7SUFDSSx5Q0FBeUM7QUFDN0M7QUFDQTtJQUNJLFdBQVc7SUFDWCxlQUFlO0lBQ2YsWUFBWTtJQUNaLGtCQUFrQjtJQUNsQixtQ0FBbUM7SUFDbkMseUJBQXlCO0lBQ3pCLGFBQWE7QUFDakI7QUFDQTtJQUNJLHNCQUFzQjtBQUMxQjtBQUNBO0lBQ0ksZ0JBQWdCO0FBQ3BCO0FBQ0E7RUFDRSxhQUFhO0VBQ2IscUNBQXFDO0VBQ3JDLHVCQUF1QjtBQUN6QiIsImZpbGUiOiJzcmMvYXBwL3BhbmVscy9pZnJhbWUtcGFuZWwvaWZyYW1lLXBhbmVsLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjZm9jdXMsICNjbGlja0ZvY3Vze1xuICAgIGRpc3BsYXk6IG5vbmU7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIGhlaWdodDogOTIzcHg7XG4gICAgd2lkdGg6IDEwNjFweDtcbiAgICBib3JkZXI6IDJweCBzb2xpZCAjMjI5NGUzO1xuICAgIHRvcDogMHB4O1xuICAgIGxlZnQ6IDBweDtcbiAgICB6LWluZGV4OiA5OTk5OTtcbiAgICBwb2ludGVyLWV2ZW50czogbm9uZTtcbn1cbiNjbGlja0ZvY3Vze1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMTY2LCAxNjYsIDI1NSwwLjIpO1xufVxuI2luZm8sICNjbGlja0luZm97XG4gICAgZmxvYXQ6IGxlZnQ7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHBhZGRpbmc6IDFweDtcbiAgICBmb250LXNpemU6IHgtc21hbGw7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDM0LCAxNDgsIDIyNyk7XG4gICAgY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KTtcbiAgICBkaXNwbGF5OiBub25lO1xufVxuI2luZm97XG4gICAgd2lkdGg6IDcwcHggIWltcG9ydGFudDtcbn1cbm1hdC1pY29ue1xuICAgIGZvbnQtc2l6ZTogc21hbGw7XG59XG4jY2xpY2tJbmZvIHtcbiAgZGlzcGxheTogZ3JpZDtcbiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoNiwgMWZyKTtcbiAgd2lkdGg6IDE0NXB4ICFpbXBvcnRhbnQ7XG59XG4iXX0= */");
 
 /***/ }),
 
@@ -607,15 +724,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _shared_size_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/size.service */ "./src/app/shared/size.service.ts");
 /* harmony import */ var _shared_data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/data.service */ "./src/app/shared/data.service.ts");
+/* harmony import */ var _shared_state_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared/state.service */ "./src/app/shared/state.service.ts");
+/* harmony import */ var _shared_right_panel_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../shared/right-panel.service */ "./src/app/shared/right-panel.service.ts");
+/* harmony import */ var _shared_code_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/code.service */ "./src/app/shared/code.service.ts");
+
+
+
 
 
 
 
 let IframePanelComponent = class IframePanelComponent {
-    constructor(size, data) {
+    constructor(size, data, iframeState, rightPanelData, code) {
         this.size = size;
         this.data = data;
-        // perant methods setup
+        this.iframeState = iframeState;
+        this.rightPanelData = rightPanelData;
+        this.code = code;
+        // the current element in the focus bar
+        this.clickedElement = [];
+        // when should focus show
+        this.focusState = true;
+        // to show elemnt path
+        this.elementPath = [];
+        this.frameData = [];
+        // perant methods setup so iframe could access the methods here
         window.drop = this.drop.bind(this);
         window.dragover = this.dragover.bind(this);
         window.mouseover = this.mouseover.bind(this);
@@ -624,129 +757,330 @@ let IframePanelComponent = class IframePanelComponent {
         //setting the iframe data
         let iframe = document.querySelector('#iframe');
         let frame = iframe.contentWindow;
-        // creating the css link
-        let link = document.createElement('link');
-        link.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css');
-        link.setAttribute('rel', 'stylesheet');
+        // my link
+        let myLink = document.createElement('link');
+        myLink.setAttribute('href', './assets/framebody.css');
+        myLink.setAttribute('rel', 'stylesheet');
+        // creating the bulma css link
+        let bulmaLink = document.createElement('link');
+        // the animate css link
+        let animateLink = document.createElement('link');
+        bulmaLink.setAttribute('href', './assets/bulma/bulma.min.css');
+        // attributing animate link
+        animateLink.setAttribute('href', './assets/libs/animate.min.css');
+        bulmaLink.setAttribute('rel', 'stylesheet');
+        animateLink.setAttribute('rel', 'stylesheet');
         // appending the link to the head
-        let csslink = frame.document.querySelector('head').appendChild(link);
+        frame.document.querySelector('head').appendChild(bulmaLink);
+        frame.document.querySelector('head').appendChild(animateLink);
+        frame.document.querySelector('head').appendChild(myLink);
         let framebody = frame.document.querySelector('body');
-        console.log(framebody);
+        // when you click the save button in the code component when the iframe component is loading again the data is set
+        // set timout to delay the innerHTML until the css has loaded completly
+        setTimeout(() => {
+            if (localStorage.getItem("frameData") != undefined) {
+                framebody.innerHTML = localStorage.getItem("frameData");
+            }
+            else {
+                return;
+            }
+        }, 300);
+        this.iframeState.frameData$.subscribe(value => {
+            // making sure that the value of the frame is not underfined
+            if (value == undefined) {
+                return;
+            }
+            else {
+                framebody.innerHTML = value.toString();
+            }
+        });
+        // framebody.innerHTML = this.iframeState.redo_undoData;
         // adding the mouseover event
         framebody.setAttribute('onmouseover', 'parent.mouseover(event)');
         // adding the ondrag event in the iframe and letting it access the parent window
         framebody.setAttribute('ondrop', 'parent.drop(event)');
         framebody.setAttribute('ondragover', 'parent.dragover(event)');
         framebody.style.backgroundColor = "white";
-        framebody.addEventListener('click', function (e) {
-            e.preventDefault();
-            console.log('test');
+        ////////////////////////////////////////////
+        let mutations = new MutationObserver((data) => {
+            data.forEach((mutation) => {
+                // this.code.codeData = framebody.innerHTML;
+                localStorage.setItem("frameData", framebody.innerHTML);
+            });
         });
-        // listening for drop in body
+        mutations.observe(framebody, {
+            attributes: true,
+            subtree: true,
+            childList: true,
+            characterData: true,
+            characterDataOldValue: true
+        });
         // setting the size of the iframe
         this.size.sizze$.subscribe(data => {
             this.output = data;
             if (data["state"] == "true") {
                 let iframe = document.querySelector('#iframe');
                 iframe.setAttribute('width', this.output['x']);
-                iframe.setAttribute('height', this.output['y']);
+                // iframe.setAttribute('height', this.output['y']);
+                iframe.style.height = this.output['y'];
             }
         });
-        // showing textform for the text of elemnts to be editted 
-        framebody.addEventListener('dblclick', function (event) {
+        // when the focus bar is double clicked
+        let focus = document.querySelector('#focus');
+        let info = document.querySelector('#info');
+        // hidden the focus bar
+        framebody.addEventListener('mouseout', () => {
+            focus.style.display = 'none';
+            info.style.display = 'none';
+        });
+        framebody.addEventListener('mousemove', (event) => {
+            //  if(event.target.localName == 'body'){
+            //    console.log('dfvb')
+            //  } 
+        });
+        // for displaying the clickable focus bar
+        framebody.addEventListener('click', (event) => {
             event.preventDefault();
-            // checking to see that the target is not the body
-            if (event.target != framebody) {
-                if (event.type == 'dblclick') {
-                    // creating the texarea that will show up
-                    let input = document.createElement('input');
-                    input.style.display = "none";
-                    console.log(event);
-                    let currentElement = event.target;
-                    // the elements textContent should not be empty
-                    if (currentElement.textContent !== '') {
-                        // check to see if the element does not have chilldnodes
-                        if (currentElement.children.length == 0) {
-                            input.style.position = 'absolute';
-                            input.style.zIndex = '4';
-                            input.style.border = currentElement.style.border;
-                            // getting computed styles to use for the input appearance 
-                            let rect = currentElement.getBoundingClientRect();
-                            let style = window.getComputedStyle(currentElement, 'before');
-                            input.style.font = style.font;
-                            input.style.boxShadow = ` 0 0 2px #3273dc`;
-                            input.style.textAlign = style.textAlign;
-                            input.style.width = currentElement.clientWidth + 'px';
-                            input.style.height = currentElement.clientHeight + 'px';
-                            input.style.minWidth = 4 + 'px';
-                            input.style.minHeight = 7 + 'px';
-                            input.style.zIndex = '99999';
-                            input.style.left = rect.left + "px";
-                            input.style.top = rect.top + 'px';
-                            input.value = currentElement.textContent;
-                            input.style.display = 'block';
-                            framebody.appendChild(input);
-                            // making the input to focus     
-                            input.focus();
-                            input.select();
-                            // interchanging the data on blur
-                            input.addEventListener('blur', function (e) {
-                                e.preventDefault();
-                                if (e.type == 'blur') {
-                                    currentElement.textContent = input.value;
-                                    framebody.removeChild(input);
-                                }
-                                else {
-                                    framebody.removeChild(input);
-                                }
-                            });
-                        }
-                    }
-                }
+            // working with the click focus bar
+            this.clickedElement.push(event.target);
+            this.rightPanelData.edditedElement = event.target;
+            let element = event.target;
+            let coordinates = this.clickedElement[this.clickedElement.length - 1].getBoundingClientRect();
+            let coor = iframe.getBoundingClientRect();
+            let clickFocus = document.querySelector('#clickFocus');
+            let clickInfo = document.querySelector('#clickInfo');
+            clickFocus.style.height = coordinates.height + "px";
+            clickFocus.style.width = coordinates.width + "px";
+            clickFocus.style.top = (coordinates.top + coor.top) + "px";
+            clickFocus.style.left = (coordinates.left + coor.left) + "px";
+            clickInfo.style.height = info.style.height;
+            clickFocus.style.display = 'block';
+            clickInfo.style.display = 'grid';
+            clickInfo.style.height = info.style.height;
+            clickInfo.style.top = (coordinates.top + coor.top - 26) + "px";
+            clickInfo.style.left = (coordinates.left + coor.left) + "px";
+            frame.addEventListener('scroll', () => {
+                coor = iframe.getBoundingClientRect();
+                let currentCoordinates = this.clickedElement[this.clickedElement.length - 1].getBoundingClientRect();
+                clickFocus.style.top = (currentCoordinates.top + coor.top) + "px";
+                clickFocus.style.left = (currentCoordinates.left + coor.left) + "px";
+                clickInfo.style.top = (currentCoordinates.top + coor.top) - 26 + "px";
+                clickInfo.style.left = (currentCoordinates.left + coor.left) + "px";
+                // clickFocus.style.display = 'none';
+                // clickInfo.style.display = 'none';
+                // dont show the focus bar on scroll
+                focus.style.display = 'none';
+                info.style.display = 'none';
+            });
+        }, true);
+        // deleting the current element
+        let clickFocus = document.querySelector('#clickFocus');
+        let clickInfo = document.querySelector('#clickInfo');
+        let del = document.querySelector('#delete');
+        del.addEventListener('click', (event) => {
+            event.preventDefault();
+            clickFocus.style.display = 'none';
+            clickInfo.style.display = 'none';
+            // deleting the element
+            // dont delette the body
+            if (this.clickedElement[this.clickedElement.length - 1].nodeName == 'BODY') {
+                // do nothing
+            }
+            else {
+                this.clickedElement[this.clickedElement.length - 1].parentNode.removeChild(this.clickedElement[this.clickedElement.length - 1]);
+                // sending the data to enable redo and undo
+                // this.iframeState.iframeStateData = framebody.innerHTML;
+            }
+        });
+        // duplicating elements
+        let duplicate = document.querySelector('#duplicate');
+        duplicate.addEventListener('click', (event) => {
+            event.preventDefault();
+            clickFocus.style.display = 'none';
+            clickInfo.style.display = 'none';
+            let parent = this.clickedElement[this.clickedElement.length - 1].parentNode;
+            let clonedNode = this.clickedElement[this.clickedElement.length - 1].cloneNode(true);
+            parent.insertBefore(clonedNode, this.clickedElement[this.clickedElement.length - 1].nextSibling);
+            // this.iframeState.iframeStateData = framebody.innerHTML;
+        });
+        // dont show the clickfocus after the dellete has taken place
+        clickFocus.style.display = 'none';
+        // making it posible for us to edit text
+        let edit = document.querySelector('#edit');
+        edit.addEventListener('click', (event) => {
+            clickFocus.style.display = 'none';
+            clickInfo.style.display = 'none';
+            event.preventDefault();
+            // setting focus state to false
+            this.focusState = false;
+            // adding the contenteditable attribute
+            this.clickedElement[this.clickedElement.length - 1].setAttribute('contenteditable', 'true');
+            // making it auto focus when you click the edit icon
+            this.clickedElement[this.clickedElement.length - 1].focus();
+            // adding an event listener to remove the contenteditable attribute
+            this.clickedElement[this.clickedElement.length - 1].addEventListener('blur', () => {
+                this.clickedElement[this.clickedElement.length - 1].removeAttribute('contenteditable');
+                // on blur setting focus state to true 
+                this.focusState = true;
+            });
+        });
+        // selecting parent
+        let parentSelector = document.querySelector('#parent');
+        parentSelector.addEventListener('click', (e) => {
+            e.preventDefault();
+            let parentElementt = this.clickedElement[this.clickedElement.length - 1].parentElement;
+            this.clickedElement.push(parentElementt);
+            this.clickedElement.shift();
+            parentElementt.click();
+        });
+        // moving element down
+        let moveDown = document.querySelector('#moveDown');
+        moveDown.addEventListener('click', (e) => {
+            e.preventDefault();
+            // clone the node first
+            try {
+                let clonedNode = this.clickedElement[this.clickedElement.length - 1].cloneNode(true);
+                let parentElementt = this.clickedElement[this.clickedElement.length - 1].parentElement;
+                let nextElement = this.clickedElement[this.clickedElement.length - 1].nextElementSibling;
+                parentElementt.insertBefore(clonedNode, nextElement.nextElementSibling);
+                parentElementt.removeChild(this.clickedElement[this.clickedElement.length - 1]);
+                clickFocus.style.display = 'none';
+                clickInfo.style.display = 'none';
+                // clicking the node
+                clonedNode.click();
+            }
+            catch (_a) { }
+        });
+        // moving element up
+        let moveUp = document.querySelector('#moveUp');
+        moveUp.addEventListener('click', (e) => {
+            e.preventDefault();
+            try {
+                let clonedNode = this.clickedElement[this.clickedElement.length - 1].cloneNode(true);
+                let parentElementt = this.clickedElement[this.clickedElement.length - 1].parentElement;
+                let previousElement = this.clickedElement[this.clickedElement.length - 1].previousElementSibling;
+                parentElementt.insertBefore(clonedNode, previousElement.previousElementSibling);
+                parentElementt.removeChild(this.clickedElement[this.clickedElement.length - 1]);
+                clickFocus.style.display = 'none';
+                clickInfo.style.display = 'none';
+                // clicking the node
+                clonedNode.click();
+            }
+            catch (_a) { }
+        });
+        // making it posible for us to edit text through dblclick
+        framebody.addEventListener('dblclick', (event) => {
+            clickFocus.style.display = 'none';
+            clickInfo.style.display = 'none';
+            info.style.display = 'none';
+            let element = event.target;
+            // adding the contenteditable attribute
+            element.setAttribute('contenteditable', 'true');
+            // making it auto focus when you click the edit icon
+            element.focus();
+            // setting focus state to false
+            this.focusState = false;
+            // adding an event listener to remove the contenteditable attribute
+            element.addEventListener('blur', () => {
+                element.removeAttribute('contenteditable');
+                // on blur setting focus state to true
+                this.focusState = true;
+            });
+        });
+        // tracking the window resize to update the click focus bar
+        frame.addEventListener('resize', () => {
+            let element = this.clickedElement[this.clickedElement.length - 1];
+            // so that even wen resizing without selecting and element
+            if (element != undefined) {
+                let currentCoordinates = element.getBoundingClientRect();
+                let coor = iframe.getBoundingClientRect();
+                clickFocus.style.top = (currentCoordinates.top + coor.top) + "px";
+                clickFocus.style.left = (currentCoordinates.left + coor.left) + "px";
+                clickInfo.style.top = (currentCoordinates.top + coor.top) - 26 + "px";
+                clickInfo.style.left = (currentCoordinates.left + coor.left) + "px";
+                clickInfo.style.height = info.style.height;
+                clickFocus.style.width = currentCoordinates.width + 'px';
+                clickFocus.style.height = currentCoordinates.height + 'px';
             }
         });
     }
     // preventing deafault to enable dropping
     dragover(event) {
         event.preventDefault();
+        // shows the line on dragover
+        let coordinates = event.target.getBoundingClientRect();
+        let iframe = document.querySelector('#iframe');
+        let coor = iframe.getBoundingClientRect();
+        let line = document.querySelector('#line');
+        // line.style.width = coordinates.width + "px";
+        // line.style.backgroundColor = 'blue';
+        // line.style.top = (coordinates.top + coor.top) + "px";
+        // line.style.left = (coordinates.left + coor.left) + "px";
+        // line.style.display = 'block';
+        let info = document.querySelector('#info');
+        // calling the mouseover event in the dragover method to show us where the dragover is
+        // this.mouseover(event);
     }
     // dropping event on iframe
     drop(event) {
         event.preventDefault();
+        // stop the line from showing
+        let line = document.querySelector('#line');
+        line.style.display = 'none';
         // setiing up the dropable data
         let iframe = document.querySelector('#iframe');
         let frame = iframe.contentWindow;
         let framebody = frame.document.querySelector('body');
-        // creating the css link
-        event.target.innerHTML += this.data.recievedData;
+        if (this.data.recievedData != undefined) {
+            event.target.innerHTML += this.data.recievedData;
+        }
+        // this.iframeState.iframeStateData = framebody.innerHTML;
+        line.style.display = 'none';
+        // let element = event.target.getBoundingClientRect();
+        // let prev = event.target.previousElementSibling.getBoundingClientRect();
+        // let next = event.target.nextElementSibling.getBoundingClientRect();
+        // console.log(prev, 'prev');
+        // console.log(next, 'next');
+        // console.log(element, 'cure');
+        // console.log('cu - prev', element.top- prev.top);
+        // console.log('cu - next', element.top- next.top);
     }
-    // for m
+    // for showing the location an element targeted on mousee over
     mouseover(event) {
         event.preventDefault();
-        let div = document.createElement('div');
-        var element;
         let iframe = document.querySelector('#iframe');
         let frame = iframe.contentWindow;
-        let framebody = frame.document.querySelector('body');
-        element = event.target;
-        if (event.target != framebody) {
-            var bor = window.frames.getComputedStyle(element);
-            var bb = bor.border;
-            element.style.border = '1px solid green';
+        // setting up the focus bar
+        let focus = document.querySelector('#focus');
+        let info = document.querySelector('#info');
+        let coordinates = event.target.getBoundingClientRect();
+        let coor = iframe.getBoundingClientRect();
+        focus.style.height = coordinates.height + "px";
+        focus.style.width = coordinates.width + "px";
+        focus.style.top = (coordinates.top + coor.top) + "px";
+        focus.style.left = (coordinates.left + coor.left) + "px";
+        focus.style.zIndex = '99999';
+        // focus state to show or hide
+        if (this.focusState == true) {
+            focus.style.display = 'block';
+            info.style.display = 'inline';
         }
-        event.target.addEventListener('mouseout', function (e) {
-            e.preventDefault();
-            let ele = e.target;
-            element.style.removeProperty('border');
-        });
-    }
-    undo() {
-        let i = 0;
+        info.style.top = (parseInt(coordinates.top + coor.top) - 16) + "px";
+        info.style.left = (coordinates.left + coor.left) + "px";
+        if (event.target.classList == '') {
+            info.innerHTML = event.target.localName;
+        }
+        else if (event.target.classList !== '') {
+            info.innerHTML = event.target.classList;
+        }
     }
 };
 IframePanelComponent.ctorParameters = () => [
     { type: _shared_size_service__WEBPACK_IMPORTED_MODULE_2__["SizeService"] },
-    { type: _shared_data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"] }
+    { type: _shared_data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"] },
+    { type: _shared_state_service__WEBPACK_IMPORTED_MODULE_4__["StateService"] },
+    { type: _shared_right_panel_service__WEBPACK_IMPORTED_MODULE_5__["RightPanelService"] },
+    { type: _shared_code_service__WEBPACK_IMPORTED_MODULE_6__["CodeService"] }
 ];
 IframePanelComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -769,7 +1103,7 @@ IframePanelComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhbmVscy9sZWZ0LXBhbmVsL2NvbXBvbmVudC10b29sYmFyL2NvbXBvbmVudC10b29sYmFyLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".mat-expansion-panel {\n    background: #f7f7f7;\n    border: none !important;\n    box-shadow: none;\n    border: none;\n    border-radius: 0;\n    margin-top: 0;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFuZWxzL2xlZnQtcGFuZWwvY29tcG9uZW50LXRvb2xiYXIvY29tcG9uZW50LXRvb2xiYXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLG1CQUFtQjtJQUNuQix1QkFBdUI7SUFDdkIsZ0JBQWdCO0lBQ2hCLFlBQVk7SUFDWixnQkFBZ0I7SUFDaEIsYUFBYTtBQUNqQiIsImZpbGUiOiJzcmMvYXBwL3BhbmVscy9sZWZ0LXBhbmVsL2NvbXBvbmVudC10b29sYmFyL2NvbXBvbmVudC10b29sYmFyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LWV4cGFuc2lvbi1wYW5lbCB7XG4gICAgYmFja2dyb3VuZDogI2Y3ZjdmNztcbiAgICBib3JkZXI6IG5vbmUgIWltcG9ydGFudDtcbiAgICBib3gtc2hhZG93OiBub25lO1xuICAgIGJvcmRlcjogbm9uZTtcbiAgICBib3JkZXItcmFkaXVzOiAwO1xuICAgIG1hcmdpbi10b3A6IDA7XG59XG4iXX0= */");
 
 /***/ }),
 
@@ -800,10 +1134,19 @@ let ComponentToolbarComponent = class ComponentToolbarComponent {
         // getting all the data associated with the service
         this.recivedComponentData = this.data.componentData;
         this.recievedElementData = this.data.elementData;
+        let dragMe = document.querySelector('.dragMe');
+        // still to work on it
+        dragMe.addEventListener('dragstart', function (event) {
+            var crt = this.cloneNode(true);
+            crt.style.backgroundColor = "red";
+            crt.style.display = "block"; /* or visibility: hidden, or any of the above */
+            document.body.appendChild(crt);
+            // event.dataTransfer.setDragImage(crt, 10, 10);
+        });
     }
     // handles componet data drag
     comDrag(event) {
-        // handles componet data drag
+        // handles component data drag
         event.preventDefault();
         // console.log(event.target.innerHTML)
         // console.log(this.data.data)
@@ -811,7 +1154,6 @@ let ComponentToolbarComponent = class ComponentToolbarComponent {
         for (let i = 0; i < this.data.componentData.length; i++) {
             if (this.recivedComponentData[i].name == text) {
                 this.dataToBeSent = this.recivedComponentData[i].source;
-                console.log('ok');
                 this.data.recievedData = this.dataToBeSent;
             }
         }
@@ -830,12 +1172,10 @@ let ComponentToolbarComponent = class ComponentToolbarComponent {
     // handles layout data drag
     layDrag(event) {
         event.preventDefault();
-        console.log(event.target.innerHTML);
     }
     // handles form data drag
     formDrag(event) {
         event.preventDefault();
-        console.log(event.target.innerHTML);
     }
     // show the hidden preview div
     over(event) {
@@ -954,8 +1294,8 @@ let LeftToolbarComponent = class LeftToolbarComponent {
     }
     phone() {
         let data = {
-            "y": '914px',
-            "x": '425px',
+            "y": '842px',
+            "x": '325px',
             'state': 'true'
         };
         this.smartphone = false;
@@ -966,8 +1306,8 @@ let LeftToolbarComponent = class LeftToolbarComponent {
     }
     tablet() {
         let data = {
-            "y": '914px',
-            "x": '768px',
+            "y": '842px',
+            "x": '668px',
             'state': 'true'
         };
         this.size.iframeSize(data);
@@ -979,7 +1319,7 @@ let LeftToolbarComponent = class LeftToolbarComponent {
     laptop() {
         let data = {
             "x": '85%',
-            "y": '99.1%',
+            "y": '842px',
             'state': 'true'
         };
         this.size.iframeSize(data);
@@ -990,7 +1330,7 @@ let LeftToolbarComponent = class LeftToolbarComponent {
     }
     dextop() {
         let data = {
-            "x": '94%',
+            "x": '95%',
             "y": '942px',
             'state': 'true'
         };
@@ -999,6 +1339,17 @@ let LeftToolbarComponent = class LeftToolbarComponent {
         this.tab = true;
         this.lap = true;
         this.des = false;
+    }
+    // testing upload
+    upload(event) {
+        // let img = <HTMLImageElement> document.querySelector('#img');
+        // let file = event.target.files[0];
+        // const fileread = new FileReader();
+        // fileread.onload = (e)=>{
+        //  console.log(e.target.result)
+        // //  img.setAttribute('src', e.target.result);
+        // }
+        // fileread.readAsDataURL(file);
     }
 };
 LeftToolbarComponent.ctorParameters = () => [
@@ -1129,13 +1480,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AnimationComponent", function() { return AnimationComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_right_panel_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../shared/right-panel.service */ "./src/app/shared/right-panel.service.ts");
+
 
 
 let AnimationComponent = class AnimationComponent {
-    constructor() { }
+    constructor(currentElement) {
+        this.currentElement = currentElement;
+    }
     ngOnInit() {
     }
+    animation(event) {
+        let element = this.currentElement.edditedElement;
+        element.classList.add('animate');
+        element.classList.add(event.target.value);
+        console.log(element);
+    }
 };
+AnimationComponent.ctorParameters = () => [
+    { type: _shared_right_panel_service__WEBPACK_IMPORTED_MODULE_2__["RightPanelService"] }
+];
 AnimationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-animation',
@@ -1201,7 +1565,7 @@ AppearanceComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhbmVscy9yaWdodC1wYW5lbC9hcHBlYXJhbmNlL2xheW91dC9sYXlvdXQuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = (".float{\n    width: 100%;\n}\n.float mat-button-toggle{\n    width: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFuZWxzL3JpZ2h0LXBhbmVsL2FwcGVhcmFuY2UvbGF5b3V0L2xheW91dC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksV0FBVztBQUNmO0FBQ0E7SUFDSSxXQUFXO0FBQ2YiLCJmaWxlIjoic3JjL2FwcC9wYW5lbHMvcmlnaHQtcGFuZWwvYXBwZWFyYW5jZS9sYXlvdXQvbGF5b3V0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZmxvYXR7XG4gICAgd2lkdGg6IDEwMCU7XG59XG4uZmxvYXQgbWF0LWJ1dHRvbi10b2dnbGV7XG4gICAgd2lkdGg6IDEwMCU7XG59Il19 */");
 
 /***/ }),
 
@@ -1217,13 +1581,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LayoutComponent", function() { return LayoutComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_right_panel_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../shared/right-panel.service */ "./src/app/shared/right-panel.service.ts");
+
 
 
 let LayoutComponent = class LayoutComponent {
-    constructor() { }
+    constructor(rightPanelData) {
+        this.rightPanelData = rightPanelData;
+        this.unitAndValue = [];
+    }
     ngOnInit() {
     }
+    // working on display
+    display(event) {
+        try {
+            let element = this.rightPanelData.edditedElement;
+            element.style.display = event.target.value;
+        }
+        catch (_a) { }
+    }
+    // working on float 
+    float(value) {
+        try {
+            let element = this.rightPanelData.edditedElement;
+            if (value == ' ') {
+                element.style.removeProperty('float');
+            }
+            else {
+                element.style.cssFloat = value;
+            }
+        }
+        catch (_a) { }
+    }
 };
+LayoutComponent.ctorParameters = () => [
+    { type: _shared_right_panel_service__WEBPACK_IMPORTED_MODULE_2__["RightPanelService"] }
+];
 LayoutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-layout',
@@ -1245,7 +1638,7 @@ LayoutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhbmVscy9yaWdodC1wYW5lbC9lbGVtZW50LXBhdGgvZWxlbWVudC1wYXRoLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".is-primary{\n    background-color: #2294e3 !important;\n}\n.btnPath{\n    margin-left: 5px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFuZWxzL3JpZ2h0LXBhbmVsL2VsZW1lbnQtcGF0aC9lbGVtZW50LXBhdGguY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLG9DQUFvQztBQUN4QztBQUNBO0lBQ0ksZ0JBQWdCO0FBQ3BCIiwiZmlsZSI6InNyYy9hcHAvcGFuZWxzL3JpZ2h0LXBhbmVsL2VsZW1lbnQtcGF0aC9lbGVtZW50LXBhdGguY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pcy1wcmltYXJ5e1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMyMjk0ZTMgIWltcG9ydGFudDtcbn1cbi5idG5QYXRoe1xuICAgIG1hcmdpbi1sZWZ0OiA1cHg7XG59XG4iXX0= */");
 
 /***/ }),
 
@@ -1261,13 +1654,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ElementPathComponent", function() { return ElementPathComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_element_path_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared/element-path.service */ "./src/app/shared/element-path.service.ts");
+
 
 
 let ElementPathComponent = class ElementPathComponent {
-    constructor() { }
+    constructor(path) {
+        this.path = path;
+    }
     ngOnInit() {
+        if (this.path.path$ != undefined) {
+            this.path.path$.subscribe((data) => {
+                this.elementPath = data;
+                console.log(this.elementPath);
+            });
+        }
     }
 };
+ElementPathComponent.ctorParameters = () => [
+    { type: _shared_element_path_service__WEBPACK_IMPORTED_MODULE_2__["ElementPathService"] }
+];
 ElementPathComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-element-path',
@@ -1333,7 +1739,7 @@ RightPanelComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhbmVscy9yaWdodC1wYW5lbC9zdWItdG9vbHMvc3ViLXRvb2xzLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".textAlign{\n    width: 100%;\n}\n.textAlign mat-button-toggle{\n    width: 100%;\n}\n.textOptions{\n    width: 100%;\n}\n.textOptions mat-button-toggle{\n    width: 100%;\n}\n.column{\n    margin-bottom: 0;\n}\n.columns{\n    margin-bottom: 0;\n}\nmat-slider{\n    width: 100%;\n}\n.block{\n    margin: 0 !important;\n}\n.filters{\n    background-color: #f7f7f7;\n}\n.mat-expansion-panel {\n    background: #f7f7f7;\n    border: none !important;\n    box-shadow: none;\n    border: none;\n    border-radius: 0;\n    margin-top: 0;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFuZWxzL3JpZ2h0LXBhbmVsL3N1Yi10b29scy9zdWItdG9vbHMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFdBQVc7QUFDZjtBQUNBO0lBQ0ksV0FBVztBQUNmO0FBQ0E7SUFDSSxXQUFXO0FBQ2Y7QUFDQTtJQUNJLFdBQVc7QUFDZjtBQUNBO0lBQ0ksZ0JBQWdCO0FBQ3BCO0FBQ0E7SUFDSSxnQkFBZ0I7QUFDcEI7QUFDQTtJQUNJLFdBQVc7QUFDZjtBQUNBO0lBQ0ksb0JBQW9CO0FBQ3hCO0FBQ0E7SUFDSSx5QkFBeUI7QUFDN0I7QUFDQTtJQUNJLG1CQUFtQjtJQUNuQix1QkFBdUI7SUFDdkIsZ0JBQWdCO0lBQ2hCLFlBQVk7SUFDWixnQkFBZ0I7SUFDaEIsYUFBYTtBQUNqQiIsImZpbGUiOiJzcmMvYXBwL3BhbmVscy9yaWdodC1wYW5lbC9zdWItdG9vbHMvc3ViLXRvb2xzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudGV4dEFsaWdue1xuICAgIHdpZHRoOiAxMDAlO1xufVxuLnRleHRBbGlnbiBtYXQtYnV0dG9uLXRvZ2dsZXtcbiAgICB3aWR0aDogMTAwJTtcbn1cbi50ZXh0T3B0aW9uc3tcbiAgICB3aWR0aDogMTAwJTtcbn1cbi50ZXh0T3B0aW9ucyBtYXQtYnV0dG9uLXRvZ2dsZXtcbiAgICB3aWR0aDogMTAwJTtcbn1cbi5jb2x1bW57XG4gICAgbWFyZ2luLWJvdHRvbTogMDtcbn1cbi5jb2x1bW5ze1xuICAgIG1hcmdpbi1ib3R0b206IDA7XG59XG5tYXQtc2xpZGVye1xuICAgIHdpZHRoOiAxMDAlO1xufVxuLmJsb2Nre1xuICAgIG1hcmdpbjogMCAhaW1wb3J0YW50O1xufVxuLmZpbHRlcnN7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2Y3ZjdmNztcbn1cbi5tYXQtZXhwYW5zaW9uLXBhbmVsIHtcbiAgICBiYWNrZ3JvdW5kOiAjZjdmN2Y3O1xuICAgIGJvcmRlcjogbm9uZSAhaW1wb3J0YW50O1xuICAgIGJveC1zaGFkb3c6IG5vbmU7XG4gICAgYm9yZGVyOiBub25lO1xuICAgIGJvcmRlci1yYWRpdXM6IDA7XG4gICAgbWFyZ2luLXRvcDogMDtcbn1cbiJdfQ== */");
 
 /***/ }),
 
@@ -1349,13 +1755,214 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SubToolsComponent", function() { return SubToolsComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _simonwep_pickr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @simonwep/pickr */ "./node_modules/@simonwep/pickr/dist/pickr.min.js");
+/* harmony import */ var _simonwep_pickr__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_simonwep_pickr__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _shared_right_panel_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../shared/right-panel.service */ "./src/app/shared/right-panel.service.ts");
+
+
 
 
 let SubToolsComponent = class SubToolsComponent {
-    constructor() { }
+    constructor(rightPanelData) {
+        this.rightPanelData = rightPanelData;
+        this.filtersArray = [];
+    }
     ngOnInit() {
+        const pickr = _simonwep_pickr__WEBPACK_IMPORTED_MODULE_2___default.a.create({
+            el: '.color-picker',
+            theme: 'classic',
+            swatches: [
+                'rgba(244, 67, 54, 1)',
+                'rgba(233, 30, 99, 0.95)',
+                'rgba(156, 39, 176, 0.9)',
+                'rgba(103, 58, 183, 0.85)',
+                'rgba(63, 81, 181, 0.8)',
+                'rgba(33, 150, 243, 0.75)',
+                'rgba(3, 169, 244, 0.7)',
+                'rgba(0, 188, 212, 0.7)',
+                'rgba(0, 150, 136, 0.75)',
+                'rgba(76, 175, 80, 0.8)',
+                'rgba(139, 195, 74, 0.85)',
+                'rgba(205, 220, 57, 0.9)',
+                'rgba(255, 235, 59, 0.95)',
+                'rgba(255, 193, 7, 1)'
+            ],
+            components: {
+                // Main components
+                preview: true,
+                opacity: true,
+                hue: true,
+                // Input / output Options
+                interaction: {
+                    hex: true,
+                    rgba: true,
+                    hsla: true,
+                    hsva: true,
+                    cmyk: true,
+                    input: true,
+                    clear: true,
+                    save: true
+                }
+            }
+        });
+        const Backpickr = _simonwep_pickr__WEBPACK_IMPORTED_MODULE_2___default.a.create({
+            el: '.bgGolor-picker',
+            theme: 'classic',
+            swatches: [
+                'rgba(244, 67, 54, 1)',
+                'rgba(233, 30, 99, 0.95)',
+                'rgba(156, 39, 176, 0.9)',
+                'rgba(103, 58, 183, 0.85)',
+                'rgba(63, 81, 181, 0.8)',
+                'rgba(33, 150, 243, 0.75)',
+                'rgba(3, 169, 244, 0.7)',
+                'rgba(0, 188, 212, 0.7)',
+                'rgba(0, 150, 136, 0.75)',
+                'rgba(76, 175, 80, 0.8)',
+                'rgba(139, 195, 74, 0.85)',
+                'rgba(205, 220, 57, 0.9)',
+                'rgba(255, 235, 59, 0.95)',
+                'rgba(255, 193, 7, 1)'
+            ],
+            components: {
+                // Main components
+                preview: true,
+                opacity: true,
+                hue: true,
+                // Input / output Options
+                interaction: {
+                    hex: true,
+                    rgba: true,
+                    hsla: true,
+                    hsva: true,
+                    cmyk: true,
+                    input: true,
+                    clear: true,
+                    save: true
+                }
+            }
+        });
+    }
+    // to bold text
+    bold(event) {
+        try {
+            let element = this.rightPanelData.edditedElement;
+            if (element.style.fontWeight == 'bold') {
+                element.style.removeProperty('font-weight');
+            }
+            else {
+                element.style.fontWeight = 'bold';
+            }
+        }
+        catch (_a) { }
+    }
+    // to italise
+    italic() {
+        try {
+            let element = this.rightPanelData.edditedElement;
+            if (element.style.fontStyle == "italic") {
+                element.style.removeProperty('font-style');
+            }
+            else {
+                element.style.fontStyle = 'italic';
+            }
+        }
+        catch (_a) { }
+    }
+    // line throug
+    lineThrough() {
+        try {
+            let element = this.rightPanelData.edditedElement;
+            if (element.style.textDecoration == 'underline' || element.style.textDecoration == 'line-through') {
+                element.style.removeProperty('text-decoration');
+            }
+            else {
+                element.style.textDecoration = 'line-through';
+            }
+        }
+        catch (_a) { }
+    }
+    // to underline
+    underline() {
+        try {
+            let element = this.rightPanelData.edditedElement;
+            if (element.style.textDecoration == 'underline' || element.style.textDecoration == 'line-through') {
+                element.style.removeProperty('text-decoration');
+            }
+            else {
+                element.style.textDecoration = 'underline';
+            }
+        }
+        catch (_a) { }
+    }
+    // text align 
+    align(value) {
+        try {
+            let element = this.rightPanelData.edditedElement;
+            if (value == '') {
+                element.style.removeProperty('text-align');
+            }
+            else {
+                element.style.textAlign = value;
+            }
+        }
+        catch (_a) { }
+    }
+    // filters 
+    // opacity
+    opacity(event) {
+        try {
+            let element = this.rightPanelData.edditedElement;
+            element.style.opacity = event.value;
+            console.log(element.style.opacity);
+        }
+        catch (_a) { }
+    }
+    // brigthness
+    brightness(event) {
+        try {
+            let element = this.rightPanelData.edditedElement;
+            this.filtersArray[0] = ' brightness(' + event.value + '%) ';
+            element.style.filter = this.filtersArray.join('');
+        }
+        catch (_a) { }
+    }
+    saturation(event) {
+        try {
+            let element = this.rightPanelData.edditedElement;
+            this.filtersArray[1] = 'saturate(' + event.value + '%)';
+            element.style.filter = this.filtersArray.join('');
+        }
+        catch (_a) { }
+    }
+    contrast(event) {
+        try {
+            let element = this.rightPanelData.edditedElement;
+            this.filtersArray[2] = 'contrast(' + event.value + '%)';
+            element.style.filter = this.filtersArray.join('');
+        }
+        catch (_a) { }
+    }
+    blur(event) {
+        try {
+            let element = this.rightPanelData.edditedElement;
+            this.filtersArray[4] = 'blur(' + event.value + 'px)';
+            element.style.filter = this.filtersArray.join('');
+        }
+        catch (_a) { }
+    }
+    sepia(event) {
+        try {
+            let element = this.rightPanelData.edditedElement;
+            this.filtersArray[3] = 'sepia(' + event.value + '%)';
+            element.style.filter = this.filtersArray.join('');
+        }
+        catch (_a) { }
     }
 };
+SubToolsComponent.ctorParameters = () => [
+    { type: _shared_right_panel_service__WEBPACK_IMPORTED_MODULE_3__["RightPanelService"] }
+];
 SubToolsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-sub-tools',
@@ -1393,11 +2000,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToolbarComponent", function() { return ToolbarComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_state_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/state.service */ "./src/app/shared/state.service.ts");
+
 
 
 let ToolbarComponent = class ToolbarComponent {
-    constructor() {
+    constructor(iframeState) {
+        this.iframeState = iframeState;
         this.open = false;
+        // index for undo and redo
+        this.currentIndex = 1;
     }
     ngOnInit() {
         // clipboard pasting 
@@ -1429,10 +2041,43 @@ let ToolbarComponent = class ToolbarComponent {
             console.log("not ok");
         }
     }
+    // working on undo and redo
+    //undo 
+    undo() {
+        let length = this.iframeState._iframeContent.length;
+        if (this.currentIndex == length) {
+            // set the focus bar element
+            let empty = '';
+            this.iframeState.iframedata(empty);
+            console.log('max undo');
+            return;
+        }
+        else {
+            // sending the data to the service
+            this.iframeState.iframedata(this.iframeState._iframeContent[(length - 1) - this.currentIndex]);
+            this.currentIndex += 1;
+        }
+    }
+    //redo
+    redo() {
+        let length = this.iframeState._iframeContent.length;
+        if (this.currentIndex > 0 && this.currentIndex <= length) {
+            // sending the data to the service
+            this.iframeState.iframedata(this.iframeState._iframeContent[length - this.currentIndex]);
+            this.currentIndex -= 1;
+        }
+        else {
+            console.log("hihest undo");
+            return;
+        }
+    }
     sideDrawer() {
         console.log("dwwf");
     }
 };
+ToolbarComponent.ctorParameters = () => [
+    { type: _shared_state_service__WEBPACK_IMPORTED_MODULE_2__["StateService"] }
+];
 ToolbarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-toolbar',
@@ -1440,6 +2085,39 @@ ToolbarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./toolbar.component.css */ "./src/app/panels/toolbar/toolbar.component.css")).default]
     })
 ], ToolbarComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/code.service.ts":
+/*!****************************************!*\
+  !*** ./src/app/shared/code.service.ts ***!
+  \****************************************/
+/*! exports provided: CodeService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CodeService", function() { return CodeService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let CodeService = class CodeService {
+    constructor() { }
+    set htmlCode(value) {
+        this.codeData = value;
+    }
+    get htmlCode() {
+        return this.codeData;
+    }
+};
+CodeService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], CodeService);
 
 
 
@@ -1925,6 +2603,76 @@ DrawerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/shared/element-path.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/shared/element-path.service.ts ***!
+  \************************************************/
+/*! exports provided: ElementPathService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ElementPathService", function() { return ElementPathService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+
+
+
+let ElementPathService = class ElementPathService {
+    constructor() {
+        this._path = [];
+        this._pathSource = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this.path$ = this._pathSource.asObservable();
+    }
+    elementPath(dara) {
+        this._pathSource.next(dara);
+    }
+};
+ElementPathService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], ElementPathService);
+
+// element path service
+
+
+/***/ }),
+
+/***/ "./src/app/shared/right-panel.service.ts":
+/*!***********************************************!*\
+  !*** ./src/app/shared/right-panel.service.ts ***!
+  \***********************************************/
+/*! exports provided: RightPanelService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RightPanelService", function() { return RightPanelService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let RightPanelService = class RightPanelService {
+    constructor() { }
+    get edditedElement() {
+        return this.element;
+    }
+    set edditedElement(value) {
+        this.element = value;
+    }
+};
+RightPanelService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], RightPanelService);
+
+
+
+/***/ }),
+
 /***/ "./src/app/shared/size.service.ts":
 /*!****************************************!*\
   !*** ./src/app/shared/size.service.ts ***!
@@ -1958,6 +2706,51 @@ SizeService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         providedIn: 'root'
     })
 ], SizeService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/state.service.ts":
+/*!*****************************************!*\
+  !*** ./src/app/shared/state.service.ts ***!
+  \*****************************************/
+/*! exports provided: StateService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StateService", function() { return StateService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+
+
+
+let StateService = class StateService {
+    constructor() {
+        this._iframeContent = [];
+        this._dataSource = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this.frameData$ = this._dataSource.asObservable();
+    }
+    get iframeStateData() {
+        return this._state;
+    }
+    // undo and redo data
+    // use to send data in the _iframecontent array
+    set iframeStateData(value) {
+        this._state = value;
+        this._iframeContent.push(this._state);
+    }
+    iframedata(dara) {
+        this._dataSource.next(dara);
+    }
+};
+StateService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], StateService);
 
 
 
@@ -2031,7 +2824,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_3__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/sevenacademy/Desktop/bulmaStudio/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/sevenacademy/Desktop/Bulma-Studio/src/main.ts */"./src/main.ts");
 
 
 /***/ })
