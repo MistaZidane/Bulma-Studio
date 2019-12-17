@@ -57,9 +57,16 @@ export class IframePanelComponent implements OnInit {
     frame.document.querySelector('head').appendChild(myLink);
     let framebody = <HTMLElement>frame.document.querySelector('body');
     // when you click the save button in the code component when the iframe component is loading again the data is set
-    if( this.code.codeData != undefined){
-        framebody.innerHTML = this.code.codeData;
-    }
+    // set timout to delay the innerHTML until the css has loaded completly
+    setTimeout(()=>{
+      if(localStorage.getItem("frameData") != undefined){
+        framebody.innerHTML = localStorage.getItem("frameData");
+      }
+      else{
+        return;
+      }
+       
+    },300)
   
     this.iframeState.frameData$.subscribe(value => {
       // making sure that the value of the frame is not underfined
@@ -84,7 +91,8 @@ export class IframePanelComponent implements OnInit {
     ////////////////////////////////////////////
     let mutations = new MutationObserver((data) => {
       data.forEach( (mutation)=>{
-        this.code.codeData = framebody.innerHTML;
+        // this.code.codeData = framebody.innerHTML;
+        localStorage.setItem("frameData", framebody.innerHTML);
       });
     });
     mutations.observe(framebody, {
