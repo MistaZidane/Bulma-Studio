@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CodeService} from '../../shared/code.service'
 
 @Component({
   selector: 'app-code',
@@ -8,7 +7,7 @@ import { CodeService} from '../../shared/code.service'
 })
 export class CodeComponent implements OnInit {
 
-  constructor(private code:CodeService) { }
+  constructor() { }
  public codeHtml = ``;
   ngOnInit() {
     setTimeout(() => {

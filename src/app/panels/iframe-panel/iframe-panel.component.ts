@@ -3,7 +3,7 @@ import { SizeService } from '../../shared/size.service';
 import { DataService } from '../../shared/data.service';
 import { StateService } from '../../shared/state.service';
 import { RightPanelService } from '../../shared/right-panel.service';
-import { CodeService } from '../../shared/code.service'
+
 @Component({
   selector: 'app-iframe-panel',
   templateUrl: './iframe-panel.component.html',
@@ -24,7 +24,7 @@ export class IframePanelComponent implements OnInit {
   // path event
   public pathEvent: any;
   public frameData = []
-  constructor(private size: SizeService, private data: DataService, private iframeState: StateService, private rightPanelData: RightPanelService, private code:CodeService) {
+  constructor(private size: SizeService, private data: DataService, private iframeState: StateService, private rightPanelData: RightPanelService) {
     // perant methods setup so iframe could access the methods here
     (<any>window).drop = this.drop.bind(this);
     (<any>window).dragover = this.dragover.bind(this);

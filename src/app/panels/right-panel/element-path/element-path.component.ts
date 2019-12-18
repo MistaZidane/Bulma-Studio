@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ElementPathService} from '../../../shared/element-path.service';
+
 @Component({
   selector: 'app-element-path',
   templateUrl: './element-path.component.html',
@@ -7,16 +7,12 @@ import {ElementPathService} from '../../../shared/element-path.service';
 })
 export class ElementPathComponent implements OnInit {
 public elementPath: any;
-  constructor(private path: ElementPathService) { }
+  constructor() { }
 
   ngOnInit() {
     
-    if(this.path.path$ != undefined){
-      this.path.path$.subscribe( (data)=>{
-        this.elementPath = data;
-        console.log(this.elementPath)
-    })
-    }
+    
+   
   }
 
 }
