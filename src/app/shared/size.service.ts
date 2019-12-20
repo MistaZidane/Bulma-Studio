@@ -6,7 +6,7 @@ import { Subject } from 'rxjs';
 })
 export class SizeService {
   private _size = {
-    'state':''
+    'state': ''
   };
 
   private _sizeSource = new Subject<object>();
