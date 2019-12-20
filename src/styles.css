@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+
 body{
     background-color: #e4e4e4;
     overflow: hidden;
@@ -9,10 +9,7 @@ html{
     background-color: #e4e4e4; 
     overflow: hidden;
 }
-/* embed, iframe, img, object, video {
-    height: 100% !important;
-    max-width: 100%;
-} */
+
 span{
     user-select: none;
 }
@@ -22,11 +19,7 @@ span{
     height: 100px;
     max-height: 110px;
 }
-/* .myFrame{
-    overflow-y: scroll;
-    overflow-x: hidden;  
-    height: 95.4vh;
-} */
+
 ::-webkit-scrollbar {
     height: 6px;
     width: 6px;
