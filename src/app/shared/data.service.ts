@@ -18,7 +18,7 @@ export class DataService {
       </nav>`
     },
     {
-      "name": "card",
+      "name": "card", 
       "source": `<div class="card">
       <div class="card-image">
         <figure class="image is-4by3">
@@ -97,7 +97,7 @@ export class DataService {
   <ul class="menu-list">
     <li><a>Team Settings</a></li>
     <li>
-      <a class="is-active">Manage Your Team</a>
+      <a class="is-active"> Manage Your Team</a>
       <ul>
         <li><a>Members</a></li>
         <li><a>Plugins</a></li>
@@ -109,7 +109,7 @@ export class DataService {
     <li><a>Authentication</a></li>
   </ul>
   <p class="menu-label">
-    Transactions
+    Transactions 
   </p>
   <ul class="menu-list">
     <li><a>Payments</a></li>
