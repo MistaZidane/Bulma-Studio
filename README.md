@@ -1,4 +1,4 @@
-# Novia admin dashboard ( Dashboard for course scheduling algorithm)
+# Drag and Drop Builder (studio) for Bulma css
 ## Features
  - Drag and drop
  - Extensive DOM manipulation
