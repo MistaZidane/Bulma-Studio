@@ -3,7 +3,7 @@
  - Drag and drop
  - Extensive DOM manipulation
 
-### Some dashboard screenshots
+### Screenshots
 <img
   src="https://github.com/MistaZidane/Bulma-Studio/blob/master/Screen%20Shot%202022-07-01%20at%2012.40.04%20AM.png"
   alt="Alt text"
